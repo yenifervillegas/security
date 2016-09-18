@@ -1,0 +1,58 @@
+body{
+	margin: 0;
+}
+#fondo{
+	width:100%;
+	height: 100%;
+	vertical-align: top;
+	overflow: hidden; 
+	z-index: 2;
+	position: fixed;
+	margin-top: -580px;
+	background: rgba(0,0,0,0.8);
+	display: none;
+
+}
+#login{
+	width: 30%;
+	height: 400px;
+	background-color: #fff;
+	overflow: hidden;
+	border-radius: 7px;
+	margin-left: 35%;
+	margin-top: 150px;
+
+
+}
+#button{
+	margin-top: 50px;
+	margin-left: 35%;
+}
+.row input{
+	width: 80%;
+	margin-left: 45px;
+	
+}
+.row label{
+	margin-left: 200px;
+	margin-top: 30px;
+}
+
+#cerrar{
+	width: 30px;
+	height: 30px;
+	background: url(../images/cerrar.png);
+	float: right;
+	margin-right: 10px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+h2{
+	width: 50px;
+	height: 50px;
+	margin-left: -90%;
+	margin-top:-220px;
+	margin-bottom: 100px;
+	cursor: pointer !important;
+	z-index: 2;
+}

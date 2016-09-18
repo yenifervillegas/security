@@ -10,17 +10,37 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/login.js"></script>
+
 	</head>
 	<body>
 
 		<!-- Header -->
 			<header id="header" class="alt">
-				<h1><a href="#"><div id="ingresar" onclick="sbIngre('abrir');">Ingresar</div></a></h1>
+				<h2><div id="ingresar" onclick="ingresar();">Ingresar</div></h2>
 				<div class="inner">
 					<h1>Security</h1>
 					
 				</div>
 			</header>
+			<div id="ingresar" onclick="sbIngre();">Ingresar</div>
+		<div id="fondo">
+			<div id="login">
+				<div id="cerrar"onclick="cerrar();"></div>
+			
+		    	<div class="row">
+		     <form action="../Controller/login.controller.php" method="post">
+			      <label for="icon_prefix">Documento</label>
+			      <input id="icon_prefix" type="text" name="documento" class="validate">
+			        
+			      <label for="icon_telephone">Contraseña</label>
+			      <input id="icon_telephone" type="password" name="contrasena" class="validate">
+			      <button id="button"  onclick="boton();" name="action" value="consultar">Ingresar</button>
+		   </form>
+		    	</div>
+   			</div>
+   		</div>
 
 		<!-- Wrapper -->
 			<div id="wrapper">
