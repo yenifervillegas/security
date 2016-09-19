@@ -10,7 +10,7 @@ switch ($action) {
 		//$codigo=$_POST["codigo"];
 		$nombre=$_POST["nombre"];
 		$apellido=$_POST["apellido"];
-		$tipodocu=$_POST["tipodocu"]
+		$tipodocu=$_POST["tipodocu"];
 		$documento=$_POST["documento"];
 		$email=$_POST["email"];
 		$telefono=$_POST["telefono"];
@@ -22,7 +22,7 @@ switch ($action) {
 		$cifrar=password_hash($contrasena,PASSWORD_DEFAULT);
 		//$codigo,
 		try{
-			Gestion_usuario::Guardar($selecion,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$estado,$centro,$cargo,$cifrar);
+			Gestion_usuario::Guardar($seleccion,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$estado,$centro,$cargo,$cifrar);
 			echo "Guardo con exito";
 
 		}catch(Exception $e){
@@ -35,7 +35,7 @@ switch ($action) {
 		$codigo=$_POST["codigo"];
 		$nombre=$_POST["nombre"];
 		$apellido=$_POST["apellido"];
-		$tipodocu=$_POST["tipodocu"]
+		$tipodocu=$_POST["tipodocu"];
 		$documento=$_POST["documento"];
 		$email=$_POST["email"];
 		$telefono=$_POST["telefono"];
@@ -47,7 +47,7 @@ switch ($action) {
 		$cifrars=password_hash($contrasenas,PASSWORD_DEFAULT);
 
 try{
-			Gestion_usuario::Modificar($selecion,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$estado,$centro,$carga,$cifrars);
+			Gestion_usuario::Modificar($nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$estado,$centro,$carga,$cifrars);
 		header("location:../views/consulta.usuario.php");
 
 		}catch(Exception $e){

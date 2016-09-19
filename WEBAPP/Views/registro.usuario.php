@@ -19,8 +19,8 @@
 					   		<label for="icon_telephone">Apellido</label>
 					        <input id="icon_telephone" type="text" name="apellido" class="validate" required>
 					       
-					        <label for="email">Tipo de Documento</label>
-				   			<select>
+					        <label >Tipo de Documento</label>
+				   			<select name="tipodocu">
 				   				<option value="0">seleccionar</option>
 				   				<option value="Cedula">Cedula</option>
 				   				<option value="Tarjeta de Identidad">Tarjeta de Identidad</option>

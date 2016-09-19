@@ -77,13 +77,13 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 							
 							<td>
 								<span onclick='valida(".$consulta["usu_cod"].");'class='btn-floating light-red' style='cursor:pointer'>
-									<i class='material-icons'>airline_seat_flat</i>
+									Inactivar
 								</span>
 								<span onclick='valida1(".$consulta["usu_cod"].");'class='btn-floating light-blue' style='cursor:pointer'>
-									<i class='material-icons'>directions_walk</i>
+									Activar
 								</span>
 								<span style='cursor:pointer' onclick='valida2(&#34".$consulta["usu_estado"]."&#34,".$consulta["usu_cod"].");'class='btn-floating light-green'>
-									<i class='material-icons'>edit</i>
+									modificar
 								</span>
 							</td>
 					</tr>";
