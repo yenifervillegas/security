@@ -8,17 +8,21 @@ switch ($action) {
 	case 'Guardar'://funcion para guardar usuario 9 lineas de abajo son para capturar los datos
 		$seleccion=$_POST["seleccion"];
 		//$codigo=$_POST["codigo"];
-		$documento=$_POST["documento"];
 		$nombre=$_POST["nombre"];
 		$apellido=$_POST["apellido"];
+		$tipodocu=$_POST["tipodocu"]
+		$documento=$_POST["documento"];
 		$email=$_POST["email"];
 		$telefono=$_POST["telefono"];
-		$nombredeusuario=$_POST["nombredeusuario"];
+		$direccion=$_POST["direccion"];
+		$estado=$_POST["estado"];
+		$centro=$_POST["centro"];
+		$cargo=$_POST["cargo"];
 		$contrasena=$_POST["contrasena"];
 		$cifrar=password_hash($contrasena,PASSWORD_DEFAULT);
 		//$codigo,
 		try{
-			Gestion_usuario::Guardar($seleccion,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$cifrar);
+			Gestion_usuario::Guardar($selecion,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$estado,$centro,$cargo,$cifrar);
 			echo "Guardo con exito";
 
 		}catch(Exception $e){
@@ -29,17 +33,21 @@ switch ($action) {
 
 		case 'Modificar'://funcion para modificar usuario 9 lineas de abajo son para capturar los datos
 		$codigo=$_POST["codigo"];
-		$documento=$_POST["documento"];
 		$nombre=$_POST["nombre"];
 		$apellido=$_POST["apellido"];
+		$tipodocu=$_POST["tipodocu"]
+		$documento=$_POST["documento"];
 		$email=$_POST["email"];
 		$telefono=$_POST["telefono"];
-		$nombredeusuario=$_POST["nombredeusuario"];
-		$contrasenas=$_POST["contrasena"];
+		$direccion=$_POST["direccion"];
+		$estado=$_POST["estado"];
+		$centro=$_POST["centro"];
+		$cargo=$_POST["cargo"];
+		$contrasena=$_POST["contrasena"];
 		$cifrars=password_hash($contrasenas,PASSWORD_DEFAULT);
 
 try{
-			Gestion_usuario::Modificar($codigo,$documento,$nombre,$apellido,$email,$telefono,$nombredeusuario,$cifrars);
+			Gestion_usuario::Modificar($selecion,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$estado,$centro,$carga,$cifrars);
 		header("location:../views/consulta.usuario.php");
 
 		}catch(Exception $e){
