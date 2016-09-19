@@ -12,17 +12,26 @@
 					 			<?php endforeach ?>
 					 		</select>
 					   
-
-					       <input id="icon_prefix" type="text" name="nombre" class="validate" required>
-					       <label for="icon_prefix">Nombre</label>
+					 		<label for="icon_prefix">Nombre</label>
+					        <input id="icon_prefix" type="text" name="nombre" class="validate" required>
+					       
 					    
-					   
-					       <input id="icon_telephone" type="text" name="apellido" class="validate" required>
-					       <label for="icon_telephone">Apellido</label>
-				   
-					  
+					   		<label for="icon_telephone">Apellido</label>
+					        <input id="icon_telephone" type="text" name="apellido" class="validate" required>
+					       
+					        <label for="email">Tipo de Documento</label>
+				   			<select>
+				   				<option value="0">seleccionar</option>
+				   				<option value="Cedula">Cedula</option>
+				   				<option value="Tarjeta de Identidad">Tarjeta de Identidad</option>
+				   				<option value="Cedula de extrajero">Cedula de extrajero</option>
+				   				<option value="Pasaporte">Pasaporte</option>
+				   			</select>
+							
+					  		
+					  		<label for="email">Numero de DOcumento</label>
 							<input id="email" type="number" name="documento" class="validate" required>
-							<label for="email">Cedula</label>
+							
 	  				
 							<input id="email" type="number" name="telefono" class="validate" required>
 							<label for="email">Telefono</label>
