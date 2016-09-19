@@ -1,6 +1,6 @@
 <?php require_once("../Model/conexion.php"); require_once("../Model/usuario.class.php"); ?>
 <section>
-	<center><h5>Registro de Vigilantes y Administradores</h5></center>
+	<center><h5>Registro de Usuarios</h5></center>
 		<div class="row">
  			<form class="col s10" action="../Controller/registro.controller.php" method="post" <?php $rol=Gestion_usuario::cargar_rol(); ?>>
 				  <div class="row">
@@ -29,18 +29,26 @@
 				   			</select>
 							
 					  		
-					  		<label for="email">Numero de DOcumento</label>
+					  		<label for="email">Numero de Documento</label>
 							<input id="email" type="number" name="documento" class="validate" required>
 							
-	  				
+	  						<input id="email" type="email" name="email" class="validate" required>
+							<label for="email">Email</label>
+
 							<input id="email" type="number" name="telefono" class="validate" required>
 							<label for="email">Telefono</label>
 		  			
-							<input id="email" type="email" name="email" class="validate" required>
-							<label for="email">Email</label>
+		  					<input id="email" type="text" name="direccion" class="validate" required>
+							<label for="email">Direccion</label>
+
+							<input id="email" type="text" name="estado" class="validate" required>
+							<label for="email">Estado</label>
+
+							<input id="email" type="text" name="centro" class="validate" required>
+							<label for="email">Centro</label>
 						
-							<input id="email" type="text" name="nombredeusuario" class="validate" required>
-							<label for="email">Usuario</label>
+							<input id="email" type="text" name="cargo" class="validate" required>
+							<label for="email">Cargo</label>
 						
 							<input id="email" type="password" name="contrasena" class="validate" required>
 							<label for="email">Contraseña</label>
