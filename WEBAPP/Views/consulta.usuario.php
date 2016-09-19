@@ -46,13 +46,16 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 <table id="myTable" class="striped bordered responsive-table">
 	<thead>
 		<tr>
-			<td>Documento</td>
 			<td>Nombre</td>
 			<td>Apellido</td>
-			<td>Telefono</td>
+			<td>Tipo de documento</td>
+			<td>Documento</td>
 			<td>Correo Electronico</td>
-			<td>Usuario</td>
+			<td>Telefono</td>
+			<td>Direccion</td>
 			<td>Estado</td>
+			<td>Centro</td>
+			<td>Cargo</td>
 			<td>Accion</td>
 		</tr>
 	</thead>
@@ -60,13 +63,18 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 		<?php
 			foreach ($usuario as $consulta) {//se pone los registros de los usuarios
 				echo "<tr>
-							<td>".$consulta["usu_docu"]."</td>
+							
 							<td>".$consulta["usu_nom"]."</td>
 							<td>".$consulta["usu_ape"]."</td>
-							<td>".$consulta["usu_tel"]."</td>
+							<td>".$consulta["usu_tipodocu"]."</td>
+							<td>".$consulta["usu_docu"]."</td>
 							<td>".$consulta["usu_email"]."</td>
-							<td>".$consulta["usu_nick"]."</td>
+							<td>".$consulta["usu_tel"]."</td>
+							<td>".$consulta["usu_direc"]."</td>
 							<td>".$consulta["usu_estado"]."</td>
+							<td>".$consulta["usu_centro"]."</td>
+							<td>".$consulta["usu_cargo"]."</td>
+							
 							<td>
 								<span onclick='valida(".$consulta["usu_cod"].");'class='btn-floating light-red' style='cursor:pointer'>
 									<i class='material-icons'>airline_seat_flat</i>

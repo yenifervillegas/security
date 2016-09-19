@@ -8,7 +8,7 @@
 					 		<select class="icons" name="seleccion">
 					 	    <option value="" disabled selected>Elija Rol de Usuario</option>
 					 			<?php foreach ($rol as $roles): ?>
-					 		  <option value="<?php echo $roles["rol_cod"]?>" data-icon="images/user.png" class="left circle"><?php echo $roles["rol_nombre"]; ?></option>
+					 		  <option value="<?php echo $roles["rol_cod"]?>" data-icon="images/user.png" class="left circle"><?php echo $roles["rol_nom"]; ?></option>
 					 			<?php endforeach ?>
 					 		</select>
 					   
