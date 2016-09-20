@@ -5,7 +5,7 @@ require_once("../model/registro.producto.class.php");
 
 $usuario=Gestion_producto::consultarUsu();
 //$producto=Gestion_producto::consultarprodu();
-$propietario=Gestion_producto::consultarpropie();
+//$propietario=Gestion_producto::consultarpropie();
 
 ?>
 

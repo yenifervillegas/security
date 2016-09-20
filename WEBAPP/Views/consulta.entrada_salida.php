@@ -43,12 +43,12 @@ $codigoEntrada=Gestion_producto::consultarEntrada();
 		<?php
 			foreach ($codigoEntrada as $comp) {
 			echo "<tr>
-					<td>".$comp["entsal_cod"]."</td>
+					<td>".$comp["entra_cod"]."</td>
 					<td>".$comp["regi_cod"]."</td>
-					<td>".$comp["entsal_fechaent"]."</td>
-					<td>".$comp["entsal_fechasal"]."</td>
-					<td>".$comp["entsal_horaent"]."</td>
-					<td>".$comp["entsal_horasal"]."</td>
+					<td>".$comp["entra_fechaentra"]."</td>
+					<td>".$comp["entra_fechasal"]."</td>
+					<td>".$comp["entra_horaentra"]."</td>
+					<td>".$comp["entra_horasal"]."</td>
 					<td><div onclick='salida(".$comp["entsal_cod"].");'>Salida</div></td>
 					
 			</tr>";

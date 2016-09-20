@@ -11,16 +11,16 @@
       include 'consultar.accesorio.php';
      ?>
 
-     <form class="" action="../Controller.php" method="post">
-       <label for="">Nombre</label>
-       <input type="button" name="name" value="">
-       <label for="">Apellido</label>
-       <input type="text" name="name" value="">
+     <form class="" action="../Controller/accesorio.controller.php" method="post">
+
+       <label for="">Nombre del Accesorio</label>
+       <input type="button" name="nombre" value="">
+
+       <label for="">Cantidad</label>
+       <input type="text" name="cantidad" value="">
+
        <button type="submit" name="button">Guardar</button>
      </form>
-     <?php
-
-      echo "<input>";
-      ?>
+  
   </body>
 </html>
