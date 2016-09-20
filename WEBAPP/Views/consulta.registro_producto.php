@@ -22,15 +22,15 @@ $producto=Gestion_producto::consultar();
 <table id="myTable">
 	<thead>
 		<tr>
-			<td>codigo registro </td>
-			<td>Codigo usuario</td>
-			<td>codigo producto</td>
-			<td>registro serial </td>
-			<td>registro color</td>
-			<td>registro fecha</td>
-			<td>registro descripcion</td>
-			<td>registro autoalterna </td>
-			<td>accion</td>
+			<td>Codigo registro </td>
+			<td>Numero de Documento</td>
+			<td>Codigo producto</td>
+			<td>Registro serial </td>
+			<td>Registro color</td>
+			<td>Registro fecha</td>
+			<td>Registro descripcion</td>
+			<td>Registro autoalterna </td>
+			<td>Accion</td>
 
 
 		</tr>

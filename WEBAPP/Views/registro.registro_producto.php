@@ -15,13 +15,13 @@ $propietario=Gestion_producto::consultarpropie();
 		
 
 		<label>Codigo de Registro</label>
-		<input name="registro_usu" type="text" required/>
+		<input name="regi_usu" type="text" required/>
 
 		<label>Codigo de usuario</label>
-		<input name="registro_usu" type="text" required/>
+		<input name="usu_docu" type="text" required/>
 
 		<label>Codigo de producto</label>
-		<input name="registro_usu" type="text" required/>
+		<input name="produ_cod" type="text" required/>
 
 		<label >Registra serial</label>
 		<input name="registro_serial" type="text" required/>

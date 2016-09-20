@@ -10,18 +10,18 @@ switch ($accion) {
 	case 'Guardar':
 	$codigo=$_POST["codigo"];
 	$codigo_pro=$_POST["codigo_pro"];
-	$codigo_propiedad=$_POST["codigo_propiedad"];
 	$registro_serial=$_POST["registro_serial"];
 	$registre_color=$_POST["registre_color"];
 	$registre_fecha=$_POST["registre_fecha"];
 	$registre_decrip=$_POST["registre_decrip"];
 	$registre_autoalerta=$_POST["registre_autoalerta"];
+	$registre_cantidad=$_POST["registre_cantidad"];
 	$fecha=date("o-m-d");
 	$hora=date("H:i");
 
 	try{
 
-		Gestion_producto::Guardar($codigo,$codigo_pro,$codigo_propiedad,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$fecha,$hora);
+		Gestion_producto::Guardar($codigo,$codigo_pro,$codigo_propiedad,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad,$fecha,$hora);
 		echo "<a href='../Views/dashboard.php?seccion=rr_producto'>Volver</a>";
 		//header("location:../Views/dashboard.php?seccion=rr_producto");
 	}catch(Exception $e){
@@ -32,18 +32,16 @@ switch ($accion) {
 
 		case 'modificar'://funcion para modificar usuario 9 lineas de abajo son para capturar los datos
 
-	$codigo_registro=$_POST["codigo_regi"];
-	$codigo_usu=$_POST["codigo_usu"];
-	$codigo_pro=$_POST["produ_cod"];
-	$codigo_propiedad=$_POST["propie_cod"];
+
 	$registro_serial=$_POST["regi_serial"];
 	$registre_color=$_POST["regi_color"];
 	$registre_fecha=$_POST["regi_fecha"];
 	$registre_decrip=$_POST["regi_desc"];
 	$registre_autoalerta=$_POST["regi_autoalterna"];
+	$registre_cantidad=$_POST["regi_cantidad"];
 
 try{
-			Gestion_producto::modificar($codigo_registro,$codigo_usu,$codigo_pro,$codigo_propiedad,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta);
+			Gestion_producto::modificar($registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad);
 			header("location:../views/consulta.registro_producto.php");
 
 		}catch(Exception $e){

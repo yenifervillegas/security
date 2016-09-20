@@ -6,7 +6,7 @@ class Gestion_usuario
     $pdo = Conexion::Abrirbd();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
-    $sqlU= "select * from regi_admin where admin_docu=? and admin_pass=?";
+    $sqlU= "select * from usuario where usu_docu=? and usu_pass=?";
 
     $query= $pdo->prepare($sqlU);
     $query->execute(array($nick,$pass));
