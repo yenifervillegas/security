@@ -8,20 +8,22 @@ require_once("../Model/registro.producto.class.php");
 $accion=$_REQUEST["action"];
 switch ($accion) {
 	case 'Guardar':
-	$codigo=$_POST["codigo"];
+	//$codigo=$_POST["codigo"];
+	$codigo_usu=$_POST["codigo_usu"];
 	$codigo_pro=$_POST["codigo_pro"];
+	$codigo_acc=$_POST["registro_acces"];
 	$registro_serial=$_POST["registro_serial"];
 	$registre_color=$_POST["registre_color"];
 	$registre_fecha=$_POST["registre_fecha"];
 	$registre_decrip=$_POST["registre_decrip"];
 	$registre_autoalerta=$_POST["registre_autoalerta"];
 	$registre_cantidad=$_POST["registre_cantidad"];
-	$fecha=date("o-m-d");
-	$hora=date("H:i");
+	//$fecha=date("o-m-d");se borraron en el try probicional
+	//$hora=date("H:i");
 
 	try{
 
-		Gestion_producto::Guardar($codigo,$codigo_pro,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad,$fecha,$hora);
+		Gestion_producto::Guardar($codigo_usu,$codigo_pro,$codigo_acc,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad);
 		echo "<a href='../Views/dashboard.php?seccion=rr_producto'>Volver</a>";
 		//header("location:../Views/dashboard.php?seccion=rr_producto");
 	}catch(Exception $e){

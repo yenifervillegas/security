@@ -14,25 +14,28 @@ $propietario=Gestion_producto::consultarpropie();
 	<form action="../Controller/controller.registro.producto.php" method="post"/>
 		
 
-		<label>Codigo de Registro</label>
-		<input name="codigo" type="text" required/>
+		<!--<label>Codigo de Registro</label>
+		<input name="codigo" type="text" required/> este es autoincremental-->
 
 		<label>Codigo de usuario</label>
-		<input name="codigo_pro" type="text" required/>
+		<input name="codigo_usu" type="text" required/><!--este si va?,,,, se le cambio el name repetido con el cod prod-->
 
 		<label>Codigo de producto</label>
-		<input name="registre_descrip" type="text" required/>
+		<input name="codigo_pro" type="text" required/><!--este desplegable,,,,se le cambio el name repetido con el descript-->
+
+		<label >accesorios</label>
+		<input name="registro_acces" type="text" required/><!--probicional-->
 
 		<label >Registra serial</label>
 		<input name="registro_serial" type="text" required/>
 	
 
 		<label >Registre color </label>
-		<input name="registre_color" type="color"required/>
+		<input name="registre_color" type="color" required/>
 
 	
 		<label >Registre Fecha </label>
-		<input  name="registre_fecha" type="date"required/>
+		<input  name="registre_fecha" type="date" required/>
 	
 		
 		<label >Registre descripcion</label>
