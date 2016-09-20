@@ -15,13 +15,13 @@ $propietario=Gestion_producto::consultarpropie();
 		
 
 		<label>Codigo de Registro</label>
-		<input name="regi_usu" type="text" required/>
+		<input name="codigo" type="text" required/>
 
 		<label>Codigo de usuario</label>
-		<input name="usu_docu" type="text" required/>
+		<input name="codigo_pro" type="text" required/>
 
 		<label>Codigo de producto</label>
-		<input name="produ_cod" type="text" required/>
+		<input name="registre_descrip" type="text" required/>
 
 		<label >Registra serial</label>
 		<input name="registro_serial" type="text" required/>
@@ -36,18 +36,18 @@ $propietario=Gestion_producto::consultarpropie();
 	
 		
 		<label >Registre descripcion</label>
-		<textarea  type="text"></textarea>
+		<textarea name="registre_decrip" type="text"></textarea>
 
 	
 		<label >Registre autoalterna</label>
 		<input  name="registre_autoalerta" type="text"/>
 
 		<label >Registre Cantidad del Producto</label>
-		<input  name="registre_autoalerta" type="text"/>
+		<input  name="registre_cantidad" type="text"/>
 	</div>
 
 
-		<button  class="btn" value="Guardar">Guardar</button>
+		<button name="action" class="btn" value="Guardar">Guardar</button>
 		
 </form>
 </section>

@@ -21,7 +21,7 @@ switch ($accion) {
 
 	try{
 
-		Gestion_producto::Guardar($codigo,$codigo_pro,$codigo_propiedad,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad,$fecha,$hora);
+		Gestion_producto::Guardar($codigo,$codigo_pro,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad,$fecha,$hora);
 		echo "<a href='../Views/dashboard.php?seccion=rr_producto'>Volver</a>";
 		//header("location:../Views/dashboard.php?seccion=rr_producto");
 	}catch(Exception $e){
@@ -32,7 +32,8 @@ switch ($accion) {
 
 		case 'modificar'://funcion para modificar usuario 9 lineas de abajo son para capturar los datos
 
-
+	$codigo=$_POST["codigo"];
+	$codigo_pro=$_POST["codigo_pro"];
 	$registro_serial=$_POST["regi_serial"];
 	$registre_color=$_POST["regi_color"];
 	$registre_fecha=$_POST["regi_fecha"];
@@ -41,7 +42,7 @@ switch ($accion) {
 	$registre_cantidad=$_POST["regi_cantidad"];
 
 try{
-			Gestion_producto::modificar($registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad);
+			Gestion_producto::modificar($codigo,$codigo_pro,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad);
 			header("location:../views/consulta.registro_producto.php");
 
 		}catch(Exception $e){
