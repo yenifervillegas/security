@@ -1,6 +1,6 @@
 <!-- Andrea taborda -->
 <?php
-date_default_timezone_get("America/Bogota");
+date_default_timezone_set("America/Bogota");
 session_start();
 require_once("../Model/conexion.php");
 require_once("../Model/registro.producto.class.php");
@@ -18,7 +18,7 @@ switch ($accion) {
 	$registre_autoalerta=$_POST["registre_autoalerta"];
 	$registre_cantidad=$_POST["registre_cantidad"];
 	$fecha=date("y-m-d");
-	$hora=date("H:i");
+	$hora=date("H:i,A");
 
 	try{
 

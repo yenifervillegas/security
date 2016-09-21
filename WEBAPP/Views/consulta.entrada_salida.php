@@ -24,12 +24,12 @@ $codigoEntrada=Gestion_producto::consultarEntrada();
 	</script>
 </head>
 <body>
-	
+	<h1>Consultar Entrada y Salida</h1>
 <table id="myTable">
 	<thead>
 		<tr>
-			<td>Codigo</td>
-			<td>Codigo registro de producto</td>
+			<td>Codigo entrada y salida</td>
+			<td>Codigo de registro de producto</td>
 			<td>Fecha de entrada </td>
 			<td>Fecha de salida</td>
 			<td>Hora de entrada</td>
@@ -49,7 +49,7 @@ $codigoEntrada=Gestion_producto::consultarEntrada();
 					<td>".$comp["entra_fechasal"]."</td>
 					<td>".$comp["entra_horaentra"]."</td>
 					<td>".$comp["entra_horasal"]."</td>
-					<td><div onclick='salida(".$comp["entsal_cod"].");'>Salida</div></td>
+					<td><div onclick='salida(".$comp["entra_cod"].");'>Salida</div></td>
 					
 			</tr>";
 			}
