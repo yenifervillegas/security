@@ -12,7 +12,7 @@
             $('#myTable').DataTable();
         });</script>
 
-  <a href="registro.tipoproducto.php">Volver</a>
+  
     <table id="myTable">
       <thead>
         <tr>
@@ -31,8 +31,8 @@
                     <td>".$row["acce_nom"]."</td>
                     <td>".$row["acce_cantidad"]."</td>
                     <td>
-                    <a href='modifico.accesorio.php?acce_cod=".$row["acce_cod"]."'>Modificar</a> -
-                    <a href='../Controller/accesorio.controller.php?acce_cod=".$row["acce_cod"]."&accion=delete' >Eliminar</a></td>
+                    <a href='modificar.accesorio.php?acce_cod=".$row["acce_cod"]."'>Modificar</a> -
+                    <a href='../Controller/accesorio.controller.php?acce_cod=".$row["acce_cod"]."&action=eliminar' >Eliminar</a></td>
                   </tr>";
             $item++;
           }

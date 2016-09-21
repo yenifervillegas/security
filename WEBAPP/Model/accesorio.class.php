@@ -13,14 +13,14 @@ class Gestion_usuario{
 		Conexion::Cerrarbd();
 }
 
-	function modificar($codigo_regi,$codigo,$nombre,$cantidad){
+	function Modificar($codigo_acce,$codigo_regi,$nombre,$cantidad){
 		$pdo= Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
 
-		$sql="UPDATE  accesorios set acce_nom=?,acce_cantidad=? WHERE acce_cod=?,regi_cod=?";
+		$sql="UPDATE  accesorios set acce_nom=?,acce_cantidad=? WHERE acce_cod=?";
 		$query=$pdo->prepare($sql);
-		$query->execute(array($nombre,$cantidad,$codigo,$codigo_regi));
+		$query->execute(array($nombre,$cantidad,$codigo_acce));
 
 
 		Conexion::Cerrarbd();
@@ -31,7 +31,7 @@ class Gestion_usuario{
 		$pdo = Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		$sql = "SELECT * FROM accesorios ";
+		$sql = "SELECT * FROM accesorios";
 		$query= $pdo->prepare($sql);
 		$query->execute();
 
@@ -41,5 +41,29 @@ class Gestion_usuario{
 	
 
 	}
+	function Consultaracce($codigo){
+
+		$pdo=Conexion::Abrirbd();
+		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+		$sql="SELECT * FROM accesorios";
+		$query=$pdo->prepare($sql);
+		$query->execute(array($codigo));
+
+		$result=$query->fetch(PDO::FETCH_BOTH);
+		Conexion::Cerrarbd();
+		return $result;
+}
+
+	function eliminar($codigoA){
+			$pdo = Conexion::Abrirbd();
+			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+			$sql = "DELETE from  accesorios where acce_cod=?";
+			$query= $pdo->prepare($sql);
+			$query->execute(array($codigoA));
+
+			Conexion::Cerrarbd();
+		}
 }
 ?>

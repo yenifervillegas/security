@@ -13,7 +13,7 @@ switch ($accion) {
 
 
 		try{
-			Gestion_usuario::Guardar($nombre,$cantidad,$codigo_regi);
+			Gestion_usuario::Guardar($codigo_regi,$nombre,$cantidad);
 			echo "<script>alert('Guardar con exito');
 			location.href = '../Views/registrar.accesorio.php';
 			</script>";
@@ -24,14 +24,14 @@ switch ($accion) {
 	
 		break;
 
-		case 'modificar'://funcion para modificar usuario 9 lineas de abajo son para capturar los datos
-
+		case 'Modificar'://funcion para modificar usuario 9 lineas de abajo son para capturar los datos
+	$codigo_acce=$_POST["codigo"];
 	$codigo_regi=$_POST["codigo_regi"];
 	$nombre=$_POST["nombre"];
 	$cantidad=$_POST["cantidad"];
 
 	try{
-		Gestion_producto::modificar($nombre,$cantidad,$codigo_regi);
+		Gestion_usuario::Modificar($codigo_acce,$codigo_regi,$nombre,$cantidad);
 			echo "<script>alert('Modifico  con exito');
 			location.href = '../Views/registrar.accesorio.php';
 			</script>";
@@ -42,10 +42,10 @@ switch ($accion) {
 		break;
 
 		case 'eliminar':
-		$codigoE=$_GET["codigo"];
+		$codigoA=$_GET["acce_cod"];
 
 		try{
-			Gestion_producto::eliminar($codigoA);
+			Gestion_usuario::eliminar($codigoA);
 			echo "<script>alert('Elimino con exito');
 			location.href = '../Views/registrar.accesorio.php';
 			</script>";

@@ -1,7 +1,7 @@
 <?php
 	require_once("../Model/conexion.php");
-	require_once("../Model/accesorios.class.php");
-	$codigo =Gestion_usuario::Consultarusuariocodigo($_GET["codigo_usuario"]);
+	require_once("../Model/accesorio.class.php");
+	$codigo =Gestion_usuario::Consultaracce($_GET["acce_cod"]);
 
 ?>
 
@@ -9,14 +9,17 @@
 	<h1>Modificar usuario</h1>
 	<form action="../Controller/accesorio.controller.php" method="POST">
 
-	<label>Codigo: <?php echo $codigo["regi_cod"]; ?></label>
-	<input type="hidden" name="codigo_regi" value=" <?php echo $codigo["regi_cod"]; ?>"/>
-
 	<label>Codigo: <?php echo $codigo["acce_cod"]; ?></label>
 	<input type="hidden" name="codigo" value=" <?php echo $codigo["acce_cod"]; ?>"/>
 
+	<label>Codigo<?php echo $codigo["regi_cod"]; ?></label>
+	<input type="hidden" name="codigo_regi" value=" <?php echo $codigo["regi_cod"]; ?>"/>
+
+
 	<label>Nombre</label>
-	<input type="text" name="nombre" value=" <?php echo $nombre["acce_nom"]; ?>" required/>
+	<input type="text" name="nombre" value=" <?php echo $codigo["acce_nom"]; ?>" required/>
 
 	<label>Cantidad</label>
-	<input type="text" name="cantidad" value=" <?php echo $cantidad["acce_cantidad"]; ?>"required/>
+	<input type="text" name="cantidad" value=" <?php echo $codigo["acce_cantidad"]; ?>"required/>
+
+	<button name="action" value="Modificar" >Modificar</button>
