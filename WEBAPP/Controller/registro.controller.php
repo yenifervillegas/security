@@ -7,6 +7,7 @@ $action= $_REQUEST["action"];
 switch ($action) {
 	case 'Guardar'://funcion para guardar usuario 9 lineas de abajo son para capturar los datos
 		
+		$seleccion=$_POST["seleccion"];
 		$nombre=$_POST["nombre"];
 		$apellido=$_POST["apellido"];
 		$tipodocu=$_POST["tipodocu"];
@@ -15,12 +16,13 @@ switch ($action) {
 		$telefono=$_POST["telefono"];
 		$direccion=$_POST["direccion"];
 		$centro=$_POST["centro"];
-		$cargo=$_POST["cargo"];
+		$estado="Activo";
+		$cargo=$_POST["cargo"];	
 		$contrasena=$_POST["contrasena"];
 		$cifrar=password_hash($contrasena,PASSWORD_DEFAULT);
-		//$codigo,
+		
 		try{
-			Gestion_usuario::Guardar($nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$contrasena,$cifrar);
+			Gestion_usuario::Guardar($seleccion,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$estado,$cargo,$cifrar);
 			echo "<script>alert('Guardar con exito');
 			location.href = '../Views/registro.usuario.php';
 			</script>";
@@ -46,9 +48,10 @@ switch ($action) {
 		$cifrar=password_hash($contrasena,PASSWORD_DEFAULT);
 
 	try{
-		Gestion_usuario::Modificar($nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$cifrar);
-		header("location:../views/consulta.usuario.php");
-
+		Gestion_usuario::Modificar($codigo,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$cifrar);
+		echo "<script>alert('Modifico  con exito');
+			location.href = '../Views/registro.usuario.php';
+			</script>";
 	}catch(Exception $e){
 		echo $e;
 	}

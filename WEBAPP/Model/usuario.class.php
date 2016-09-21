@@ -2,27 +2,27 @@
 <?php
 //se guarda en la base de datos
 class Gestion_usuario{
-	function Guardar($selecion,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$cifrar){
+	function Guardar($seleccion,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$estado,$cargo,$cifrar){
 		$pdo= Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-		$sql="INSERT INTO usuario(rol_cod, usu_nom, usu_ape,usu_tipodocu,usu_docu,usu_email,usu_tel,usu_direc,usu_centro,usu_cargo,usu_pass) values(?,?,?,?,?,?,?,?,?,?,?,?)";
+		$sql="INSERT INTO usuario (rol_cod, usu_nom, usu_ape,usu_tipodocu,usu_docu,usu_email,usu_tel,usu_direc,usu_centro,usu_estado,usu_cargo,usu_pass) values(?,?,?,?,?,?,?,?,?,?,?,?)";
 
 		$query=$pdo->prepare($sql);
-		$query->execute(array($selecion,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$cifrar));
+		$query->execute(array($seleccion,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$estado,$cargo,$centro,$cifrar));
 
 		Conexion::Cerrarbd();
 
 	}//se modifica en la base de datos
 
-	function Modificar($selecion,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$cifrars){
+	function Modificar($codigo,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$cifrar){
 		$pdo= Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
 
-		$sql="UPDATE  usuario set usu_nom=?, usu_ape=?,usu_tipodocu=?,usu_docu=?,usu_email=?,usu_tel=?,usu_direc=?,usu_centro=?,usu_cargo=? usu_pass=?";
+		$sql="UPDATE  usuario set usu_nom=?, usu_ape=?,usu_tipodocu=?,usu_docu=?,usu_email=?,usu_tel=?,usu_direc=?,usu_centro=?,usu_cargo=?, usu_pass=? where usu_cod=?";
 		$query=$pdo->prepare($sql);
-		$query->execute(array($nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$cifrars));
+		$query->execute(array($nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$cifrar,$codigo));
 
 		Conexion::Cerrarbd();
 
