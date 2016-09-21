@@ -53,9 +53,9 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 			<td>Correo Electronico</td>
 			<td>Telefono</td>
 			<td>Direccion</td>
-			<td>Estado</td>
 			<td>Centro</td>
 			<td>Cargo</td>
+			<td>Estado</td>
 			<td>Accion</td>
 		</tr>
 	</thead>

@@ -6,8 +6,7 @@ require_once("../Model/usuario.class.php");
 $action= $_REQUEST["action"];
 switch ($action) {
 	case 'Guardar'://funcion para guardar usuario 9 lineas de abajo son para capturar los datos
-		$seleccion=$_POST["seleccion"];
-		//$codigo=$_POST["codigo"];
+		
 		$nombre=$_POST["nombre"];
 		$apellido=$_POST["apellido"];
 		$tipodocu=$_POST["tipodocu"];
@@ -21,7 +20,7 @@ switch ($action) {
 		$cifrar=password_hash($contrasena,PASSWORD_DEFAULT);
 		//$codigo,
 		try{
-			Gestion_usuario::Guardar($seleccion,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$estado,$centro,$cargo,$cifrar);
+			Gestion_usuario::Guardar($nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$contrasena$cifrar);
 			echo "<script>alert('Guardar con exito');
 			location.href = '../Views/registro.usuario.php';
 			</script>";

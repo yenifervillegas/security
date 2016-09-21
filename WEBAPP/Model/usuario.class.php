@@ -6,10 +6,10 @@ class Gestion_usuario{
 		$pdo= Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-		$sql="INSERT INTO usuario(rol_cod, usu_nom, usu_ape,usu_tipodocu,usu_docu,usu_email,usu_tel,usu_direc,usu_estado,usu_centro,usu_cargo,usu_pass) values(?,?,?,?,?,?,?,?,?,?,?,?)";
+		$sql="INSERT INTO usuario(rol_cod, usu_nom, usu_ape,usu_tipodocu,usu_docu,usu_email,usu_tel,usu_direc,usu_centro,usu_cargo,usu_pass) values(?,?,?,?,?,?,?,?,?,?,?,?)";
 
 		$query=$pdo->prepare($sql);
-		$query->execute(array($selecion,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$estado,$centro,$cargo,$cifrar));
+		$query->execute(array($selecion,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$cifrar));
 
 		Conexion::Cerrarbd();
 
@@ -20,7 +20,7 @@ class Gestion_usuario{
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
 
-		$sql="UPDATE  usuario set usu_nom=?, usu_ape=?,usu_tipodocu=?,usu_docu=?,usu_email=?,usu_tel=?,usu_direc=?,usu_estado=?,usu_centro=?,usu_cargo=? usu_pass=?";
+		$sql="UPDATE  usuario set usu_nom=?, usu_ape=?,usu_tipodocu=?,usu_docu=?,usu_email=?,usu_tel=?,usu_direc=?,usu_centro=?,usu_cargo=? usu_pass=?";
 		$query=$pdo->prepare($sql);
 		$query->execute(array($nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$cifrars));
 

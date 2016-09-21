@@ -14,12 +14,7 @@
 		<label>Codigo: <?php echo $codigo["usu_cod"]; ?></label>
 	<input type="hidden" name="codigo" value=" <?php echo $codigo["usu_cod"]; ?>"/>
 
-<<<<<<< HEAD
 
-=======
-	<label>Documento</label><!--falta tipo documento-->
-	<input type="text" name="documento" value=" <?php echo $codigo["usu_docu"]; ?>" required/>
->>>>>>> origin/master
 
 	<label>Nombre</label>
 	<input type="text" name="nombre" value=" <?php echo $codigo["usu_nom"]; ?>"required/>

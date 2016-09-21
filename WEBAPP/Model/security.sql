@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-09-2016 a las 22:23:09
--- Versión del servidor: 10.1.16-MariaDB
--- Versión de PHP: 5.6.24
+-- Tiempo de generación: 21-09-2016 a las 04:41:51
+-- Versión del servidor: 10.1.10-MariaDB
+-- Versión de PHP: 5.6.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -31,8 +31,16 @@ USE `security`;
 CREATE TABLE `accesorios` (
   `acce_cod` int(11) NOT NULL,
   `regi_cod` int(11) NOT NULL,
-  `acce_nom` varchar(80) NOT NULL
+  `acce_nom` varchar(80) NOT NULL,
+  `acce_cantidad` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `accesorios`
+--
+
+INSERT INTO `accesorios` (`acce_cod`, `regi_cod`, `acce_nom`, `acce_cantidad`) VALUES
+(1, 1, 'portatil', 1);
 
 -- --------------------------------------------------------
 
@@ -49,6 +57,15 @@ CREATE TABLE `entrada_salida` (
   `entra_horasal` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `entrada_salida`
+--
+
+INSERT INTO `entrada_salida` (`entra_cod`, `regi_cod`, `entra_fechaentra`, `entra_fechasal`, `entra_horaentra`, `entra_horasal`) VALUES
+(1, 1, '2016-09-20', '', '23:54', ''),
+(2, 1, '2016-09-20', '', '23:55', ''),
+(3, 1, '2016-09-20', '', '23:55', '');
+
 -- --------------------------------------------------------
 
 --
@@ -59,7 +76,6 @@ CREATE TABLE `registro_producto` (
   `regi_cod` int(11) NOT NULL,
   `usu_cod` int(11) NOT NULL,
   `produ_cod` int(11) NOT NULL,
-  `acce_cod` int(11) NOT NULL,
   `regi_serial` varchar(80) NOT NULL,
   `regi_color` varchar(80) NOT NULL,
   `regi_fecha` date NOT NULL,
@@ -67,6 +83,13 @@ CREATE TABLE `registro_producto` (
   `regi_autoalerta` varchar(80) NOT NULL,
   `regi_cantidad` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `registro_producto`
+--
+
+INSERT INTO `registro_producto` (`regi_cod`, `usu_cod`, `produ_cod`, `regi_serial`, `regi_color`, `regi_fecha`, `regi_desc`, `regi_autoalerta`, `regi_cantidad`) VALUES
+(1, 1, 3, ' 1', ' 33233', '0000-00-00', ' 2016-09-01', ' dsadsd', 0);
 
 -- --------------------------------------------------------
 
@@ -79,6 +102,13 @@ CREATE TABLE `rol` (
   `rol_nom` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `rol`
+--
+
+INSERT INTO `rol` (`rol_cod`, `rol_nom`) VALUES
+(1, 'admin');
+
 -- --------------------------------------------------------
 
 --
@@ -87,9 +117,16 @@ CREATE TABLE `rol` (
 
 CREATE TABLE `tipo_producto` (
   `produ_cod` int(11) NOT NULL,
-  `produ_nom` int(11) NOT NULL,
+  `produ_nom` varchar(80) NOT NULL,
   `produ_marca` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tipo_producto`
+--
+
+INSERT INTO `tipo_producto` (`produ_cod`, `produ_nom`, `produ_marca`) VALUES
+(1, 'portatil', 'wwww');
 
 -- --------------------------------------------------------
 
@@ -137,7 +174,6 @@ ALTER TABLE `entrada_salida`
 ALTER TABLE `registro_producto`
   ADD PRIMARY KEY (`regi_cod`),
   ADD KEY `usu_cod` (`usu_cod`,`produ_cod`),
-  ADD KEY `acce_cod` (`acce_cod`),
   ADD KEY `produ_cod` (`produ_cod`);
 
 --
@@ -167,49 +203,47 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `accesorios`
 --
 ALTER TABLE `accesorios`
-  MODIFY `acce_cod` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `acce_cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `entrada_salida`
 --
 ALTER TABLE `entrada_salida`
-  MODIFY `entra_cod` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `entra_cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `registro_producto`
 --
 ALTER TABLE `registro_producto`
-  MODIFY `regi_cod` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `regi_cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `rol`
 --
 ALTER TABLE `rol`
-  MODIFY `rol_cod` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `rol_cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `tipo_producto`
 --
 ALTER TABLE `tipo_producto`
-  MODIFY `produ_cod` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `produ_cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `usu_cod` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `usu_cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- Restricciones para tablas volcadas
 --
+
+--
+-- Filtros para la tabla `accesorios`
+--
+ALTER TABLE `accesorios`
+  ADD CONSTRAINT `accesorios_ibfk_1` FOREIGN KEY (`regi_cod`) REFERENCES `registro_producto` (`regi_cod`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `entrada_salida`
 --
 ALTER TABLE `entrada_salida`
   ADD CONSTRAINT `entrada_salida_ibfk_1` FOREIGN KEY (`regi_cod`) REFERENCES `registro_producto` (`regi_cod`) ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `registro_producto`
---
-ALTER TABLE `registro_producto`
-  ADD CONSTRAINT `registro_producto_ibfk_1` FOREIGN KEY (`acce_cod`) REFERENCES `accesorios` (`acce_cod`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `registro_producto_ibfk_2` FOREIGN KEY (`produ_cod`) REFERENCES `tipo_producto` (`produ_cod`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `registro_producto_ibfk_3` FOREIGN KEY (`usu_cod`) REFERENCES `usuario` (`usu_cod`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `usuario`
