@@ -14,16 +14,13 @@ $usuario=Gestion_producto::consultarUsu();
 	<form action="../Controller/controller.registro.producto.php" method="post"/>
 		
 
-<<<<<<< HEAD
+
 
 		<label>Codigo de usuario</label>
 		<input name="codigo_usu" type="text" required/>
 
 		<label>Codigo de producto</label>
 		<input name="codigo_produ" type="text" required/>
-=======
-		<!--<label>Codigo de Registro</label>
-		<input name="codigo" type="text" required/> este es autoincremental-->
 
 		<label>Codigo de usuario</label>
 		<input name="codigo_usu" type="text" required/><!--este si va?,,,, se le cambio el name repetido con el cod prod-->
@@ -33,7 +30,6 @@ $usuario=Gestion_producto::consultarUsu();
 
 		<label >accesorios</label>
 		<input name="registro_acces" type="text" required/><!--probicional-->
->>>>>>> origin/master
 
 		<label >Registra serial</label>
 		<input name="registro_serial" type="text" required/>
