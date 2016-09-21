@@ -10,7 +10,7 @@ switch($accion){
     $pass=$_POST["contrasena"];
 
     try{
-      Gestion_usuario::validar($nick,$pass);
+     $login=Gestion_usuario::validar($nick,$pass);
       header("location:../views/user.php");
       
     }catch(Exception $e){
