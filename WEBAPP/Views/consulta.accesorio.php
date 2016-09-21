@@ -5,9 +5,15 @@
 ?>
 <div class="container">
 
-  <h1>Gestion de tipo de producto</h1>
+          <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+          <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+          <script type="text/javascript"src="http://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+          <script type="text/javascript">$(document).ready(function(){
+            $('#myTable').DataTable();
+        });</script>
+
   <a href="registro.tipoproducto.php">Volver</a>
-    <table id="datatable">
+    <table id="myTable">
       <thead>
         <tr>
           <td>Codigo</td>

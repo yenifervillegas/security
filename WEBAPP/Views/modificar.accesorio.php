@@ -9,6 +9,9 @@
 	<h1>Modificar usuario</h1>
 	<form action="../Controller/accesorio.controller.php" method="POST">
 
+	<label>Codigo: <?php echo $codigo["regi_cod"]; ?></label>
+	<input type="hidden" name="codigo_regi" value=" <?php echo $codigo["regi_cod"]; ?>"/>
+
 	<label>Codigo: <?php echo $codigo["acce_cod"]; ?></label>
 	<input type="hidden" name="codigo" value=" <?php echo $codigo["acce_cod"]; ?>"/>
 
