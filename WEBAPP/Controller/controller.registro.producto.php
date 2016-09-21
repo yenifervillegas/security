@@ -8,25 +8,38 @@ require_once("../Model/registro.producto.class.php");
 $accion=$_REQUEST["action"];
 switch ($accion) {
 	case 'Guardar':
+<<<<<<< HEAD
 
 	$codigo_usu=$_POST["codigo_usu"];
 	$codigo_produ=$_POST["codigo_produ"];
+=======
+	//$codigo=$_POST["codigo"];
+	$codigo_usu=$_POST["codigo_usu"];
+	$codigo_pro=$_POST["codigo_pro"];
+	$codigo_acc=$_POST["registro_acces"];
+>>>>>>> origin/master
 	$registro_serial=$_POST["registro_serial"];
 	$registre_color=$_POST["registre_color"];
 	$registre_fecha=$_POST["registre_fecha"];
 	$registre_decrip=$_POST["registre_decrip"];
 	$registre_autoalerta=$_POST["registre_autoalerta"];
 	$registre_cantidad=$_POST["registre_cantidad"];
-	$fecha=date("o-m-d");
-	$hora=date("H:i");
+	//$fecha=date("o-m-d");se borraron en el try probicional
+	//$hora=date("H:i");
 
 	try{
 
+<<<<<<< HEAD
 		Gestion_producto::Guardar($codigo_usu,$codigo_produ,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad,$fecha,$hora);
 		echo "<script>alert('Guardar con exito');
 			location.href = '../Views/registro.registro_producto.php';
 			</script>";
 
+=======
+		Gestion_producto::Guardar($codigo_usu,$codigo_pro,$codigo_acc,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad);
+		echo "<a href='../Views/dashboard.php?seccion=rr_producto'>Volver</a>";
+		//header("location:../Views/dashboard.php?seccion=rr_producto");
+>>>>>>> origin/master
 	}catch(Exception $e){
 		echo $e;
 	}

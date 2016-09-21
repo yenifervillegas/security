@@ -25,6 +25,7 @@ $producto=Gestion_producto::consultar();
 			<td>Codigo registro </td>
 			<td>Numero de Documento</td>
 			<td>Codigo producto</td>
+			<td>accesorio</td>
 			<td>Registro serial </td>
 			<td>Registro color</td>
 			<td>Registro fecha</td>
@@ -38,17 +39,24 @@ $producto=Gestion_producto::consultar();
 	</thead>
 	<tbody>
 		<?php
-			foreach ($producto as $produc) {
+			foreach ($producto as $produc) {//estan mal los nombres codigo, autoalterna ya corregidos
 			echo "<tr>
 					<td>".$produc["regi_cod"]."</td>
 					<td>".$produc["usu_cod"]."</td>
 					<td>".$produc["produ_cod"]."</td>
+<<<<<<< HEAD
+=======
+					<td>".$produc["acce_cod"]."</td>
+>>>>>>> origin/master
 					<td>".$produc["regi_serial"]."</td>
 					<td>".$produc["regi_color"]."</td>
 					<td>".$produc["regi_fecha"]."</td>
 					<td>".$produc["regi_desc"]."</td>
 					<td>".$produc["regi_autoalerta"]."</td>
+<<<<<<< HEAD
 					<td>".$produc["regi_cantidad"]."</td>
+=======
+>>>>>>> origin/master
 					<td>
 						<a href='modificar.registro_producto.php?producto=".$produc["regi_cod"]."'>modificar</a>
 						<a href='../Controller/controller.registro.producto.php?codigo_produc=".$produc["regi_cod"]."& action=eliminar' >Eliminar</a>

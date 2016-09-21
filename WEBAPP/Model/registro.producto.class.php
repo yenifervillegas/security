@@ -3,6 +3,7 @@
 
 class Gestion_producto{
 
+<<<<<<< HEAD
 	function Guardar($codigo_usu,$codigo_produ,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad,$fecha,$hora){
 	$pdo=conexion::Abrirbd();
 	$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
@@ -11,10 +12,20 @@ class Gestion_producto{
 
 	$query=$pdo->prepare($sql);
 	$query->execute(array($codigo_usu,$codigo_produ,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad));
+=======
+	function guardar($codigo_usu,$codigo_pro,$codigo_acc,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad){
+	$pdo=conexion::Abrirbd();
+	$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+	$sql="INSERT INTO registro_producto (usu_cod,produ_cod,acce_cod,regi_serial,regi_color,regi_fecha,regi_desc,regi_autoalerta,regi_cantidad) values(?,?,?,?,?,?,?,?,?)";
+//en la consulta se agrego accesorios, tenia mal copiado el autoalterna bd tipo producto nombre esta int?
+	$query=$pdo->prepare($sql);
+	$query->execute(array($codigo_usu,$codigo_pro,$codigo_acc,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad));
+>>>>>>> origin/master
 
 //consultar entrada y salir
 
-	$sql1="SELECT max(regi_cod) FROM registro_producto";
+	/*$sql1="SELECT max(regi_cod) FROM registro_producto";
 	$query=$pdo->prepare($sql1);
 	$query->execute();
 
@@ -24,7 +35,7 @@ class Gestion_producto{
 	$sql2="INSERT INTO entrada_salida (regi_cod,entra_fechaentra,entra_fechasal,entra_horaentra,entra_horasal) values(?,?,?,?,?)";
 
 	$query1=$pdo->prepare($sql2);
-	$query1->execute(array($codigo,$fecha,"",$hora,""));
+	$query1->execute(array($codigo,$fecha,"",$hora,""));*/
 
 	
 	conexion::Cerrarbd();
