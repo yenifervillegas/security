@@ -9,7 +9,6 @@ $accion=$_REQUEST["action"];
 switch ($accion) {
 	case 'Guardar':
 
-
 	$codigo_usu=$_POST["codigo_usu"];
 	$codigo_produ=$_POST["codigo_produ"];
 	$registro_serial=$_POST["registro_serial"];
@@ -18,7 +17,7 @@ switch ($accion) {
 	$registre_decrip=$_POST["registre_decrip"];
 	$registre_autoalerta=$_POST["registre_autoalerta"];
 	$registre_cantidad=$_POST["registre_cantidad"];
-	$fecha=date("o-m-d");
+	$fecha=date("y-m-d");
 	$hora=date("H:i");
 
 	try{
@@ -28,11 +27,6 @@ switch ($accion) {
 		echo "<script>alert('Guardar con exito');
 			location.href = '../Views/registro.registro_producto.php';
 			</script>";
-
-
-		Gestion_producto::Guardar($codigo_usu,$codigo_pro,$codigo_acc,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad);
-		echo "<a href='../Views/dashboard.php?seccion=rr_producto'>Volver</a>";
-		//header("location:../Views/dashboard.php?seccion=rr_producto");
 
 	}catch(Exception $e){
 		echo $e;

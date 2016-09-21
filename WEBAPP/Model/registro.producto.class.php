@@ -67,6 +67,23 @@ class Gestion_producto{
 
 	}
 
+	function consultarprodu(){
+		$pdo = Conexion::Abrirbd();
+		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		
+		$sqlP= "select * from tipo_producto";
+
+		$query= $pdo->prepare($sqlP);
+		$query->execute();
+
+		$result=$query->fetchALL(PDO::FETCH_BOTH);
+	
+		Conexion::Cerrarbd();
+			return $result;
+
+
+	}
+
 	function consultarUsu(){
 		$pdo=conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);

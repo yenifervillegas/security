@@ -4,7 +4,7 @@ require_once("../Model/conexion.php");
 include("../Model/registro.producto.class.php");
 
 $usuario=Gestion_producto::consultarUsu();
-//$producto=Gestion_producto::consultarprodu();
+$producto=Gestion_producto::consultarprodu();
 //$propietario=Gestion_producto::consultarpropie();
 
 ?>
@@ -15,21 +15,22 @@ $usuario=Gestion_producto::consultarUsu();
 		
 
 
+		
+		<!--<input name="codigo_produ" type="text" required/>-->
 
 		<label>Codigo de usuario</label>
-		<input name="codigo_usu" type="text" required/>
+		<input name="codigo_usu" type="number" required/><!--este si va?,,,, se le cambio el name repetido con el cod prod-->
 
 		<label>Codigo de producto</label>
-		<input name="codigo_produ" type="text" required/>
-
-		<label>Codigo de usuario</label>
-		<input name="codigo_usu" type="text" required/><!--este si va?,,,, se le cambio el name repetido con el cod prod-->
-
-		<label>Codigo de producto</label>
-		<input name="codigo_pro" type="text" required/><!--este desplegable,,,,se le cambio el name repetido con el descript-->
-
-		<label >accesorios</label>
-		<input name="registro_acces" type="text" required/><!--probicional-->
+		<select name="codigo_produ">
+			<option>Seleccionar</option>
+			<?php
+				foreach ($producto as $pd) {
+				 	echo "<option value=".$pd["produ_cod"].">".$pd["produ_nom"]."</option>";
+				 } 
+				
+			?>
+		</select>
 
 		<label >Registra serial</label>
 		<input name="registro_serial" type="text" required/>
@@ -51,7 +52,7 @@ $usuario=Gestion_producto::consultarUsu();
 		<input  name="registre_autoalerta" type="text"/>
 
 		<label >Registre Cantidad del Producto</label>
-		<input  name="registre_cantidad" type="text"/>
+		<input  name="registre_cantidad" type="number"/>
 	</div>
 
 

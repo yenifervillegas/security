@@ -25,7 +25,6 @@ $producto=Gestion_producto::consultar();
 			<td>Codigo registro </td>
 			<td>Numero de Documento</td>
 			<td>Codigo producto</td>
-			<td>accesorio</td>
 			<td>Registro serial </td>
 			<td>Registro color</td>
 			<td>Registro fecha</td>
@@ -44,8 +43,6 @@ $producto=Gestion_producto::consultar();
 					<td>".$produc["regi_cod"]."</td>
 					<td>".$produc["usu_cod"]."</td>
 					<td>".$produc["produ_cod"]."</td>
-
-					<td>".$produc["acce_cod"]."</td>
 
 					<td>".$produc["regi_serial"]."</td>
 					<td>".$produc["regi_color"]."</td>
