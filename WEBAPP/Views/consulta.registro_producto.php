@@ -1,7 +1,7 @@
 <?php
 
-require_once("../model/conexion.php");
-require_once("../model/registro.producto.class.php");
+require_once("../Model/conexion.php");
+require_once("../Model/registro.producto.class.php");
 
 $producto=Gestion_producto::consultar();
 
@@ -39,24 +39,22 @@ $producto=Gestion_producto::consultar();
 	</thead>
 	<tbody>
 		<?php
-			foreach ($producto as $produc) {//estan mal los nombres codigo, autoalterna ya corregidos
+			foreach ($producto as $produc) {
 			echo "<tr>
 					<td>".$produc["regi_cod"]."</td>
 					<td>".$produc["usu_cod"]."</td>
 					<td>".$produc["produ_cod"]."</td>
-<<<<<<< HEAD
-=======
+
 					<td>".$produc["acce_cod"]."</td>
->>>>>>> origin/master
+
 					<td>".$produc["regi_serial"]."</td>
 					<td>".$produc["regi_color"]."</td>
 					<td>".$produc["regi_fecha"]."</td>
 					<td>".$produc["regi_desc"]."</td>
 					<td>".$produc["regi_autoalerta"]."</td>
-<<<<<<< HEAD
+
 					<td>".$produc["regi_cantidad"]."</td>
-=======
->>>>>>> origin/master
+
 					<td>
 						<a href='modificar.registro_producto.php?producto=".$produc["regi_cod"]."'>modificar</a>
 						<a href='../Controller/controller.registro.producto.php?codigo_produc=".$produc["regi_cod"]."& action=eliminar' >Eliminar</a>

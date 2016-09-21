@@ -11,17 +11,7 @@ class Gestion_producto{
 	$sql="INSERT INTO registro_producto (usu_cod,produ_cod,regi_serial,regi_color,regi_fecha,regi_desc,regi_autoalerta,regi_cantidad) values(?,?,?,?,?,?,?,?)";
 
 	$query=$pdo->prepare($sql);
-	$query->execute(array($codigo_usu,$codigo_produ,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad));
-
-	function guardar($codigo_usu,$codigo_pro,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad){
-	$pdo=conexion::Abrirbd();
-	$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-
-	$sql="INSERT INTO registro_producto (usu_cod,produ_cod,regi_serial,regi_color,regi_fecha,regi_desc,regi_autoalerta,regi_cantidad) values(?,?,?,?,?,?,?,?,?)";
-//en la consulta se agrego accesorios, tenia mal copiado el autoalterna bd tipo producto nombre esta int?
-	$query=$pdo->prepare($sql);
-	$query->execute(array($codigo_usu,$codigo_pro,$codigo_acc,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad));
-
+	$query->execute(array($codigo_usu,$codigo_produ,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad));	
 
 //consultar entrada y salir
 
@@ -41,36 +31,8 @@ class Gestion_producto{
 	conexion::Cerrarbd();
 
 }
-	function consultarUsu(){
-		$pdo=conexion::Abrirbd();
-		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+	
 
-		$sql="SELECT * FROM usuario";
-		$query=$pdo->prepare($sql);
-		$query->execute();
-
-		$result=$query->fetchALL(PDO::FETCH_BOTH);
-
-		
-		conexion::Cerrarbd();
-		return $result;
-	}
-
-
-function consultar(){
-		$pdo=conexion::AbrirBD();
-		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-
-		$sql="SELECT * FROM registro_producto";
-		$query=$pdo->prepare($sql);
-		$query->execute();
-
-		$result=$query->fetchALL(PDO::FETCH_BOTH);
-
-		Conexion::Cerrarbd();
-
-		return $result;
-	}
 
 	function consultaP($codigo){
 		$pdo = Conexion::Abrirbd();
@@ -85,6 +47,41 @@ function consultar(){
 
 		Conexion::Cerrarbd();
 	}
+
+
+
+	function consultar(){
+		$pdo = Conexion::Abrirbd();
+		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		
+		$sqlP= "select * from registro_producto";
+
+		$query= $pdo->prepare($sqlP);
+		$query->execute();
+
+		$result=$query->fetchALL(PDO::FETCH_BOTH);
+	
+		Conexion::Cerrarbd();
+			return $result;
+
+
+	}
+
+	function consultarUsu(){
+		$pdo=conexion::Abrirbd();
+		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+		$sql="SELECT * FROM usuario";
+		$query=$pdo->prepare($sql);
+		$query->execute();
+
+		$result=$query->fetchALL(PDO::FETCH_BOTH);
+		
+		conexion::Cerrarbd();
+		return $result;
+	}
+
+
 
 		function modificar($codigo_regi,$codigo_usu,$codigo_produ,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad){
 
@@ -124,7 +121,7 @@ function consultar(){
 		Conexion::Cerrarbd();
 	}
 
-	function entrada_salida($codigo,$fecha,$hora){
+		function entrada_salida($codigo,$fecha,$hora){
 			$pdo = Conexion::Abrirbd();
 			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -135,7 +132,6 @@ function consultar(){
 			Conexion::Cerrarbd();
 		}
 
-}
 
 
 

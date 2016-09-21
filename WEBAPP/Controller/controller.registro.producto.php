@@ -18,7 +18,7 @@ switch ($accion) {
 	$registre_decrip=$_POST["registre_decrip"];
 	$registre_autoalerta=$_POST["registre_autoalerta"];
 	$registre_cantidad=$_POST["registre_cantidad"];
-	$fecha=date("o-m-d");se borraron en el try probicional
+	$fecha=date("o-m-d");
 	$hora=date("H:i");
 
 	try{

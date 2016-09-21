@@ -1,7 +1,7 @@
 <!-- Andrea T. -->
 <?php
-require_once("../model/conexion.php");
-require_once("../model/registro.producto.class.php");
+require_once("../Model/conexion.php");
+include("../Model/registro.producto.class.php");
 
 $usuario=Gestion_producto::consultarUsu();
 //$producto=Gestion_producto::consultarprodu();
