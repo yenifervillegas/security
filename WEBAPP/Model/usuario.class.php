@@ -2,7 +2,7 @@
 <?php
 //se guarda en la base de datos
 class Gestion_usuario{
-	function Guardar($selecion,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$estado,$centro,$cargo,$cifrar){
+	function Guardar($selecion,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$cifrar){
 		$pdo= Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
@@ -15,14 +15,14 @@ class Gestion_usuario{
 
 	}//se modifica en la base de datos
 
-	function Modificar($selecion,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$estado,$centro,$cargo,$cifrar){
+	function Modificar($nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$cifrars){
 		$pdo= Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
 
 		$sql="UPDATE  usuario set usu_nom=?, usu_ape=?,usu_tipodocu=?,usu_docu=?,usu_email=?,usu_tel=?,usu_direc=?,usu_estado=?,usu_centro=?,usu_cargo=? usu_pass=?";
 		$query=$pdo->prepare($sql);
-		$query->execute(array($selecion,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$estado,$centro,$cargo,$cifrar));
+		$query->execute(array($nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$cifrars));
 
 		Conexion::Cerrarbd();
 

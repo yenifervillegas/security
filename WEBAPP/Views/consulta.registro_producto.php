@@ -30,6 +30,7 @@ $producto=Gestion_producto::consultar();
 			<td>Registro fecha</td>
 			<td>Registro descripcion</td>
 			<td>Registro autoalterna </td>
+			<td>Registro cantidad </td>
 			<td>Accion</td>
 
 
@@ -42,12 +43,12 @@ $producto=Gestion_producto::consultar();
 					<td>".$produc["regi_cod"]."</td>
 					<td>".$produc["usu_cod"]."</td>
 					<td>".$produc["produ_cod"]."</td>
-					<td>".$produc["prop_cod"]."</td>
 					<td>".$produc["regi_serial"]."</td>
 					<td>".$produc["regi_color"]."</td>
 					<td>".$produc["regi_fecha"]."</td>
 					<td>".$produc["regi_desc"]."</td>
-					<td>".$produc["regi_autoalterna"]."</td>
+					<td>".$produc["regi_autoalerta"]."</td>
+					<td>".$produc["regi_cantidad"]."</td>
 					<td>
 						<a href='modificar.registro_producto.php?producto=".$produc["regi_cod"]."'>modificar</a>
 						<a href='../Controller/controller.registro.producto.php?codigo_produc=".$produc["regi_cod"]."& action=eliminar' >Eliminar</a>

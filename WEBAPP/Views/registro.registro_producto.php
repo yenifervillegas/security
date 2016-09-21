@@ -14,14 +14,12 @@ $usuario=Gestion_producto::consultarUsu();
 	<form action="../Controller/controller.registro.producto.php" method="post"/>
 		
 
-		<label>Codigo de Registro</label>
-		<input name="codigo" type="text" required/>
 
 		<label>Codigo de usuario</label>
-		<input name="codigo_pro" type="text" required/>
+		<input name="codigo_usu" type="text" required/>
 
 		<label>Codigo de producto</label>
-		<input name="registre_descrip" type="text" required/>
+		<input name="codigo_produ" type="text" required/>
 
 		<label >Registra serial</label>
 		<input name="registro_serial" type="text" required/>

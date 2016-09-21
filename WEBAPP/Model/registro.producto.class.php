@@ -3,14 +3,14 @@
 
 class Gestion_producto{
 
-	function guardar($codigo,$codigo_pro,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad,$fecha,$hora){
+	function Guardar($codigo_usu,$codigo_produ,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad,$fecha,$hora){
 	$pdo=conexion::Abrirbd();
 	$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-	$sql="INSERT INTO registro_producto (usu_cod,produ_cod,regi_serial,regi_color,regi_fecha,regi_desc,regi_autoalterna,regi_cantidad) values(?,?,?,?,?,?,?,?,?)";
+	$sql="INSERT INTO registro_producto (usu_cod,produ_cod,regi_serial,regi_color,regi_fecha,regi_desc,regi_autoalerta,regi_cantidad) values(?,?,?,?,?,?,?,?)";
 
 	$query=$pdo->prepare($sql);
-	$query->execute(array($codigo,$codigo_pro,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad));
+	$query->execute(array($codigo_usu,$codigo_produ,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad));
 
 //consultar entrada y salir
 
@@ -99,13 +99,15 @@ function consultar(){
 		Conexion::Cerrarbd();
 	}
 
-		function modificar($registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad){
+		function modificar($codigo_regi,$codigo_usu,$codigo_produ,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad){
+
 			$pdo = Conexion::Abrirbd();
 			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			
+			$sql = "UPDATE registro_producto SET usu_cod=?,produ_cod=?,regi_serial=?,regi_color=?,regi_fecha=?,regi_desc=?,regi_autoalerta=?,regi_cantidad=? WHERE regi_cod =?";
 
-			$sql = "UPDATE registro_producto SET regi_serial=?,regi_color=?,regi_fecha=?,regi_desc=?,regi_autoalterna=? WHERE regi_cod = ?";
 			$query= $pdo->prepare($sql);
-			$query->execute(array($codigo_usu,$codigo_pro,$codigo_propiedad,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad,$codigo_registro));
+			$query->execute(array($codigo_usu,$codigo_produ,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad,$codigo_regi));
 
 			Conexion::Cerrarbd();
 		}

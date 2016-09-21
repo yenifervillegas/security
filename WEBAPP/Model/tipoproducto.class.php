@@ -2,14 +2,14 @@
 <?php
 //tipoproducto.class.php
 class Gestion_Tipoproducto{
-	function Guardar($tipopro_cod, $tipopro_nombre, $tipopro_desc)
+	function Guardar($tipopro_nombre,$tipopro_desc)
 	{
 		$pdo=Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		$sql="INSERT INTO tipo_producto (tipopro_cod, tipopro_nombre, tipopro_desc) VALUES(?,?,?)";
+		$sql="INSERT INTO tipo_producto (produ_nom, produ_marca) VALUES(?,?)";
 		$query = $pdo->prepare($sql);
-		$query->execute(array($tipopro_cod, $tipopro_nombre, $tipopro_desc));
+		$query->execute(array($tipopro_nombre, $tipopro_desc));
 
 		Conexion::Cerrarbd();
 	}
@@ -18,11 +18,11 @@ class Gestion_Tipoproducto{
 		$pdo = Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		$sql = "SELECT * FROM tipo_producto ORDER BY tipopro_nombre";
+		$sql = "SELECT * FROM tipo_producto ";
 		$query= $pdo->prepare($sql);
 		$query->execute();
 
-		$result = $query->fetchAll(PDO::FETCH_BOTH);
+		$result = $query->fetchALL(PDO::FETCH_BOTH);
 		Conexion::Cerrarbd();
 		return $result;
 	}
@@ -45,7 +45,7 @@ class Gestion_Tipoproducto{
 		$pdo = Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		$sql = "UPDATE tipo_producto SET tipopro_nombre = ?, tipopro_desc = ? WHERE tipopro_cod = ?";
+		$sql = "UPDATE tipo_producto SET produ_nom = ?, produ_marca = ? WHERE produ_cod = ?";
 		$query= $pdo->prepare($sql);
 		$query->execute(array($tipopro_nombre, $tipopro_desc, $tipopro_cod));
 		Conexion::Cerrarbd();
@@ -56,7 +56,7 @@ class Gestion_Tipoproducto{
 		$pdo = Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		$sql = "DELETE  FROM tipo_producto Where tipopro_cod = ?";
+		$sql = "DELETE  FROM tipo_producto Where produ_cod = ?";
 		$query= $pdo->prepare($sql);
 		$query->execute(array($tipopro_cod));
 
@@ -67,7 +67,7 @@ class Gestion_Tipoproducto{
 		$pdo = Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		$sql = "SELECT * FROM tipo_producto WHERE tipopro_cod = ?";
+		$sql = "SELECT * FROM tipo_producto WHERE produ_cod = ?";
 		$query= $pdo->prepare($sql);
 		$query->execute(array($codigo));
 

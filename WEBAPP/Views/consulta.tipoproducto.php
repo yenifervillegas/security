@@ -3,17 +3,22 @@
   require_once '../Model/tipoproducto.class.php';
   $tipo_produ = Gestion_Tipoproducto::ConsultarTodo();
 ?>
+<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript"src="http://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript">$(document).ready(function(){
+    $('#myTable').DataTable();
+});</script>
+
 <div class="container">
 
-  <h1>Gestion de tipo de producto</h1>
-  <a href="registro.tipoproducto.php">Volver</a>
-    <table id="datatable">
+  
+    <table id="myTable">
       <thead>
         <tr>
-          <td>Item</td>
           <td>Codigo</td>
           <td>Nombre</td>
-          <td>Descripcion</td>
+          <td>Marca</td>
           <td>Acciones</td>
         </tr>
       </thead>
@@ -22,13 +27,14 @@
           $item = 1;
           foreach ($tipo_produ as $row) {
             echo"<tr>
-                    <td>".$item."</td>
-                    <td>".$row["tipopro_cod"]."</td>
-                    <td>".$row["tipopro_nombre"]."</td>
-                    <td>".$row["tipopro_desc"]."</td>
+                    
+                    <td>".$row["produ_cod"]."</td>
+                    <td>".$row["produ_nom"]."</td>
+                    <td>".$row["produ_marca"]."</td>
                     <td>
-                    <a href='modifico_tipoproducto.php?tipopro_cod=".$row["tipopro_cod"]."'>Modificar</a> -
-                    <a href='../Controller/tipoproducto.controller.php?tipopro_cod=".$row["tipopro_cod"]."&accion=delete' >Eliminar</a></td>
+                    <a href='modifico_tipoproducto.php?produ_cod=".$row["produ_cod"]."'>Modificar</a> -
+                    <a href='../Controller/tipoproducto.controller.php?produ_cod=".$row["produ_cod"]."&action=delete'>Eliminar</a></td>
+                    
                   </tr>";
             $item++;
           }

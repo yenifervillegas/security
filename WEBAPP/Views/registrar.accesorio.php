@@ -6,21 +6,23 @@
   </head>
   <body>
 
-    <?php
-      include 'conexion.php';
-      include 'consultar.accesorio.php';
-     ?>
+  
 
      <form class="" action="../Controller/accesorio.controller.php" method="post">
 
        <label for="">Nombre del Accesorio</label>
-       <input type="button" name="nombre" value="">
+       <input type="text" name="nombre" >
 
        <label for="">Cantidad</label>
-       <input type="text" name="cantidad" value="">
+       <input type="text" name="cantidad" />
 
-       <button type="submit" name="button">Guardar</button>
+
+       <button name="action"  value="Guardar">Guardar</button>
      </form>
   
+    <?php
+      include '../Model/conexion.php';
+      include 'consulta.accesorio.php';
+     ?>
   </body>
 </html>

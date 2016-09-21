@@ -15,7 +15,6 @@ switch ($action) {
 		$email=$_POST["email"];
 		$telefono=$_POST["telefono"];
 		$direccion=$_POST["direccion"];
-		$estado=$_POST["estado"];
 		$centro=$_POST["centro"];
 		$cargo=$_POST["cargo"];
 		$contrasena=$_POST["contrasena"];
@@ -23,7 +22,9 @@ switch ($action) {
 		//$codigo,
 		try{
 			Gestion_usuario::Guardar($seleccion,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$estado,$centro,$cargo,$cifrar);
-			echo "Guardo con exito";
+			echo "<script>alert('Guardar con exito');
+			location.href = '../Views/registro.usuario.php';
+			</script>";
 
 		}catch(Exception $e){
 			echo $e;
@@ -40,19 +41,18 @@ switch ($action) {
 		$email=$_POST["email"];
 		$telefono=$_POST["telefono"];
 		$direccion=$_POST["direccion"];
-		$estado=$_POST["estado"];
 		$centro=$_POST["centro"];
 		$cargo=$_POST["cargo"];
 		$contrasena=$_POST["contrasena"];
-		$cifrars=password_hash($contrasenas,PASSWORD_DEFAULT);
+		$cifrars=password_hash($contrasena,PASSWORD_DEFAULT);
 
-try{
-			Gestion_usuario::Modificar($nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$estado,$centro,$carga,$cifrars);
+	try{
+		Gestion_usuario::Modificar($nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$cifrars);
 		header("location:../views/consulta.usuario.php");
 
-		}catch(Exception $e){
-			echo $e;
-		}
+	}catch(Exception $e){
+		echo $e;
+	}
 
 		break;
 

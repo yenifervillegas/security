@@ -41,8 +41,6 @@
 		  					<label for="email">Direccion</label>
 		  					<input id="email" type="text" name="direccion" class="validate" required>
 							
-		  					<label for="email">Estado</label>
-							<input id="email" type="text" name="estado" class="validate" required>
 							
 							<label for="email">Centro</label>
 							<input id="email" type="text" name="centro" class="validate" required>
