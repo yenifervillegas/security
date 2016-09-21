@@ -43,6 +43,12 @@ function cargar(){
 		switch(Vvar){
 			case "regi_usu":
 				$("#fondopan").fadeOut();
+				$("#registrousu").fadeOut();
+				$("#TipodeProducto").fadeOut();
+				$("#registroProducto").fadeOut();
+				$("#accesorios").fadeOut();
+				$("#entradaysalida").fadeOut();
+				
 				$("#registrousu").fadeIn();
 				
 			break;

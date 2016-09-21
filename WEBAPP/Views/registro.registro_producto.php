@@ -10,7 +10,7 @@ $producto=Gestion_producto::consultarprodu();
 ?>
 
 <section>
-
+<h1>Registro de Productos</h1>
 	<form action="../Controller/controller.registro.producto.php" method="post"/>
 		
 
