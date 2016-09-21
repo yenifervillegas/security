@@ -20,7 +20,7 @@ switch ($action) {
 		$cifrar=password_hash($contrasena,PASSWORD_DEFAULT);
 		//$codigo,
 		try{
-			Gestion_usuario::Guardar($nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$contrasena$cifrar);
+			Gestion_usuario::Guardar($nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$contrasena,$cifrar);
 			echo "<script>alert('Guardar con exito');
 			location.href = '../Views/registro.usuario.php';
 			</script>";
@@ -43,10 +43,10 @@ switch ($action) {
 		$centro=$_POST["centro"];
 		$cargo=$_POST["cargo"];
 		$contrasena=$_POST["contrasena"];
-		$cifrars=password_hash($contrasena,PASSWORD_DEFAULT);
+		$cifrar=password_hash($contrasena,PASSWORD_DEFAULT);
 
 	try{
-		Gestion_usuario::Modificar($nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$cifrars);
+		Gestion_usuario::Modificar($nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$cifrar);
 		header("location:../views/consulta.usuario.php");
 
 	}catch(Exception $e){
