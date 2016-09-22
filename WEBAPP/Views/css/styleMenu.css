@@ -179,7 +179,7 @@ margin-bottom: 0;
 }
 #registroProducto{
 	width: 40%;
-	height: 1000px;
+	height: 1120px;
 	z-index: 100;
 	position: relative;
 	margin-left: 30%;
@@ -194,7 +194,7 @@ margin-bottom: 0;
 	display: none;
 }
 #entradaysalida{
-	width: 40%;
+	width: 60%;
 	height: 1000px;
 	z-index: 100;
 	position: relative;

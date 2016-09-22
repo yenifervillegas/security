@@ -24,7 +24,7 @@ switch ($action) {
 		try{
 			Gestion_usuario::Guardar($seleccion,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$estado,$cargo,$cifrar);
 			echo "<script>alert('Guardar con exito');
-			location.href = '../Views/registro.usuario.php';
+			location.href = '../views/user.php#';
 			</script>";
 
 		}catch(Exception $e){

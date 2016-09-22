@@ -3,16 +3,19 @@
   require_once '../Model/tipoproducto.class.php';
   $tipo_produ = Gestion_Tipoproducto::ConsultarTodo();
 ?>
-<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
-   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<head>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript"src="http://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-  <script type="text/javascript">$(document).ready(function(){
-    $('#myTable').DataTable();
+  <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+  <script type="text/javascript">
+  $(document).ready(function(){
+       $('#myTable').DataTable();
+  
 });</script>
 
 <div class="container">
 
-  
+  </head>
     <table id="myTable">
       <thead>
         <tr>

@@ -53,11 +53,12 @@ $producto=Gestion_producto::consultarprodu();
 
 		<label >Registre Cantidad del Producto</label>
 		<input  name="registre_cantidad" type="number"/>
-	</div>
-
+	
+</br>
+</br>
 
 		<button name="action" class="btn" value="Guardar">Guardar</button>
-		
+	</div>	
 </form>
 </section>
 

@@ -15,7 +15,7 @@ switch ($accion) {
 		try{
 			Gestion_usuario::Guardar($codigo_regi,$nombre,$cantidad);
 			echo "<script>alert('Guardar con exito');
-			location.href = '../Views/registrar.accesorio.php';
+			location.href = '../views/user.php#';
 			</script>";
 
 		}catch(Exception $e){

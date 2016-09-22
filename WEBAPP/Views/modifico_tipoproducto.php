@@ -17,9 +17,9 @@
   		
       <label>Marca</label>
   		  <input type="text" name="txt_desctipopro" value="<?php echo $tipo["produ_marca"]; ?>">
+        
   		<button name="action" value="update">Modificar</button>
       
 		    <?php echo @$_REQUEST["$mensaje"];?>
   </form>
-  <a href="consulta.tipoproducto.php">Volver</a>
-<a href="registro.tipoproducto.php">Crear tipo de producto</a>
+ 

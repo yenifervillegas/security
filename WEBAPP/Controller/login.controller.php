@@ -17,12 +17,14 @@ switch($accion){
       echo "no pasa";
     }
   break;
-}
 
-case 'session':
-  session_destroy()
+  case 'session':
+  session_destroy();
   echo"<script>location.href='../Views/index.html';</script>";
   break;
+}
+
+
       
         
 ?>

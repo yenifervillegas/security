@@ -25,7 +25,7 @@ switch ($accion) {
 
 		Gestion_producto::Guardar($codigo_usu,$codigo_produ,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad,$fecha,$hora);
 		echo "<script>alert('Guardar con exito');
-			location.href = '../Views/registro.registro_producto.php';
+			location.href = '../views/user.php#';
 			</script>";
 
 	}catch(Exception $e){
