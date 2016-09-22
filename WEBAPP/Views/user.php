@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Menu Lateral Jampudia.com</title>
+    <title>Security</title>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="js/login.js"></script>
     <link rel="stylesheet" type="text/css" href="css/styleMenu.css">
