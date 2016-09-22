@@ -15,6 +15,10 @@ $(document).ready(function() {
  	$("#fondo").fadeOut();
    	
 }
+function sesion(){
+	location.href="../Controller/login.controller.php?action=session";
+
+}
 
 
 function cargar(){

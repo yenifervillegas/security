@@ -12,7 +12,7 @@
 <body>
   <div id="mainConte"><!--contiene todo el pagina-->
     <div id="barra1">
-      <div id="off"></div>
+      <div onclik="sesion('cerrasesion')"id="off"></div>
     </div>
     <div id="e_left"><!--contiene todo el menu-->
       <div class="container">

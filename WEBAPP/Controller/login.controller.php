@@ -1,7 +1,7 @@
 <?php
   require_once("../Model/conexion.php");
   require_once("../Model/login.class.php");
-  
+  session_start();
 $accion=$_POST["action"];
 
 switch($accion){
@@ -19,6 +19,10 @@ switch($accion){
   break;
 }
 
+case 'session':
+  session_destroy()
+  echo"<script>location.href='../Views/index.html';</script>";
+  break;
       
         
 ?>
