@@ -15,7 +15,7 @@ switch ($accion) {
 		try{
 			Gestion_usuario::Guardar($codigo_regi,$nombre,$cantidad);
 			echo "<script>alert('Guardar con exito');
-			location.href = '../views/user.php#';
+			location.href = '../views/user.php#user.php?seccion=ace';
 			</script>";
 
 		}catch(Exception $e){

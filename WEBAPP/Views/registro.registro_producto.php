@@ -8,6 +8,13 @@ $producto=Gestion_producto::consultarprodu();
 //$propietario=Gestion_producto::consultarpropie();
 
 ?>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
 
 <section>
 <h1>Registro de Productos</h1>
@@ -57,8 +64,7 @@ $producto=Gestion_producto::consultarprodu();
 </br>
 </br>
 
-		<button name="action" class="btn" value="Guardar">Guardar</button>
-	</div>	
+		<button name="action"  value="Guardar">Guardar</button>
 </form>
 </section>
 
@@ -67,3 +73,5 @@ $producto=Gestion_producto::consultarprodu();
   </section>
 
 
+</body>
+</html>

@@ -15,7 +15,7 @@ case 'create':
 	try {
 		Gestion_Tipoproducto::Guardar($tipopro_nombre, $tipopro_desc);
 		echo "<script>alert('Guardar con exito');
-		location.href =  '../views/user.php#';
+		location.href =  '../views/user.php#user.php?seccion=tipo';
 		</script>";
 	}
 	catch (Exception $e) {

@@ -1,22 +1,21 @@
 <?php
-class Gestion_usuario
-{
-  function validar($nick,$pass){
-    
-    $pdo = Conexion::Abrirbd();
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
-    $sqlU= "select * from usuario where usu_docu=? and usu_pass=?";
 
-    $query= $pdo->prepare($sqlU);
-    $query->execute(array($nick,$pass));
+  class Login{
+    public static function validar($name){
+      try{
 
-    $result=$query->fetch(PDO::FETCH_BOTH);
+        $pdo=Conexion::Abrirbd();
+        $consul = "SELECT * FROM usuario WHERE usu_docu=? ";
+        $mostrar = $pdo->prepare($consul);
+        $mostrar->execute(array($name));
+        $dato=$mostrar->fetch(PDO::FETCH_BOTH);
+        return $dato;
 
-    return $result;
-    
-    //ConexionBD::Cerrarbd();
+        Conexion::Cerrarbd();
+      }
+      catch (Exception $e) {
+          die( "Error: " . $e->getMessage() . " en la linea: " . $e->getLine() . " , su codigo es: " . $e->getCode());
+      }
+    }
   }
-  
-}
 ?>

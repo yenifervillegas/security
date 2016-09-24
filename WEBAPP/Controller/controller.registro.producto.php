@@ -8,7 +8,7 @@ require_once("../Model/registro.producto.class.php");
 $accion=$_REQUEST["action"];
 switch ($accion) {
 	case 'Guardar':
-
+echo"dddd";
 	$codigo_usu=$_POST["codigo_usu"];
 	$codigo_produ=$_POST["codigo_produ"];
 	$registro_serial=$_POST["registro_serial"];
@@ -25,7 +25,7 @@ switch ($accion) {
 
 		Gestion_producto::Guardar($codigo_usu,$codigo_produ,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad,$fecha,$hora);
 		echo "<script>alert('Guardar con exito');
-			location.href = '../views/user.php#';
+			location.href = '../views/user.php#user.php?seccion=pro';
 			</script>";
 
 	}catch(Exception $e){
@@ -83,7 +83,7 @@ switch ($accion) {
 		$hora=date("H:i");
 		try{
 			Gestion_producto::entrada_salida($codigo,$fecha,$hora);
-			header("location:../views/consulta.entrada_salida.php");
+			header("location:../views/user.php#user.php?seccion=consul");
 
 		}catch(Exception $e){
 			echo $e;
