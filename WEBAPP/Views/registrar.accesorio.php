@@ -18,7 +18,7 @@
 
        <label for="">Cantidad</label>
        <input type="text" name="cantidad" />
-
+</br>
 
        <button name="action"  value="Guardar">Guardar</button>
      </form>
