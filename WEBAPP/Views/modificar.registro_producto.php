@@ -23,7 +23,7 @@
       <input type="text" name="regi_serial" value=" <?php echo $codigoP["regi_serial"]; ?>"/>
 
       <label>registro color</label>
-      <input type="text" name="regi_color" value=" <?php echo $codigoP["regi_color"]; ?>"/>
+      <input type="color" name="regi_color" value=" <?php echo $codigoP["regi_color"]; ?>"/>
 
       <label>registro fecha</label>
       <input type="text" name="regi_fecha" value=" <?php echo $codigoP["regi_fecha"]; ?>"/>
@@ -39,5 +39,6 @@
 
 
       <button name="action" value="modificar">Modificar</button>
+
+  <button name="action" value="Cancelar">Cancelar</button>
   </form>
-  <button><a href="registro.registro_producto.php">Volver</a></button>

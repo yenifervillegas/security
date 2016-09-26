@@ -17,7 +17,22 @@ $producto=Gestion_producto::consultar();
 	$(document).ready(function(){
    		 $('#myTable').DataTable();
 	
-});</script>
+});
+
+ function valida3(code){
+
+ 	$("#registrousu").fadeOut();
+   		   		
+	$("#registrousu").fadeOut();
+	$("#fondopan").fadeOut();
+	$("#TipodeProducto").fadeOut();
+	$("#registroProducto").fadeOut();
+	$("#accesorios").fadeOut();
+	$("#Modificoproducto").fadeIn();
+	$("#Modificoproducto").load("modificar.registro_producto.php?producto="+code+"");
+ }
+
+</script>
 </head>
 <body>
 	
@@ -55,7 +70,10 @@ $producto=Gestion_producto::consultar();
 					<td>".$produc["regi_cantidad"]."</td>
 
 					<td>
-						<a href='modificar.registro_producto.php?producto=".$produc["regi_cod"]."'>modificar</a>
+						
+						<span style='cursor:pointer' onclick='valida3(".$produc["regi_cod"].");' class='btn-floating light-green'>
+							modificar
+						</span>
 						<a href='../Controller/controller.registro.producto.php?codigo_produc=".$produc["regi_cod"]."& action=eliminar' >Eliminar</a>
 					</td>
 			</tr>";

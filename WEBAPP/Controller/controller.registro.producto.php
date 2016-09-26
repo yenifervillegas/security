@@ -49,7 +49,7 @@ echo"dddd";
 	try{
 		Gestion_producto::modificar($codigo_regi,$codigo_usu,$codigo_produ,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad);
 			echo "<script>alert('Modifico  con exito');
-			location.href = '../Views/registro.registro_producto.php';
+			location.href = '../views/user.php#user.php?seccion=pro';
 			</script>";
 		}catch(Exception $e){
 			echo $e;
@@ -65,7 +65,7 @@ echo"dddd";
 		try{
 			Gestion_producto::eliminar($codigoA);
 			echo "<script>alert('Elimino con exito');
-			location.href = '../Views/registro.registro_producto.php';
+			location.href = ../views/user.php#user.php?seccion=pro;
 			</script>";
 		}catch(Exception $e){
 
@@ -91,7 +91,9 @@ echo"dddd";
 
 	break;
 
-
+	case 'Cancelar':
+		header("location:../views/user.php#user.php?seccion=pro");
+	break;
 
 
 }

@@ -55,6 +55,10 @@
       <div id="accesorios"></div>
       <div id="entradaysalida"></div>
 
+      <div id="ModificaUsua"></div>
+      <div id="Modificoproducto"></div>
+      <div id="Modificotipo"></div>
+      <div id="Modificoacce"></div>
 
 
       </div>

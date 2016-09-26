@@ -7,7 +7,7 @@
 
 
 <?php require_once("../Model/conexion.php"); require_once("../Model/usuario.class.php"); ?>
-<section>
+<section class="med">
 	<center><h1>Registro de Usuarios</h1></center>
 	
  			<form  action="../Controller/registro.controller.php" method="post" <?php $rol=Gestion_usuario::cargar_rol(); ?>>

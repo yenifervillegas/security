@@ -59,7 +59,7 @@ function url(){
 	}
 
 	
-	if (URLhash=="#user.php?seccion=ace") {
+	if (URLhash=="#user.php?seccion=acce") {
 		
 		menu('accesorios');
 	}
@@ -143,6 +143,7 @@ function url(){
 				$("#entradaysalida").load("consulta.entrada_salida.php");
 				
 			break;
+
 	}
 }
 

@@ -33,7 +33,7 @@ case 'create':
      		 try {
      		 	Gestion_Tipoproducto::Modificar($tipopro_cod, $tipopro_nombre, $tipopro_desc);
      		 	echo "<script>alert('Modifico con exito');
-					location.href =  '../Views/registro.tipoproducto.php';
+					location.href =  '../views/user.php#user.php?seccion=tipo';
 						</script>";
      		 } catch (Exception $e) {
      		 	echo $e;
@@ -46,7 +46,7 @@ case 'create':
        		 try {
        		 	Gestion_Tipoproducto::Eliminar($tipopro_cod);
        		 	echo "<script>alert('Elimino con exito');
-       		 	location.href =  '../Views/registro.tipoproducto.php';
+       		 	location.href =  '../views/user.php#user.php?seccion=tipo';
 						</script>";
 						
 			
@@ -54,6 +54,10 @@ case 'create':
        		 	echo $e;
        		 }
      		break;
+
+     		case 'cancelar':
+		header("location:../views/user.php#user.php?seccion=tipo");
+	break;
 	}
 	
 ?>

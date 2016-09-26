@@ -166,7 +166,7 @@ margin-bottom: 0;
 	height: 1200px;
 	z-index: 100;
 	position: relative;
-	margin-left: 25%;
+	margin-left: 20%;
 	display: none;
 }
 #TipodeProducto{
@@ -196,6 +196,39 @@ margin-bottom: 0;
 #entradaysalida{
 	width: 60%;
 	height: 1000px;
+	z-index: 100;
+	position: relative;
+	margin-left: 30%;
+	display: none;
+}
+
+#ModificaUsua{
+	width: 60%;
+	height: 1200px;
+	z-index: 100;
+	position: relative;
+	margin-left: 30%;
+	display: none;
+}
+#Modificoproducto{
+	width: 60%;
+	height: 1200px;
+	z-index: 100;
+	position: relative;
+	margin-left: 30%;
+	display: none;
+}
+#Modificotipo{
+	width: 40%;
+	height: 1200px;
+	z-index: 100;
+	position: relative;
+	margin-left: 30%;
+	display: none;
+}
+#Modificoacce{
+	width: 40%;
+	height: 1200px;
 	z-index: 100;
 	position: relative;
 	margin-left: 30%;

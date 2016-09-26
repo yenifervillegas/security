@@ -35,7 +35,19 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 
    		   	}
    		   	else{
-   		   		location.href = "modificar.usuario.php?codigo_usuario="+code+"";
+   		   		$("#registrousu").fadeOut();
+   		   		
+				$("#registrousu").fadeOut();
+				$("#fondopan").fadeOut();
+				$("#TipodeProducto").fadeOut();
+				$("#registroProducto").fadeOut();
+				$("#accesorios").fadeOut();
+
+				$("#ModificaUsua").fadeIn();
+				$("#ModificaUsua").load("modificar.usuario.php?codigo_usuario="+code+"");
+				
+			
+   		   		//location.href = "modificar.usuario.php?codigo_usuario="+code+"";
    		   	}
 		  }
 
@@ -71,9 +83,9 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 							<td>".$consulta["usu_email"]."</td>
 							<td>".$consulta["usu_tel"]."</td>
 							<td>".$consulta["usu_direc"]."</td>
-							<td>".$consulta["usu_estado"]."</td>
 							<td>".$consulta["usu_centro"]."</td>
 							<td>".$consulta["usu_cargo"]."</td>
+							<td>".$consulta["usu_estado"]."</td>
 							
 							<td>
 								<span onclick='valida(".$consulta["usu_cod"].");'class='btn-floating light-red' style='cursor:pointer'>

@@ -51,8 +51,9 @@
 
 	<label>Contraseña</label>
 	<input type="password" name="contrasena" value=" <?php echo $codigo["usu_pass"]; ?>"required/>
-
+</br>
 	<button name="action" value="Modificar" >Modificar</button>
+	<button name="action" value="Cancelar" >Cancelar</button>
 
 
 

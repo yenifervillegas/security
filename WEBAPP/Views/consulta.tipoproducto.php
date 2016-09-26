@@ -10,8 +10,24 @@
   <script type="text/javascript">
   $(document).ready(function(){
        $('#myTable').DataTable();
+
+
   
-});</script>
+});
+function valida3(code){
+
+  $("#registrousu").fadeOut();
+            
+  $("#registrousu").fadeOut();
+  $("#fondopan").fadeOut();
+  $("#TipodeProducto").fadeOut();
+  $("#registroProducto").fadeOut();
+  $("#accesorios").fadeOut();
+  $("#Modificotipo").fadeIn();
+  $("#Modificotipo").load("modifico_tipoproducto.php?produ_cod="+code+"");
+ }
+
+  </script>
 
 <div class="container">
 
@@ -35,7 +51,11 @@
                     <td>".$row["produ_nom"]."</td>
                     <td>".$row["produ_marca"]."</td>
                     <td>
-                    <a href='modifico_tipoproducto.php?produ_cod=".$row["produ_cod"]."'>Modificar</a> -
+                   
+                    
+                   <span style='cursor:pointer' onclick='valida3(".$row["produ_cod"].");' class='btn-floating light-green'>
+                     modificar
+                   </span>
                     <a href='../Controller/tipoproducto.controller.php?produ_cod=".$row["produ_cod"]."&action=delete'>Eliminar</a></td>
                     
                   </tr>";

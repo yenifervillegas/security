@@ -5,7 +5,7 @@
   $tipo = Gestion_Tipoproducto::ConsultarPorCodigo($_GET["produ_cod"]);
 
 ?>
-
+<section >
 	<form action="../Controller/tipoproducto.controller.php" method="POST">
       <h1 class="center">Modificar tipo de producto</h1>
 
@@ -17,9 +17,11 @@
   		
       <label>Marca</label>
   		  <input type="text" name="txt_desctipopro" value="<?php echo $tipo["produ_marca"]; ?>">
-        
+        </br>
   		<button name="action" value="update">Modificar</button>
+      <button name="action" value="cancelar">Cancelar</button>
       
 		    <?php echo @$_REQUEST["$mensaje"];?>
   </form>
- 
+
+</section>

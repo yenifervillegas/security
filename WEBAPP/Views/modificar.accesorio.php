@@ -4,7 +4,7 @@
 	$codigo =Gestion_usuario::Consultaracce($_GET["acce_cod"]);
 
 ?>
-
+<section> 
 
 	<h1>Modificar usuario</h1>
 	<form action="../Controller/accesorio.controller.php" method="POST">
@@ -23,3 +23,5 @@
 	<input type="text" name="cantidad" value=" <?php echo $codigo["acce_cantidad"]; ?>"required/>
 
 	<button name="action" value="Modificar" >Modificar</button>
+	<button name="action" value="Cancelar" >Cancelar</button>
+</section>

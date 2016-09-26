@@ -50,7 +50,7 @@ switch ($action) {
 	try{
 		Gestion_usuario::Modificar($codigo,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$cifrar);
 		echo "<script>alert('Modifico  con exito');
-			location.href = '../Views/registro.usuario.php';
+			location.href = '../views/user.php#user.php?seccion=usu';
 			</script>";
 	}catch(Exception $e){
 		echo $e;
@@ -65,7 +65,7 @@ switch ($action) {
 			
 			try{
 				Gestion_usuario::Estado($estado,$codigo);
-				header("location:../views/registro.usuario.php");
+				header("location:../views/user.php#user.php?seccion=usu");
 
 			}catch(Exception $e){
 				echo $e;
@@ -79,11 +79,15 @@ switch ($action) {
 			
 			try{
 				Gestion_usuario::activo1($estado,$codigo);
-				header("location:../views/registro.usuario.php");
+				header("location:../views/user.php#user.php?seccion=usu");
 
 			}catch(Exception $e){
 				echo $e;
 			}
+		break;
+		case 'Cancelar':
+			echo "<script>location.href = '../views/user.php#user.php?seccion=usu';
+			</script>";
 		break;
 }
 ?>

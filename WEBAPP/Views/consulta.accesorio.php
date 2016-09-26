@@ -12,7 +12,22 @@
   $(document).ready(function(){
        $('#myTable').DataTable();
 
-});</script>
+});
+function valida3(code){
+
+  $("#registrousu").fadeOut();
+            
+  $("#registrousu").fadeOut();
+  $("#fondopan").fadeOut();
+  $("#TipodeProducto").fadeOut();
+  $("#registroProducto").fadeOut();
+  $("#accesorios").fadeOut();
+  $("#Modificoacce").fadeIn();
+  $("#Modificoacce").load("modificar.accesorio.php?acce_cod="+code+"");
+ }
+
+
+  </script>
 
   
     <table id="myTable">
@@ -33,7 +48,10 @@
                     <td>".$row["acce_nom"]."</td>
                     <td>".$row["acce_cantidad"]."</td>
                     <td>
-                    <a href='modificar.accesorio.php?acce_cod=".$row["acce_cod"]."'>Modificar</a> -
+                    
+                    <span style='cursor:pointer' onclick='valida3(".$row["acce_cod"].");' class='btn-floating light-green'>
+                      modificar
+                   </span>
                     <a href='../Controller/accesorio.controller.php?acce_cod=".$row["acce_cod"]."&action=eliminar' >Eliminar</a></td>
                   </tr>";
             $item++;
