@@ -16,7 +16,7 @@ $(document).ready(function() {
    	
 }
 function sesion(){
-	location.href="../Controller/login.controller.php?action=session";
+	location.href="../Controller/login.controller.php?action=sesion";
 
 }
 

@@ -2,7 +2,7 @@
   require_once("../Model/conexion.php");
   require_once("../Model/login.class.php");
   session_start();
-$accion=$_POST["action"];
+$accion=$_REQUEST["action"];
 
 switch($accion){
   case 'consultar':
@@ -36,7 +36,7 @@ switch($accion){
           }
   break;
 
-  case 'session':
+  case 'sesion':
   session_destroy();
   echo"<script>location.href='../Views/index.html';</script>";
   break;
