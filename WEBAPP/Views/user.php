@@ -25,7 +25,7 @@
           <li><a href="#" onclick="menu('inicio');">inicio</a></li>
           <li><a href="#user.php?seccion=usu" id="liUsuario" onclick="menu('regi_usu');">Registro Usuario</a></li>
           <li><a href="#user.php?seccion=tipo" id="liproducto" onclick="menu('tipo_pro');">Tipo de Producto</a></li>
-          <li><a href="#" id="liregiproducto" onclick="menu('regi_pro');">Registro Producto</a></li>
+          <li><a href="#user.php?seccion=pro" id="liregiproducto" onclick="menu('regi_pro');">Registro Producto</a></li>
           <li><a href="#user.php?seccion=ace" id="liaccesorio" onclick="menu('accesorios');">Accesorios</a></li>
           <li><a href="#user.php?seccion=consul" id="lientrasal" onclick="menu('entra_sal');">Consulta de Entrada y salida</a></li>
         </ul>

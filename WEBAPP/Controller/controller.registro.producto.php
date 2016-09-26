@@ -7,7 +7,7 @@ require_once("../Model/registro.producto.class.php");
 
 $accion=$_REQUEST["action"];
 switch ($accion) {
-	case 'Guardar':
+	case 'Guardarpro':
 echo"dddd";
 	$codigo_usu=$_POST["codigo_usu"];
 	$codigo_produ=$_POST["codigo_produ"];

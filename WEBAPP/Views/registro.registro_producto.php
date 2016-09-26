@@ -18,7 +18,7 @@ $producto=Gestion_producto::consultarprodu();
 
 <section>
 <h1>Registro de Productos</h1>
-	<form action="../Controller/controller.registro.producto.php" method="post"/>
+	<form action="../Controller/controller.registro.producto.php" method="post">
 		
 
 
@@ -64,7 +64,7 @@ $producto=Gestion_producto::consultarprodu();
 </br>
 </br>
 
-		<button name="action"  value="Guardar">Guardar</button>
+		<button name="action"  value="Guardarpro">Guardar</button>
 </form>
 </section>
 

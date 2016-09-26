@@ -44,7 +44,8 @@ function cargar(){
 	url();
 }
 
-function ul(){
+function url(){
+
 	var URLhash = window.location.hash;
 	if (URLhash=="#user.php?seccion=usu") {
 		menu('regi_usu');
@@ -53,8 +54,13 @@ function ul(){
 		menu('tipo_pro');
 	}
 
+	if (URLhash=="#user.php?seccion=pro") {
+		menu('regi_pro');
+	}
+
 	
 	if (URLhash=="#user.php?seccion=ace") {
+		
 		menu('accesorios');
 	}
 	if (URLhash=="#user.php?seccion=consul") {
@@ -109,11 +115,12 @@ function ul(){
 				$("#entradaysalida").fadeOut();
 
 				$("#registroProducto").fadeIn();
-				//$("#registroProducto").load("registro.registro_producto.php");
+				$("#registroProducto").load("registro.registro_producto.php");
 				
 			break;
 
 			case "accesorios":
+			
 				$("#registrousu").fadeOut();
 				$("#fondopan").fadeOut();
 				$("#TipodeProducto").fadeOut();
