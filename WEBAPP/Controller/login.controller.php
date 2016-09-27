@@ -16,7 +16,7 @@ switch($accion){
             if (password_verify($pass,$datos["usu_pass"])) {
 
                 $_SESSION["usu_docu"]  = $datos[0];
-                $_SESSION["usu_nom"]  = $datos[1];
+                $_SESSION["usu_nom"]  = $datos[2];
         
                 header("location: ../Views/user.php");
               }

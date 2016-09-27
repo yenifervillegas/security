@@ -1,3 +1,15 @@
+<?php
+session_start();
+if(!isset($_SESSION["usu_docu"])){
+  header("Location:index.html");
+}
+
+
+?>
+
+
+
+
 <html>
 <head>
     <title>Security</title>
@@ -14,8 +26,11 @@
 
   <div id="mainConte"><!--contiene todo el pagina-->
     <div id="barra1">
-
-      <div onclick="sesion()"id="off"></div>
+      <div id="conteS">
+        <div id="icono"></div>
+        <div id="nombre"><?php echo  $_SESSION["usu_nom"]  ?></div>
+        <div onclick="sesion()"id="off"></div>
+      </div>
     </div>
     <div id="e_left"><!--contiene todo el menu-->
       <div class="container">
@@ -45,7 +60,7 @@
 
     </div>
     </div>
-    <div id="e_center"><!--contiene todo todos los formularios-->
+    <div  id="e_center"><!--contiene todo todos los formularios-->
       <div id="fondopan"></div>
 
 
