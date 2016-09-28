@@ -98,6 +98,21 @@ class Gestion_producto{
 		return $result;
 	}
 
+	function consultarultimousu(){
+		$pdo=conexion::Abrirbd();
+		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+		$sql="SELECT * FROM usuario ORDER BY usu_cod DESC LIMIT 1";
+		$query=$pdo->prepare($sql);
+		$query->execute();
+
+		$result=$query->fetch(PDO::FETCH_BOTH);
+		
+		conexion::Cerrarbd();
+		return $result;
+	}
+
+
 
 
 		function modificar($codigo_regi,$codigo_usu,$codigo_produ,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad){

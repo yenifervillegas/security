@@ -15,7 +15,13 @@ $codigoEntrada=Gestion_producto::consultarEntrada();
 	<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
 	<script type="text/javascript">
 	$(document).ready(function(){
-   		 $('#myTable').DataTable();
+   		 $('#myTable').DataTable({
+ 			"scrollY": '50vh',
+  			"scrollCollapse": true,
+  			"paging":false,
+  			"language": {
+    		"url": "//cdn.datatables.net/plug-ins/1.10.12/i18n/Spanish.json"
+  });
 	});
 	function salida(sld){
 

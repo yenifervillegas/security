@@ -16,7 +16,13 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 	<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
 	<script type="text/javascript">
 	$(document).ready(function(){
-   		 $('#myTable').DataTable();
+   		 $('#myTable').DataTable({
+  			"scrollY": '50vh',
+  			"scrollCollapse": true,
+ 			"paging":false,
+ 			"language": {
+    		"url": "//cdn.datatables.net/plug-ins/1.10.12/i18n/Spanish.json"
+  });
 	});
 
    		 function valida(usucod){
@@ -54,8 +60,8 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 	</script>
 </head>
 <body>
-
-<table id="myTable" class="striped bordered responsive-table">
+<div id="consuUse">
+<table id="myTable" >
 	<thead>
 		<tr>
 			<td>Nombre</td>
@@ -105,6 +111,6 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 
 
 </table>
-
+</div>
 </body>
 </html>

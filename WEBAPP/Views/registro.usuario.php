@@ -67,7 +67,7 @@
 	  
 	</section>
 
-	<section>
+	<section id="consultausu">
 		<?php include 'consulta.usuario.php'; ?>
 	</section>
 </body>

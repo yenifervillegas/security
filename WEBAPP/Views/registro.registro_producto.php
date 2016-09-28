@@ -3,9 +3,10 @@
 require_once("../Model/conexion.php");
 include("../Model/registro.producto.class.php");
 
-$usuario=Gestion_producto::consultarUsu();
+
 $producto=Gestion_producto::consultarprodu();
-//$propietario=Gestion_producto::consultarpropie();
+$cargarusu=Gestion_producto::consultarultimousu();
+
 
 ?>
 <html>
@@ -26,7 +27,7 @@ $producto=Gestion_producto::consultarprodu();
 		<!--<input name="codigo_produ" type="text" required/>-->
 
 		<label>Codigo de usuario</label>
-		<input name="codigo_usu" type="number" required/><!--este si va?,,,, se le cambio el name repetido con el cod prod-->
+		<input name="codigo_usu" type="number" disabled value="<?php echo $cargarusu["usu_docu"]?>"/><!--este si va?,,,, se le cambio el name repetido con el cod prod-->
 
 		<label>Codigo de producto</label>
 		<select name="codigo_produ">

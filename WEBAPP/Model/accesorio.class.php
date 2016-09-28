@@ -54,6 +54,21 @@ class Gestion_usuario{
 		Conexion::Cerrarbd();
 		return $result;
 }
+	function consultarultimoregi(){
+		$pdo=conexion::Abrirbd();
+		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+		$sql="SELECT * FROM registro_producto ORDER BY regi_cod DESC LIMIT 1";
+		$query=$pdo->prepare($sql);
+		$query->execute();
+
+		$result=$query->fetch(PDO::FETCH_BOTH);
+		
+		conexion::Cerrarbd();
+		return $result;
+	}
+
+
 
 	function eliminar($codigoA){
 			$pdo = Conexion::Abrirbd();
