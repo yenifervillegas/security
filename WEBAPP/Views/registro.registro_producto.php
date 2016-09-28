@@ -7,7 +7,7 @@ include("../Model/registro.producto.class.php");
 $producto=Gestion_producto::consultarprodu();
 $cargarusu=Gestion_producto::consultarultimousu();
 
-
+$fecha=date("Y-m-d");
 ?>
 <html>
 <head>
@@ -48,9 +48,8 @@ $cargarusu=Gestion_producto::consultarultimousu();
 		<input name="registre_color" type="color" required/>
 
 	
-		<label >Registre Fecha </label>
-		<input  name="registre_fecha" type="date" required/>
-	
+		<label>Fecha:</label>
+		<input autocomplete='off'  name='fecha' type='date' min='<?php echo $fecha; ?>'class='' id='fecha' value="<?php echo $fecha; ?>">
 		
 		<label >Registre descripcion</label>
 		<textarea name="registre_decrip" type="text"></textarea>
