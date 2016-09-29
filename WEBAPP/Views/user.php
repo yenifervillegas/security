@@ -38,7 +38,7 @@ if(!isset($_SESSION["usu_docu"])){
         <div id="sidebar">
            <ul>
           <li><a href="#" onclick="menu('inicio');">inicio</a></li>
-          <li><a href="#user.php?seccion=usu" id="liUsuario" onclick="menu('regi_usu');">Registro Usuario</a></li>
+          <li><a href="#user.php?seccion=usu" id="liUsuario" onclick="menu('regi_usu');"<?php if($_GET["seccion=usu"] == "seccion=usu"){echo"class='active'";} ?>>Registro Usuario</a></li>
           <li><a href="#user.php?seccion=tipo" id="liproducto" onclick="menu('tipo_pro');">Tipo de Producto</a></li>
           <li><a href="#user.php?seccion=pro" id="liregiproducto" onclick="menu('regi_pro');">Registro Producto</a></li>
           <li><a href="#user.php?seccion=ace" id="liaccesorio" onclick="menu('accesorios');">Accesorios</a></li>
