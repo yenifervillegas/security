@@ -70,7 +70,7 @@ display: block;
 -o-transition: background 0.3s ease-in-out;
 transition: background 0.3s ease-in-out;
 }
-#sidebar ul li:hover a .active {
+#sidebar ul li:hover a {
 background: #52c0db;
 }
 .main-content {
