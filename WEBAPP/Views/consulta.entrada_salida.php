@@ -7,21 +7,11 @@ $codigoEntrada=Gestion_producto::consultarEntrada();
 
 ?>
 
-<html>
-<head>
-	<title></title>
- 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script type="text/javascript"src="http://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+
+ 	
 	<script type="text/javascript">
 	$(document).ready(function(){
-   		 $('#myTable').DataTable({
- 			"scrollY": '50vh',
-  			"scrollCollapse": true,
-  			"paging":false,
-  			"language": {
-    		"url": "//cdn.datatables.net/plug-ins/1.10.12/i18n/Spanish.json"
-  });
+   		 $('#myTable').DataTable();
 	});
 	function salida(sld){
 
@@ -30,7 +20,9 @@ $codigoEntrada=Gestion_producto::consultarEntrada();
 	</script>
 </head>
 <body>
-	<h1>Consultar Entrada y Salida</h1>
+	<h2>Consultar Entrada y Salida</h2>
+	<div id="consuEntra">
+
 <table id="myTable">
 	<thead>
 		<tr>
@@ -62,6 +54,4 @@ $codigoEntrada=Gestion_producto::consultarEntrada();
 		?>
 	</tbody>
 </table>
-
-</body>
-</html>
+</div>

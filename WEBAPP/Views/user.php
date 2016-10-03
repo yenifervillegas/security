@@ -13,13 +13,14 @@ if(!isset($_SESSION["usu_docu"])){
 <html>
 <head>
     <title>Security</title>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script type="text/javascript" src="js/login.js"></script>
+
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+     <script type="text/javascript" src="js/login.js"></script>
+    <link rel="stylesheet" href="css/jquery.dataTables.min.css" />
     <link rel="stylesheet" type="text/css" href="css/styleMenu.css">
     <link rel="stylesheet" href="assets/css/main.css" />
 
-    <script type="text/javascript"src="http://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css"/>
 
 </head>
 <body>
@@ -36,9 +37,9 @@ if(!isset($_SESSION["usu_docu"])){
       <div class="container">
         <div id="barra"></div>
         <div id="sidebar">
-           <ul>
+           <ul><!--<?php if($_GET["seccion=usu"] == "seccion=usu"){echo"class='active'";} ?>-->
           <li><a href="#" onclick="menu('inicio');">inicio</a></li>
-          <li><a href="#user.php?seccion=usu" id="liUsuario" onclick="menu('regi_usu');"<?php if($_GET["seccion=usu"] == "seccion=usu"){echo"class='active'";} ?>>Registro Usuario</a></li>
+          <li><a href="#user.php?seccion=usu" id="liUsuario" onclick="menu('regi_usu');">Registro Usuario</a></li>
           <li><a href="#user.php?seccion=tipo" id="liproducto" onclick="menu('tipo_pro');">Tipo de Producto</a></li>
           <li><a href="#user.php?seccion=pro" id="liregiproducto" onclick="menu('regi_pro');">Registro Producto</a></li>
           <li><a href="#user.php?seccion=ace" id="liaccesorio" onclick="menu('accesorios');">Accesorios</a></li>

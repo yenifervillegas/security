@@ -8,16 +8,9 @@ $cargarregi=Gestion_usuario::consultarultimoregi();
 
 ?>
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+<h2>Registro accesorios</h2>
+  <section id="conteAcce">
 
-  
-<h1>Registro accesorios</h1>
      <form class="" action="../Controller/accesorio.controller.php" method="post">
 
       <label for="">Codigo de registro</label>
@@ -32,10 +25,9 @@ $cargarregi=Gestion_usuario::consultarultimoregi();
 
        <button name="action"  value="Guardar">Guardar</button>
      </form>
-  
+  </section>
+  <section id="consulAcce">
     <?php
-     
       include 'consulta.accesorio.php';
      ?>
-  </body>
-</html>
+  </section>

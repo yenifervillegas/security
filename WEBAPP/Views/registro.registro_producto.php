@@ -9,20 +9,12 @@ $cargarusu=Gestion_producto::consultarultimousu();
 
 $fecha=date("Y-m-d");
 ?>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
 
 
 
-<section>
-<h1>Registro de Productos</h1>
+<section id="conteProduc">
+<h2>Registro de Productos</h2>
 	<form action="../Controller/controller.registro.producto.php" method="post">
-		
-
-
 		
 		<!--<input name="codigo_produ" type="text" required/>-->
 
@@ -68,10 +60,7 @@ $fecha=date("Y-m-d");
 </form>
 </section>
 
- <section >
+ <section id="consulProdu">
     <?php include 'consulta.registro_producto.php'; ?>
   </section>
 
-
-</body>
-</html>

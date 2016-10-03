@@ -7,21 +7,16 @@ $producto=Gestion_producto::consultar();
 
 ?>
 
-<html>
-<head>
-
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script type="text/javascript"src="http://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
 	<script type="text/javascript">
 	$(document).ready(function(){
-   		 $('#myTable').DataTable({
+   		 /*{
  			"scrollY": '50vh',
   			"scrollCollapse": true,
   			"paging":false,
  			"language": {
    			"url": "//cdn.datatables.net/plug-ins/1.10.12/i18n/Spanish.json"
-  });
+  }*/
+   		 $('#myTable').DataTable();
 	
 });
 
@@ -88,5 +83,3 @@ $producto=Gestion_producto::consultar();
 	</tbody>
 </table>
 
-</body>
-</html>

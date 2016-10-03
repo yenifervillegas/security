@@ -1,8 +1,11 @@
+
+
+
 	<!-- Formulario: Guardar tipo de producto -->
-<div class="container">
+<section class="containerTipo">
 
 
-	<h2>Guardar tipo de prducto</h2>
+	<h2>Guardar tipo  producto</h2>
 	<form action="../Controller/tipoproducto.controller.php" method="POST">
 		
 		<label>Nombre del tipo de producto</label>
@@ -14,9 +17,9 @@
 		<button name="action" value="create">Guardar</button>
 		
 	</form>
-<section >
+
+</section>
+<section id="conte_consu">
     <?php include 'consulta.tipoproducto.php'; ?>
-  </section>
-</div>
+ </section>
  
-	

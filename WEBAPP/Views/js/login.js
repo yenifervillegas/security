@@ -1,10 +1,14 @@
 $(document).ready(function() {
+	$('#myTable').DataTable();
+  
   $("[data-toggle]").click(function() {
     var toggle_el = $(this).data("toggle");
     $(toggle_el).toggleClass("open-sidebar");
 
+
+
   }); 
-  cargar();
+ // cargar();
 });
 
  function ingresar(){
@@ -22,7 +26,7 @@ function sesion(){
 }
 
 
-function cargar(){
+/*function cargar(){
 	$("#liUsuario").click(function(){
 		$("#registrousu").load("registro.usuario.php");
 	});
@@ -43,7 +47,7 @@ function cargar(){
 		$("#entradaysalida").load("consulta.entrada_salida.php");
 	});
 	url();
-}
+}*/
 
 function url(){
 
@@ -80,7 +84,7 @@ function url(){
 				$("#registroProducto").fadeOut();
 				$("#accesorios").fadeOut();
 				$("#entradaysalida").fadeOut();
-				$("#registrousu").load("registro.usuario.php");
+				//$("#registrousu").load("registro.usuario.php");
 				$("#registrousu").fadeIn();
 			break;
 
