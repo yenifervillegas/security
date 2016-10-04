@@ -9,7 +9,7 @@ class Gestion_usuario{
 		$sql="INSERT INTO usuario (rol_cod, usu_nom, usu_ape,usu_tipodocu,usu_docu,usu_email,usu_tel,usu_direc,usu_centro,usu_estado,usu_cargo,usu_pass) values(?,?,?,?,?,?,?,?,?,?,?,?)";
 
 		$query=$pdo->prepare($sql);
-		$query->execute(array($seleccion,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$estado,$cargo,$centro,$cifrar));
+		$query->execute(array($seleccion,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$estado,$cargo,$cifrar));
 
 		Conexion::Cerrarbd();
 

@@ -67,8 +67,8 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 			<td>Telefono</td>
 			<td>Direccion</td>
 			<td>Centro</td>
-			<td>Cargo</td>
 			<td>Estado</td>
+			<td>Cargo</td>
 			<td>Accion</td>
 		</tr>
 	</thead>
@@ -85,8 +85,9 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 							<td>".$consulta["usu_tel"]."</td>
 							<td>".$consulta["usu_direc"]."</td>
 							<td>".$consulta["usu_centro"]."</td>
-							<td>".$consulta["usu_cargo"]."</td>
 							<td>".$consulta["usu_estado"]."</td>
+							<td>".$consulta["usu_cargo"]."</td>
+							
 							
 							<td>
 								<span onclick='valida(".$consulta["usu_cod"].");'class='btn-floating light-red' style='cursor:pointer'>
