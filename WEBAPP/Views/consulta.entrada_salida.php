@@ -7,17 +7,31 @@ $codigoEntrada=Gestion_producto::consultarEntrada();
 
 ?>
 
-
- 	
+<html>
+<head>
+	<title></title>
+ 	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.dataTables.min.css" />
+	
 	<script type="text/javascript">
 	$(document).ready(function(){
-   		 $('#myTable').DataTable();
+   		 $('#myTable').DataTable( {
+ 			"scrollY": '50vh',
+  			"scrollCollapse": true,
+  			"paging":false,
+ 			"language": {
+   			"url": "js/Spanish.json"
+   		}
+  });
+   		 alert("esa alerta esta en el consultar salida");
 	});
 	function salida(sld){
 
 		location.href = "../Controller/controller.registro.producto.php?salidas="+sld+"&action=salidae";
 	}
 	</script>
+
 </head>
 <body>
 	<h2>Consultar Entrada y Salida</h2>

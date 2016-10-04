@@ -10,7 +10,14 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 
 <script type="text/javascript">
 	$(document).ready(function(){
-   		 $('#myTable').DataTable();
+   		 $('#myTable').DataTable( {
+ 			"scrollY": '50vh',
+  			"scrollCollapse": true,
+  			"paging":false,
+ 			"language": {
+   			"url": "js/Spanish.json"
+   		}
+  });
 	});
 
    		 function valida(usucod){

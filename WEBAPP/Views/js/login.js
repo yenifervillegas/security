@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	$('#myTable').DataTable();
   
   $("[data-toggle]").click(function() {
     var toggle_el = $(this).data("toggle");
@@ -8,7 +7,8 @@ $(document).ready(function() {
 
 
   }); 
- // cargar();
+// cargar();
+url();
 });
 
  function ingresar(){
@@ -84,7 +84,7 @@ function url(){
 				$("#registroProducto").fadeOut();
 				$("#accesorios").fadeOut();
 				$("#entradaysalida").fadeOut();
-				//$("#registrousu").load("registro.usuario.php");
+				$("#registrousu").load("registro.usuario.php");
 				$("#registrousu").fadeIn();
 			break;
 
@@ -138,6 +138,8 @@ function url(){
 			break;
 
 			case "entra_sal":
+				$('#myTable').DataTable();
+				alert("no carga tabla");
 				$("#registrousu").fadeOut();
 				$("#fondopan").fadeOut();
 				$("#TipodeProducto").fadeOut();
@@ -145,7 +147,9 @@ function url(){
 				$("#accesorios").fadeOut();
 
 				$("#entradaysalida").fadeIn();
+				
 				$("#entradaysalida").load("consulta.entrada_salida.php");
+				
 				
 			break;
 

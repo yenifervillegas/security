@@ -187,11 +187,14 @@ margin-top: 5px;
 .med{
 
 	width: 60%;
+
+	margin-left: 10%;
 }
 
 #consultausu{
 	
-	width: 67% !important;
+	width: 99%;
+	margin-left: 1%;
 }
 
 #consuUse{
@@ -255,11 +258,12 @@ h2{
 #consuEntra{
 	width: 90%;
 	margin-left: 5%;
+
 }
 
 #registrousu{
 	width: 82.5%;
-	height: 1200px;
+	height: 1750px;
 	z-index: 100;
 	position: relative;
 	margin-left: 17%;
