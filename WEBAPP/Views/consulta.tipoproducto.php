@@ -21,15 +21,8 @@
 });
 function valida3(code){
 
-  $("#registrousu").fadeOut();
-            
-  $("#registrousu").fadeOut();
-  $("#fondopan").fadeOut();
-  $("#TipodeProducto").fadeOut();
-  $("#registroProducto").fadeOut();
-  $("#accesorios").fadeOut();
-  $("#Modificotipo").fadeIn();
-  $("#Modificotipo").load("modifico_tipoproducto.php?produ_cod="+code+"");
+
+  $(".contenendor").load("modifico_tipoproducto.php?produ_cod="+code+"");
  }
 
   </script> 

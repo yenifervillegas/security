@@ -8,10 +8,12 @@
 	}*/
 ?>
 
-
 	<h1>Modificar usuario</h1>
+<section class="content-form">
+	<div id="ModificaUsua">
 	<form action="../Controller/registro.controller.php" method="POST">
-		<label>Codigo: <?php echo $codigo["usu_cod"]; ?></label>
+
+	<label>Codigo: <?php echo $codigo["usu_cod"]; ?></label>
 	<input type="hidden" name="codigo" value=" <?php echo $codigo["usu_cod"]; ?>"/>
 
 
@@ -58,3 +60,5 @@
 
 
 </form>
+</div>
+</section>

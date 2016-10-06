@@ -7,6 +7,22 @@ $rol =Gestion_rol::Consultar();
 
 
 ?>
+<script type="text/javascript">
+  $(document).ready(function(){
+       $('#myTable').DataTable({
+      "scrollY": '50vh',
+        "scrollCollapse": true,
+        "paging":false,
+      "language": {
+        "url": "js/Spanish.json"
+      }
+  });
+
+
+  
+});
+
+  </script>
 
 <table id="myTable" class="striped responsive-table">
 	<thead>

@@ -5,28 +5,21 @@ class Gestion_rol{
 		// private static $query;
 		// private static $result;
 
-		function Guardar($codigo_rol, $nombre_rol, $desc_rol){
+		function Guardar($nombre_rol){
 		$pdo= Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-		$sql="INSERT INTO rol(rol_cod, rol_nombre, rol_desc) values(?,?,?)";
+		$sql="INSERT INTO rol(rol_nom) values(?)";
 
 		$query=$pdo->prepare($sql);
-		$query->execute(array($codigo_rol, $nombre_rol, $desc_rol));
+		$query->execute(array($nombre_rol));
 
 		Conexion::Cerrarbd();
 
 	}
-	function Seguir($usu, $segui_modulo, $segui_accion, $fecha, $hora){
-		$pdo= Conexion::Abrirbd();
-		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-		$sql="INSERT INTO seguimiento(usu_cod, segui_modulo, segui_accion, segui_fecha, segui_hora) values(?,?,?,?,?)";
-		$query=$pdo->prepare($sql);
-		$query->execute(array($usu, $segui_modulo, $segui_accion, $fecha, $hora));
+	
 
-		Conexion::Cerrarbd();
-
-	}
+	
 		function Consultar(){
 			$pdo= Conexion::Abrirbd();
 			$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
@@ -52,14 +45,14 @@ class Gestion_rol{
 			return $result;
 			Conexion::Cerrarbd();
 		}
-		function Modificar($rol_cod, $rol_nombre, $desc_rol)
+		function Modificar($rol_cod, $rol_nombre)
 		{
 			$pdo = Conexion::Abrirbd();
 			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-			$sql = "UPDATE rol SET rol_nombre = ?, rol_desc = ? WHERE rol_cod = ?";
+			$sql = "UPDATE rol SET rol_nom = ? WHERE rol_cod = ?";
 			$query= $pdo->prepare($sql);
-			$query->execute(array($rol_nombre, $desc_rol, $rol_cod));
+			$query->execute(array($rol_nombre,$rol_cod));
 			Conexion::Cerrarbd();
 
 		}

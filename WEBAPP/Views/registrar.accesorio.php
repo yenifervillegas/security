@@ -9,7 +9,7 @@ $cargarregi=Gestion_usuario::consultarultimoregi();
 ?>
 
 <h2>Registro de accesorios</h2>
-  <section id="conteAcce">
+ <section class="content-form">
 
      <form class="" action="../Controller/accesorio.controller.php" method="post">
 
@@ -26,7 +26,7 @@ $cargarregi=Gestion_usuario::consultarultimoregi();
        <button name="action"  value="Guardar">Guardar</button>
      </form>
   </section>
-  <section id="consulAcce">
+<section class="content-table">
     <?php
       include 'consulta.accesorio.php';
      ?>

@@ -36,16 +36,8 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 
    		   	}
    		   	else{
-   		   		$("#registrousu").fadeOut();
-   		   		
-				$("#registrousu").fadeOut();
-				$("#fondopan").fadeOut();
-				$("#TipodeProducto").fadeOut();
-				$("#registroProducto").fadeOut();
-				$("#accesorios").fadeOut();
-
-				$("#ModificaUsua").fadeIn();
-				$("#ModificaUsua").load("modificar.usuario.php?codigo_usuario="+code+"");
+   	// 	   		
+				$(".contenendor").load("modificar.usuario.php?codigo_usuario="+code+"");
 				
 			
    		   		//location.href = "modificar.usuario.php?codigo_usuario="+code+"";

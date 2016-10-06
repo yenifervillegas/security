@@ -5,6 +5,7 @@
 	 <h1>Registro de Usuarios</h1> 
 </br>
 <section class="content-form">
+	
  			<form  action="../Controller/registro.controller.php" method="post" <?php $rol=Gestion_usuario::cargar_rol(); ?>>
 		
 						
@@ -15,12 +16,12 @@
 						<?php endforeach ?>
 				</select>
 					   
-				<label for="">Nombre</label>
-				<input id="" type="text" name="nombre"  required />
+				<label>Nombre</label>
+				<input type="text" name="nombre"  required />
 					       
 					    
-				<label for="">Apellido</label>
-				<input id="" type="text" name="apellido" class="" required />
+				<label>Apellido</label>
+				<input type="text" name="apellido" class="" required />
 				       
 				  <label >Tipo de Documento</label>
 						<select name="tipodocu">
@@ -32,36 +33,37 @@
 						</select>
 							
 					  		
-				 		<label for="">Numero de Documento</label>
-						<input id="" type="number" name="documento" class="" required />
+				<label>Numero de Documento</label>
+				<input type="number" name="documento" required />
 							
-						<label for="">Email</label>
-	  				<input id="" type="email" name="email" class="" required />
+				<label>Email</label>
+	  			<input type="email" name="email" required />
 							
-	  				<label for="">Telefono</label>
-						<input id="" type="number" name="telefono" class="" required />
+	  			<label>Telefono</label>
+				<input type="number" name="telefono"  required />
 							
-		  			<label for="">Direccion</label>
-		  			<input id="" type="text" name="direccion" class="" required />
+		  		<label for="">Direccion</label>
+		  		<input id="" type="text" name="direccion" required />
 							
 							
-						<label for="">Centro</label>
-						<input id="" type="text" name="centro" class="" required />
+				<label for="">Centro</label>
+				<input id="" type="text" name="centro" required />
 							
-						<label for="">Cargo</label>
-						<input id="" type="text" name="cargo" class="" required />
+				<label for="">Cargo</label>
+				<input id="" type="text" name="cargo" required />
 							
-						<label for="">Contraseña</label>
-						<input id="" type="password" name="contrasena" class="" required />
+				<label for="">Contraseña</label>
+				<input id="" type="password" name="contrasena" required />
 							
-					</br>
-								<button  value="Guardar" name="action">Guardar</button>
+			    </br>
+			    <button  value="Guardar" name="action">Guardar</button>
 					  
-					
-				</form>
+				
+	        </form>
 	 
-	</section>
+	    </section>
+
 <section class="content-table">
-		<?php include 'consulta.usuario.php'; ?>
-	</section>
+	<?php include 'consulta.usuario.php'; ?>
+</section>
  

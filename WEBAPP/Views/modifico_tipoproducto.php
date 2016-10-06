@@ -5,7 +5,7 @@
   $tipo = Gestion_Tipoproducto::ConsultarPorCodigo($_GET["produ_cod"]);
 
 ?>
-<section >
+<section class="content-form">
 	<form action="../Controller/tipoproducto.controller.php" method="POST">
       <h1 class="center">Modificar tipo de producto</h1>
 

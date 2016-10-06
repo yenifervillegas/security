@@ -51,6 +51,7 @@ if(!isset($_SESSION["usu_docu"])){
         <div id="sidebar">
            <ul><!--<?php if($_GET["seccion=usu"] == "seccion=usu"){echo"class='active'";} ?>-->
           <li><a href="#" onclick="menu('inicio');">inicio</a></li>
+          <li><a href="#user.php?seccion=rol" id="lirol" >Registro Rol</a></li>
           <li><a href="#user.php?seccion=usu" id="liUsuario" >Registro Usuario</a></li>
           <li><a href="#user.php?seccion=tipo" id="liproducto" onclick="menu('tipo_pro');">Tipo de Producto</a></li>
           <li><a href="#user.php?seccion=pro" id="liregiproducto" onclick="menu('regi_pro');">Registro Producto</a></li>

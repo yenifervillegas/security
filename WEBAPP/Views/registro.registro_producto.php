@@ -12,7 +12,7 @@ $fecha=date("Y-m-d");
 
 
 
-<section id="conteProduc">
+<section class="content-form">
 <h2>Registro de Productos</h2>
 	<form action="../Controller/controller.registro.producto.php" method="post">
 		
@@ -51,7 +51,7 @@ $fecha=date("Y-m-d");
 		<input  name="registre_autoalerta" type="text"/>
 
 		<label >Registre Cantidad del Producto</label>
-		<input  name="registre_cantidad" type="number"/>
+		<input  name="registre_cantidad" type="number" required/>
 	
 </br>
 </br>
@@ -60,7 +60,7 @@ $fecha=date("Y-m-d");
 </form>
 </section>
 
- <section id="consulProdu">
+ <section class="content-table">
     <?php include 'consulta.registro_producto.php'; ?>
   </section>
 

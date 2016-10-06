@@ -11,7 +11,9 @@
   <form action="../Controller/guardarrol.php" method="post"><br>
     <center><h4 class="thin">Modificar Rol</h4></center>
 
-      
+      <label>Codigo: <?php echo $codigo["rol_cod"]; ?></label>
+      <input type="hidden" name="codigo" value=" <?php echo $codigo["rol_cod"]; ?>"/>
+
       <label>Nombre:</label>
       <input type="text" name="txt_nomrol" value=" <?php echo $codigo["rol_nom"]; ?>" required/>
       

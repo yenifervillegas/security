@@ -189,6 +189,7 @@ margin-top: 5px;
 	
 	width: 99%;
 	margin-left: 3%;
+	height: 1000px;
 }
 
 #consuUse{
@@ -197,6 +198,7 @@ margin-top: 5px;
 
 #myTable{
 	width: 100%;
+
 }
 
 #e_center{
@@ -256,19 +258,9 @@ h2{
 
 }
 
-#registrousu{
-	margin-top: 30px;
-	width: 82.5%;
-	height: 1750px;
-	z-index: 100;
-	position: relative;
-	margin-left: 17%; 
-	
-	
-}
 
 
-#TipodeProducto{
+/*#TipodeProducto{
 	margin-top: 30px;
 	width: 82.5%;
 	height: 1000px;
@@ -302,14 +294,11 @@ h2{
 	z-index: 100;
 	position: relative;
 	margin-left: 17%;
-}
+}*/
 
 #ModificaUsua{
-	width: 60%;
-	height: 1200px;
-	z-index: 100;
-	position: relative;
-	margin-left: 30%;
+	height: 1300px;
+	
 }
 #Modificoproducto{
 	width: 60%;
@@ -320,7 +309,7 @@ h2{
 }
 #Modificotipo{
 	width: 40%;
-	height: 1200px;
+	height: 1300px;
 	z-index: 100;
 	position: relative;
 	margin-left: 30%;
@@ -345,6 +334,8 @@ h2{
     margin-left: 240px;
     padding: 30px;
     text-align: center;
+ 
+
 }
 
 
@@ -354,5 +345,10 @@ h2{
 	text-align: left;
 	position: relative;
 	margin: auto;
+
 }
+.content-table{
+	height: 500px;		
+}
+
 

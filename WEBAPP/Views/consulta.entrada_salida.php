@@ -6,9 +6,25 @@ require_once("../model/registro.producto.class.php");
 $codigoEntrada=Gestion_producto::consultarEntrada();
 
 ?>
+ <script type="text/javascript">
+  $(document).ready(function(){
+       $('#myTable').DataTable({
+      "scrollY": '50vh',
+        "scrollCollapse": true,
+        "paging":false,
+      "language": {
+        "url": "js/Spanish.json"
+      }
+  });
+
+
+  
+});
+
+  </script>
 
 	<h2>Consultar Entrada y Salida</h2>
-	<div id="consuEntra">
+	
 
 <table id="myTable">
 	<thead>
