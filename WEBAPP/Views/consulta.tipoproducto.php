@@ -7,7 +7,14 @@
 
   <script type="text/javascript">
   $(document).ready(function(){
-       $('#myTable').DataTable();
+       $('#myTable').DataTable({
+      "scrollY": '50vh',
+        "scrollCollapse": true,
+        "paging":false,
+      "language": {
+        "url": "js/Spanish.json"
+      }
+  });
 
 
   
@@ -25,9 +32,7 @@ function valida3(code){
   $("#Modificotipo").load("modifico_tipoproducto.php?produ_cod="+code+"");
  }
 
-  </script>
-
-<div class="container">
+  </script> 
 
   </head>
     <table id="myTable">
@@ -61,5 +66,4 @@ function valida3(code){
           }
          ?>
       </tbody>
-    </table>
-</div>
+    </table> 

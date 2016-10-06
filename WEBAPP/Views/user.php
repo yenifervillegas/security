@@ -7,9 +7,6 @@ if(!isset($_SESSION["usu_docu"])){
 
 ?>
 
-
-
-
 <html>
 <head>
     <title>Security</title>
@@ -20,8 +17,23 @@ if(!isset($_SESSION["usu_docu"])){
     <link rel="stylesheet" href="css/jquery.dataTables.min.css" />
     <link rel="stylesheet" type="text/css" href="css/styleMenu.css">
     <link rel="stylesheet" href="assets/css/main.css" />
+    <script type="text/javascript">
+  $(document).ready(function(){
+       $('#myTable').DataTable({
+      "scrollY": '50vh',
+        "scrollCollapse": true,
+        "paging":false,
+      "language": {
+        "url": "js/Spanish.json"
+      }
+  });
+      
+  });
+  function salida(sld){
 
-
+    location.href = "../Controller/controller.registro.producto.php?salidas="+sld+"&action=salidae";
+  }
+  </script>
 </head>
 <body>
 
@@ -39,7 +51,7 @@ if(!isset($_SESSION["usu_docu"])){
         <div id="sidebar">
            <ul><!--<?php if($_GET["seccion=usu"] == "seccion=usu"){echo"class='active'";} ?>-->
           <li><a href="#" onclick="menu('inicio');">inicio</a></li>
-          <li><a href="#user.php?seccion=usu" id="liUsuario" onclick="menu('regi_usu');">Registro Usuario</a></li>
+          <li><a href="#user.php?seccion=usu" id="liUsuario" >Registro Usuario</a></li>
           <li><a href="#user.php?seccion=tipo" id="liproducto" onclick="menu('tipo_pro');">Tipo de Producto</a></li>
           <li><a href="#user.php?seccion=pro" id="liregiproducto" onclick="menu('regi_pro');">Registro Producto</a></li>
           <li><a href="#user.php?seccion=ace" id="liaccesorio" onclick="menu('accesorios');">Accesorios</a></li>
@@ -64,17 +76,7 @@ if(!isset($_SESSION["usu_docu"])){
     <div  id="e_center"><!--contiene todo todos los formularios-->
       <div id="fondopan"></div>
 
-
-      <div id="registrousu"></div>
-      <div id="TipodeProducto"></div>
-      <div id="registroProducto"></div>
-      <div id="accesorios"></div>
-      <div id="entradaysalida"></div>
-
-      <div id="ModificaUsua"></div>
-      <div id="Modificoproducto"></div>
-      <div id="Modificotipo"></div>
-      <div id="Modificoacce"></div>
+      <div class="contenendor"></div> 
 
 
       </div>

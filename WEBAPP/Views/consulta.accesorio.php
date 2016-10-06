@@ -1,10 +1,14 @@
 
-
-
- 
   <script type="text/javascript">
   $(document).ready(function(){
-       $('#myTable').DataTable();
+       $('#myTable').DataTable({
+      "scrollY": '50vh',
+        "scrollCollapse": true,
+        "paging":false,
+      "language": {
+        "url": "js/Spanish.json"
+      }
+  });
 
 });
 function valida3(code){

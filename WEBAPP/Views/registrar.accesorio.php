@@ -8,7 +8,7 @@ $cargarregi=Gestion_usuario::consultarultimoregi();
 
 ?>
 
-<h2>Registro accesorios</h2>
+<h2>Registro de accesorios</h2>
   <section id="conteAcce">
 
      <form class="" action="../Controller/accesorio.controller.php" method="post">

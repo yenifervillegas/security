@@ -55,7 +55,7 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 	</script>
 </head>
 <body>
-<div id="consuUse">
+<div  >
 <table id="myTable" >
 	<thead>
 		<tr>
@@ -63,7 +63,7 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 			<td>Apellido</td>
 			<td>Tipo de documento</td>
 			<td>Documento</td>
-			<td>Correo Electronico</td>
+			
 			<td>Telefono</td>
 			<td>Direccion</td>
 			<td>Centro</td>
@@ -81,7 +81,6 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 							<td>".$consulta["usu_ape"]."</td>
 							<td>".$consulta["usu_tipodocu"]."</td>
 							<td>".$consulta["usu_docu"]."</td>
-							<td>".$consulta["usu_email"]."</td>
 							<td>".$consulta["usu_tel"]."</td>
 							<td>".$consulta["usu_direc"]."</td>
 							<td>".$consulta["usu_centro"]."</td>

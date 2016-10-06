@@ -184,17 +184,11 @@ margin-top: 5px;
 	display: inline-block;
 }
 
-.med{
-
-	width: 60%;
-
-	margin-left: 10%;
-}
-
+ 
 #consultausu{
 	
 	width: 99%;
-	margin-left: 1%;
+	margin-left: 3%;
 }
 
 #consuUse{
@@ -227,7 +221,8 @@ h2{
 #conte_consu{
 
 	width: 90%;
-	margin-left: 5%;
+	margin-left: 8%;
+
 }
 
 #conteProduc{
@@ -262,51 +257,51 @@ h2{
 }
 
 #registrousu{
+	margin-top: 30px;
 	width: 82.5%;
 	height: 1750px;
 	z-index: 100;
 	position: relative;
-	margin-left: 17%;
-	display: none;
+	margin-left: 17%; 
 	
 	
 }
 
 
 #TipodeProducto{
+	margin-top: 30px;
 	width: 82.5%;
 	height: 1000px;
 	z-index: 100;
 	position: relative;
-	margin-left: 17%;
-	display: none;
+	margin-left: 25%;
 
 	overflow: hidden;
 }
 #registroProducto{
+	margin-top: 30px;
 	width: 82%;
 	height: 1250px;
 	z-index: 100;
 	position: relative;
 	margin-left: 17%;
-	display: none;
 
 }
 #accesorios{
+	margin-top: 30px;
 	width: 82%;
 	height: 1000px;
 	z-index: 100;
 	position: relative;
 	margin-left: 17%;
-	display: none;
 }
 #entradaysalida{
+	margin-top: 30px;
 	width: 82%;
 	height: 1000px;
 	z-index: 100;
 	position: relative;
 	margin-left: 17%;
-	display: none;
 }
 
 #ModificaUsua{
@@ -315,7 +310,6 @@ h2{
 	z-index: 100;
 	position: relative;
 	margin-left: 30%;
-	display: none;
 }
 #Modificoproducto{
 	width: 60%;
@@ -323,7 +317,6 @@ h2{
 	z-index: 100;
 	position: relative;
 	margin-left: 30%;
-	display: none;
 }
 #Modificotipo{
 	width: 40%;
@@ -331,7 +324,6 @@ h2{
 	z-index: 100;
 	position: relative;
 	margin-left: 30%;
-	display: none;
 }
 #Modificoacce{
 	width: 40%;
@@ -339,5 +331,28 @@ h2{
 	z-index: 100;
 	position: relative;
 	margin-left: 30%;
-	display: none;
 }
+#consuUse input{
+	margin-left: 60px;
+
+
+}
+
+
+.contenendor{ 
+    z-index: 100;
+    position: relative;
+    margin-left: 240px;
+    padding: 30px;
+    text-align: center;
+}
+
+
+
+.content-form{
+	width:55%;
+	text-align: left;
+	position: relative;
+	margin: auto;
+}
+

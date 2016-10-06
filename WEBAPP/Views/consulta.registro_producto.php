@@ -9,14 +9,14 @@ $producto=Gestion_producto::consultar();
 
 	<script type="text/javascript">
 	$(document).ready(function(){
-   		 /*{
+   		 $('#myTable').DataTable({
  			"scrollY": '50vh',
   			"scrollCollapse": true,
   			"paging":false,
  			"language": {
-   			"url": "//cdn.datatables.net/plug-ins/1.10.12/i18n/Spanish.json"
-  }*/
-   		 $('#myTable').DataTable();
+   			"url": "js/Spanish.json"
+   		}
+  });
 	
 });
 

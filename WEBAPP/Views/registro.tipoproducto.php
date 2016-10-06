@@ -1,25 +1,20 @@
+<!-- Formulario: Guardar tipo de producto -->
+<h1>Registro Tipo Producto</h1>
 
-
-
-	<!-- Formulario: Guardar tipo de producto -->
-<section class="containerTipo">
-
-
-	<h2>Guardar tipo  producto</h2>
+<section class="content-form">
 	<form action="../Controller/tipoproducto.controller.php" method="POST">
-		
+
 		<label>Nombre del tipo de producto</label>
-			<input type="text" name="txt_tipopronom"/></br>
+		<input type="text" name="txt_tipopronom"/></br>
 
 		<label>Marca</label>
-			<input type="text" name="txt_desctipopro"></br>
+		<input type="text" name="txt_desctipopro"></br>
 
-		<button name="action" value="create">Guardar</button>
-		
+		<button name="action" value="create">Guardar</button>	
 	</form>
-
 </section>
-<section id="conte_consu">
+
+<section class="content-table">
     <?php include 'consulta.tipoproducto.php'; ?>
- </section>
+</section>
  

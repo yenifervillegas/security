@@ -8,7 +8,37 @@ $(document).ready(function() {
 
   }); 
 // cargar();
-url();
+// url();
+
+$("#liUsuario").click(function(){
+		$("#fondopan").fadeOut();
+		$(".contenendor").load("registro.usuario.php");
+	});
+
+	$("#liproducto").click(function(){
+
+		$("#fondopan").fadeOut(); 
+		$(".contenendor").load("registro.tipoproducto.php");
+	});
+
+	$("#liregiproducto").click(function(){
+
+		$("#fondopan").fadeOut();
+		$(".contenendor").load("registro.registro_producto.php");
+	});
+
+	$("#liaccesorio").click(function(){
+
+		$("#fondopan").fadeOut();
+		$(".contenendor").load("registrar.accesorio.php");
+	});
+
+	$("#lientrasal").click(function(){
+
+		$("#fondopan").fadeOut();
+		$(".contenendor").load("consulta.entrada_salida.php");
+	});
+
 });
 
  function ingresar(){
@@ -26,28 +56,10 @@ function sesion(){
 }
 
 
-/*function cargar(){
-	$("#liUsuario").click(function(){
-		$("#registrousu").load("registro.usuario.php");
-	});
-
-	$("#liproducto").click(function(){
-		$("#TipodeProducto").load("registro.tipoproducto.php");
-	});
-
-	$("#liregiproducto").click(function(){
-		$("#registroProducto").load("registro.registro_producto.php");
-	});
-
-	$("#liaccesorio").click(function(){
-		$("#accesorios").load("registrar.accesorio.php");
-	});
-
-	$("#lientrasal").click(function(){
-		$("#entradaysalida").load("consulta.entrada_salida.php");
-	});
-	url();
-}*/
+//function cargar(){
+	
+	// url();
+// } 
 
 function url(){
 
@@ -74,87 +86,86 @@ function url(){
 
 }
 
- 	function menu(Vvar){
-		switch(Vvar){
-			case "regi_usu":
+//  	function menu(Vvar){
+// 		switch(Vvar){
+// 			case "regi_usu":
 
-				$("#fondopan").fadeOut();
-				$("#registrousu").fadeOut();
-				$("#TipodeProducto").fadeOut();
-				$("#registroProducto").fadeOut();
-				$("#accesorios").fadeOut();
-				$("#entradaysalida").fadeOut();
-				$("#registrousu").load("registro.usuario.php");
-				$("#registrousu").fadeIn();
-			break;
+// 				$("#fondopan").fadeOut();
+// 				$("#registrousu").fadeOut();
+// 				$("#TipodeProducto").fadeOut();
+// 				$("#registroProducto").fadeOut();
+// 				$("#accesorios").fadeOut();
+// 				$("#entradaysalida").fadeOut();
+// 				$("#registrousu").load("registro.usuario.php");
+// 				$("#registrousu").fadeIn();
+// 			break;
 
-			case "inicio":
-				$("#registrousu").fadeOut();
-				$("#TipodeProducto").fadeOut();
-				$("#registroProducto").fadeOut();
-				$("#accesorios").fadeOut();
-				$("#entradaysalida").fadeOut();
+// 			case "inicio":
+// 				$("#registrousu").fadeOut();
+// 				$("#TipodeProducto").fadeOut();
+// 				$("#registroProducto").fadeOut();
+// 				$("#accesorios").fadeOut();
+// 				$("#entradaysalida").fadeOut();
 
-				$("#fondopan").fadeIn();
+// 				$("#fondopan").fadeIn();
 
 				
-			break;
+// 			break;
 
-			case "tipo_pro":
-				$("#registrousu").fadeOut();
-				$("#fondopan").fadeOut();
-				$("#registroProducto").fadeOut();
-				$("#accesorios").fadeOut();
-				$("#entradaysalida").fadeOut();
+// 			case "tipo_pro":
+// 				$("#registrousu").fadeOut();
+// 				$("#fondopan").fadeOut();
+// 				$("#registroProducto").fadeOut();
+// 				$("#accesorios").fadeOut();
+// 				$("#entradaysalida").fadeOut();
 
-				$("#TipodeProducto").fadeIn();
-				$("#TipodeProducto").load("registro.tipoproducto.php");
+// 				$("#TipodeProducto").fadeIn();
+// 				$("#TipodeProducto").load("registro.tipoproducto.php");
 				
-			break;
+// 			break;
 
-			case "regi_pro":
-				$("#registrousu").fadeOut();
-				$("#fondopan").fadeOut();
-				$("#TipodeProducto").fadeOut();
-				$("#accesorios").fadeOut();
-				$("#entradaysalida").fadeOut();
+// 			case "regi_pro":
+// 				$("#registrousu").fadeOut();
+// 				$("#fondopan").fadeOut();
+// 				$("#TipodeProducto").fadeOut();
+// 				$("#accesorios").fadeOut();
+// 				$("#entradaysalida").fadeOut();
 
-				$("#registroProducto").fadeIn();
-				$("#registroProducto").load("registro.registro_producto.php");
+// 				$("#registroProducto").fadeIn();
+// 				$("#registroProducto").load("registro.registro_producto.php");
 				
-			break;
+// 			break;
 
-			case "accesorios":
+// 			case "accesorios":
 			
-				$("#registrousu").fadeOut();
-				$("#fondopan").fadeOut();
-				$("#TipodeProducto").fadeOut();
-				$("#registroProducto").fadeOut();
-				$("#entradaysalida").fadeOut();
+// 				$("#registrousu").fadeOut();
+// 				$("#fondopan").fadeOut();
+// 				$("#TipodeProducto").fadeOut();
+// 				$("#registroProducto").fadeOut();
+// 				$("#entradaysalida").fadeOut();
 
-				$("#accesorios").fadeIn();
-				$("#accesorios").load("registrar.accesorio.php");
+// 				$("#accesorios").fadeIn();
+// 				$("#accesorios").load("registrar.accesorio.php");
 				
-			break;
+// 			break;
 
-			case "entra_sal":
-				$('#myTable').DataTable();
-				alert("no carga tabla");
-				$("#registrousu").fadeOut();
-				$("#fondopan").fadeOut();
-				$("#TipodeProducto").fadeOut();
-				$("#registroProducto").fadeOut();
-				$("#accesorios").fadeOut();
+// 			case "entra_sal":
+// 				$('#myTable').DataTable();
+// 				$("#registrousu").fadeOut();
+// 				$("#fondopan").fadeOut();
+// 				$("#TipodeProducto").fadeOut();
+// 				$("#registroProducto").fadeOut();
+// 				$("#accesorios").fadeOut();
 
-				$("#entradaysalida").fadeIn();
+// 				$("#entradaysalida").fadeIn();
 				
-				$("#entradaysalida").load("consulta.entrada_salida.php");
+// 				$("#entradaysalida").load("consulta.entrada_salida.php");
 				
 				
-			break;
+// 			break;
 
-	}
-}
+// 	}
+// }
 
    
  

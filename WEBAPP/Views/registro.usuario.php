@@ -1,19 +1,10 @@
-<html>
-<head>
-	<title></title>
-	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
-	<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
-	<link rel="stylesheet" href="css/jquery.dataTables.min.css" />
-	<link rel="stylesheet" href="css/styleMenu.css" />
-	
-</head>
-<body>
-
+ 
 
 <?php require_once("../Model/conexion.php"); require_once("../Model/usuario.class.php"); ?>
 
-	<center><h1>Registro de Usuarios</h1></center>
-	<section class="med">
+	 <h1>Registro de Usuarios</h1> 
+</br>
+<section class="content-form">
  			<form  action="../Controller/registro.controller.php" method="post" <?php $rol=Gestion_usuario::cargar_rol(); ?>>
 		
 						
@@ -70,9 +61,7 @@
 				</form>
 	 
 	</section>
-
-	<section id="consultausu">
+<section class="content-table">
 		<?php include 'consulta.usuario.php'; ?>
 	</section>
-</body>
-</html>
+ 
