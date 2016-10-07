@@ -49,6 +49,11 @@ switch ($action) {
        		 	echo $e;
        		 }
      	break;
+     		case 'cancelar':
+		header("location:../views/user.php#user.php?seccion=rol");
+	break;
+	
+	
 }
 //header("location:../views/consulta.rol.php");
 ?>

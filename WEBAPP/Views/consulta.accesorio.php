@@ -13,15 +13,8 @@
 });
 function valida3(code){
 
-  $("#registrousu").fadeOut();
-            
-  $("#registrousu").fadeOut();
-  $("#fondopan").fadeOut();
-  $("#TipodeProducto").fadeOut();
-  $("#registroProducto").fadeOut();
-  $("#accesorios").fadeOut();
-  $("#Modificoacce").fadeIn();
-  $("#Modificoacce").load("modificar.accesorio.php?acce_cod="+code+"");
+
+  $(".contenendor").load("modificar.accesorio.php?acce_cod="+code+"");
  }
 
 

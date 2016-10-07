@@ -21,6 +21,11 @@ $rol =Gestion_rol::Consultar();
 
   
 });
+  function valida3(code){
+
+
+  $(".contenendor").load("modifico_rol.php?rol_cod="+code+"");
+ }
 
   </script>
 
@@ -42,9 +47,9 @@ $rol =Gestion_rol::Consultar();
 							<td>".$consulta["rol_nom"]."</td>
 							
 							<td>
-								<a href='modifico_rol.php?codigo_rol=".$consulta["rol_cod"]."''>
-									Modificar
-								</a>
+								<span style='cursor:pointer' onclick='valida3(".$consulta["rol_cod"].");' class='btn-floating light-green'>
+                     				modificar
+                  				 </span>
 								<a href='../Controller/guardarrol.php?rol_cod=".$consulta["rol_cod"]."&action=Borrar' class='btn-floating red'>
 									Eliminar
 								</a>

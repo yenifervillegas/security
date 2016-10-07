@@ -2,9 +2,7 @@
 @import url(font-awesome.min.css);
 
 /*
-	Epilogue by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+	
 */
 
 /* Reset */
@@ -275,7 +273,7 @@
 	}
 
 		a:hover {
-			color: #fff !important;
+			color: #000 !important;
 		}
 
 	strong, b {
@@ -714,6 +712,7 @@
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
+			color: #000;
 		}
 
 		.icon > .label {

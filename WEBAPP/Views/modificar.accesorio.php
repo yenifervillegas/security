@@ -4,7 +4,7 @@
 	$codigo =Gestion_usuario::Consultaracce($_GET["acce_cod"]);
 
 ?>
-<section> 
+<section class="content-form">
 
 	<h1>Modificar usuario</h1>
 	<form action="../Controller/accesorio.controller.php" method="POST">

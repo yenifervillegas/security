@@ -57,7 +57,7 @@ switch ($accion) {
 		break;
 
 		case 'Cancelar':
-		header("location:../Views/user.php#user.php?seccion=acce");
+		header("location:../Views/user.php#user.php?seccion=ace");
 	break;
 
 }

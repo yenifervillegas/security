@@ -3,8 +3,9 @@
   require_once("../model/conexion.php");
   require_once("../model/registro.producto.class.php");
 
-  $codigoP = Gestion_producto::consultaP($_GET["producto"]);
+  $codigoP = Gestion_producto::consultaP($_GET["regi_cod"]);
  ?>
+ <section class="content-form">
   <!-- Formulario de modificar usuarios: Vigilantes o Administradores -->
   <form action="../controller/controller.registro.producto.php" method="post">
       
@@ -42,3 +43,4 @@
 
   <button name="action" value="Cancelar">Cancelar</button>
   </form>
+</section>

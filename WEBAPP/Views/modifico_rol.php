@@ -2,9 +2,9 @@
   require_once '../Model/conexion.php';
   require_once '../Model/rol.class.php';
 
-  $codigo = Gestion_rol::Consultarporcodigo($_GET["codigo_rol"]);
- ?><br>
- <section>
+  $codigo = Gestion_rol::Consultarporcodigo($_GET["rol_cod"]);
+ ?>
+<section class="content-form">
    
   <!-- Formulario de modificar usuarios: Vigilantes o Administradores -->
 
@@ -16,8 +16,10 @@
 
       <label>Nombre:</label>
       <input type="text" name="txt_nomrol" value=" <?php echo $codigo["rol_nom"]; ?>" required/>
+      </br>
       
       <button name="action" class="btn teal thin right" value="Update">Modificar</button>
+      <button name="action" value="cancelar">Cancelar</button>
   </form>
 
 </section>

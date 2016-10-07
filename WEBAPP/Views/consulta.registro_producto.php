@@ -22,17 +22,9 @@ $producto=Gestion_producto::consultar();
 
  function valida3(code){
 
- 	$("#registrousu").fadeOut();
-   		   		
-	$("#registrousu").fadeOut();
-	$("#fondopan").fadeOut();
-	$("#TipodeProducto").fadeOut();
-	$("#registroProducto").fadeOut();
-	$("#accesorios").fadeOut();
-	$("#Modificoproducto").fadeIn();
-	$("#Modificoproducto").load("modificar.registro_producto.php?producto="+code+"");
- }
 
+  $(".contenendor").load("modificar.registro_producto.php?regi_cod="+code+"");
+ }
 </script>
 </head>
 <body>

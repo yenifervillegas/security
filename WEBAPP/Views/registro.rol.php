@@ -9,6 +9,7 @@
 					
 		</br>
 			<button type="submit" value="Guardar" class="btn thin teal" name="action">Guardar</button>
+			
 	</form>
 </section>
 
