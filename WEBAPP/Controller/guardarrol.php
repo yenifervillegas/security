@@ -12,7 +12,7 @@ switch ($action) {
 		try{
 			Gestion_rol::Guardar($nombre_rol);
 			echo "<script>alert('Guardo con exito');
-                  location.href = '../views/registro.rol.php';
+                  location.href = '../views/user.php#user.php?seccion=rol';
                 </script>";
 
 		}catch(Exception $e){
@@ -28,7 +28,7 @@ switch ($action) {
 		try{
 			Gestion_rol::Modificar($codigo,$rol_nombre);
 			echo "<script>alert('Modifico con exito');
-                  location.href = '../views/registro.rol.php';
+                  location.href = '../views/user.php#user.php?seccion=rol';
                 </script>";
 		}catch(Exception $e){
 			echo $e;
@@ -43,7 +43,7 @@ switch ($action) {
        		 Gestion_rol::Eliminar($rol_cod);
        		 echo "Eliminó con exito";
        		echo "<script>alert('Elimino con exito');
-                  location.href = '../views/registro.rol.php';
+                  location.href = '../views/user.php#user.php?seccion=rol';
                 </script>";
       	}catch (Exception $e){
        		 	echo $e;

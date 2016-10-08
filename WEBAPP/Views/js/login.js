@@ -101,7 +101,20 @@ function url(){
 	
 
 }
-
+function seleccionar(){
+	condicion=$("#seleccion").val();
+	if(condicion == 1)
+	{
+		$(".centro").fadeOut();
+		$(".cargo").fadeOut();
+		$(".contrasena").fadeIn();
+		
+	}else{
+		$(".contrasena").fadeOut();
+		$(".centro").fadeIn();
+		$(".cargo").fadeIn();
+	}
+}
 //  	function menu(Vvar){
 // 		switch(Vvar){
 // 			

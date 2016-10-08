@@ -301,11 +301,9 @@ h2{
 	
 }
 #Modificoproducto{
-	width: 60%;
-	height: 1200px;
-	z-index: 100;
-	position: relative;
-	margin-left: 30%;
+	
+	height: 1100px;
+	
 }
 #Modificotipo{
 	width: 40%;
@@ -348,7 +346,7 @@ h2{
 
 }
 .content-table{
-	height: 500px;		
+	height: 620px;		
 }
 
 

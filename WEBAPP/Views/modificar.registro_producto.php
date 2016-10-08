@@ -5,7 +5,7 @@
 
   $codigoP = Gestion_producto::consultaP($_GET["regi_cod"]);
  ?>
- <section class="content-form">
+ <section class="content-form" id="Modificoproducto">
   <!-- Formulario de modificar usuarios: Vigilantes o Administradores -->
   <form action="../controller/controller.registro.producto.php" method="post">
       
@@ -38,7 +38,7 @@
       <label>registro cantidad</label>
       <input type="text" name="regi_cantidad" value=" <?php echo $codigoP["regi_cantidad"]; ?>"/>
 
-
+</br>
       <button name="action" value="modificar">Modificar</button>
 
   <button name="action" value="Cancelar">Cancelar</button>

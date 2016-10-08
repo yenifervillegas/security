@@ -9,7 +9,7 @@
  			<form  action="../Controller/registro.controller.php" method="post" <?php $rol=Gestion_usuario::cargar_rol(); ?>>
 		
 						
-				<select  name="seleccion">
+				<select  name="seleccion" id="seleccion" onchange="seleccionar()">
 				  <option value="" disabled selected>Elija Rol de Usuario</option>
 						<?php foreach ($rol as $roles): ?>
 						  <option value="<?php echo $roles["rol_cod"]?>" ><?php echo $roles["rol_nom"]; ?></option>
@@ -46,14 +46,14 @@
 		  		<input id="" type="text" name="direccion" required />
 							
 							
-				<label for="">Centro</label>
-				<input id="" type="text" name="centro" required />
+				<label class="centro" >Centro</label>
+				<input class="centro" type="text" name="centro" required />
 							
-				<label for="">Cargo</label>
-				<input id="" type="text" name="cargo" required />
+				<label class="cargo">Cargo</label>
+				<input class="cargo" type="text" name="cargo" required />
 							
-				<label for="">Contraseña</label>
-				<input id="" type="password" name="contrasena" required />
+				<label class="contrasena">Contraseña</label>
+				<input class="contrasena" type="password" name="contrasena" required />
 							
 			    </br>
 			    <button  value="Guardar" name="action">Guardar</button>
