@@ -46,7 +46,7 @@ class Gestion_usuario{
 		$pdo=Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-		$sql="SELECT * FROM accesorios";
+		$sql="SELECT * FROM accesorios where acce_cod=?";
 		$query=$pdo->prepare($sql);
 		$query->execute(array($codigo));
 

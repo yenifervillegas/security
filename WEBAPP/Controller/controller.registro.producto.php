@@ -8,7 +8,6 @@ require_once("../Model/registro.producto.class.php");
 $accion=$_REQUEST["action"];
 switch ($accion) {
 	case 'Guardarpro':
-echo"dddd";
 	$codigo_usu=$_POST["codigo_usu"];
 	$codigo_produ=$_POST["codigo_produ"];
 	$registro_serial=$_POST["registro_serial"];
@@ -65,7 +64,7 @@ echo"dddd";
 		try{
 			Gestion_producto::eliminar($codigoA);
 			echo "<script>alert('Elimino con exito');
-			location.href = ../views/user.php#user.php?seccion=pro;
+			location.href ='../views/user.php#user.php?seccion=pro';
 			</script>";
 		}catch(Exception $e){
 

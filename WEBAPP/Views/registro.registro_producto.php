@@ -18,15 +18,15 @@ $fecha=date("Y-m-d");
 		
 		<!--<input name="codigo_produ" type="text" required/>-->
 
-		<label>Codigo de usuario</label>
-		<input name="codigo_usu" type="number" disabled value="<?php echo $cargarusu["usu_docu"]?>"/><!--este si va?,,,, se le cambio el name repetido con el cod prod-->
+		<label>Codigo de usuario: <?php echo $cargarusu["usu_docu"]?></label>
+		<input name="codigo_usu" type="hidden"  value="<?php echo $cargarusu["usu_docu"]?>"/><!--este si va?,,,, se le cambio el name repetido con el cod prod-->
 
-		<label>Codigo de producto</label>
+		<label>Nombre de producto</label>
 		<select name="codigo_produ">
 			<option>Seleccionar</option>
 			<?php
 				foreach ($producto as $pd) {
-				 	echo "<option value=".$pd["produ_cod"].">".$pd["produ_nom"]."</option>";
+				 	echo "<option value=".$pd["produ_cod"].">".$pd["produ_nom"]." ".$pd["produ_marca"]."</option>";
 				 } 
 				
 			?>
@@ -41,7 +41,7 @@ $fecha=date("Y-m-d");
 
 	
 		<label>Fecha:</label>
-		<input autocomplete='off'  name='fecha' type='date' min='<?php echo $fecha; ?>'class='' id='fecha' value="<?php echo $fecha; ?>">
+		<input autocomplete='off'  name='registre_fecha' type='date' min='<?php echo $fecha; ?>'class='' id='fecha'>
 		
 		<label >Registre descripcion</label>
 		<textarea name="registre_decrip" type="text"></textarea>

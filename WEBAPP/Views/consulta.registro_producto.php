@@ -66,7 +66,7 @@ $producto=Gestion_producto::consultar();
 						<span style='cursor:pointer' onclick='valida3(".$produc["regi_cod"].");' class='btn-floating light-green'>
 							modificar
 						</span>
-						<a href='../Controller/controller.registro.producto.php?codigo_produc=".$produc["regi_cod"]."& action=eliminar' >Eliminar</a>
+						<a href='../Controller/controller.registro.producto.php?codigo_produc=".$produc["regi_cod"]."&action=eliminar' >Eliminar</a>
 					</td>
 			</tr>";
 			}

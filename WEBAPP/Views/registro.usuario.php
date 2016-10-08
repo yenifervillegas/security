@@ -47,13 +47,13 @@
 							
 							
 				<label class="centro" >Centro</label>
-				<input class="centro" type="text" name="centro" required />
+				<input class="centro" id="centros"  type="text" name="centro" value="calatrava" required />
 							
 				<label class="cargo">Cargo</label>
-				<input class="cargo" type="text" name="cargo" required />
+				<input class="cargo"  id="cargos" type="text" name="cargo" value="vigilante" required />
 							
 				<label class="contrasena">Contraseña</label>
-				<input class="contrasena" type="password" name="contrasena" required />
+				<input class="contrasena" id="contrasena"  type="password" name="contrasena" value="123" required />
 							
 			    </br>
 			    <button  value="Guardar" name="action">Guardar</button>

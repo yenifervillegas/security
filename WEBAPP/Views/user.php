@@ -16,7 +16,7 @@ if(!isset($_SESSION["usu_docu"])){
     <script type="text/javascript" src="js/login.js"></script>
     <link rel="stylesheet" href="css/jquery.dataTables.min.css" />
 
-    <script src="dist/sweetalert-dev.js"></script>
+    <script src="dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="dist/sweetalert.css">
 
     <link rel="stylesheet" type="text/css" href="css/styleMenu.css">

@@ -14,8 +14,8 @@ switch ($accion) {
 
 		try{
 			Gestion_usuario::Guardar($codigo_regi,$nombre,$cantidad);
-			echo "<script>alert('Modifico  con exito');
-			location.href = '../views/user.php#user.php?seccion=acce';
+			echo "<script>alert('Guardo  con exito');
+			location.href = '../views/user.php#user.php?seccion=ace';
 			</script>";
 
 		}catch(Exception $e){
@@ -33,7 +33,7 @@ switch ($accion) {
 	try{
 		Gestion_usuario::Modificar($codigo_acce,$codigo_regi,$nombre,$cantidad);
 			echo "<script>alert('Modifico  con exito');
-			location.href ='../Views/user.php#user.php?seccion=acce';
+			location.href ='../Views/user.php#user.php?seccion=ace';
 			</script>";
 		}catch(Exception $e){
 			echo $e;
@@ -47,7 +47,7 @@ switch ($accion) {
 		try{
 			Gestion_usuario::eliminar($codigoA);
 			echo "<script>alert('Elimino con exito');
-			location.href = '../Views/user.php#user.php?seccion=acce';
+			location.href = '../Views/user.php#user.php?seccion=ace';
 			</script>";
 		}catch(Exception $e){
 

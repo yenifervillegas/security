@@ -41,8 +41,8 @@ switch ($action) {
 
     try {
        		 Gestion_rol::Eliminar($rol_cod);
-       		 echo "Eliminó con exito";
-       		echo "<script>alert('Elimino con exito');
+       		 
+       		echo "<script>alert('Desea eliminal el rol');
                   location.href = '../views/user.php#user.php?seccion=rol';
                 </script>";
       	}catch (Exception $e){

@@ -13,8 +13,8 @@ $cargarregi=Gestion_usuario::consultarultimoregi();
 
      <form class="" action="../Controller/accesorio.controller.php" method="post">
 
-      <label for="">Codigo de registro</label>
-       <input type="text" name="codigo_regi" disabled value="<?php echo $cargarregi["regi_cod"]?>">
+      <label for="">Codigo de registro:<?php echo $cargarregi["regi_cod"]?></label>
+       <input type="hidden" name="codigo_regi"  value="<?php echo $cargarregi["regi_cod"]?>">
 
        <label for="">Nombre del Accesorio</label>
        <input type="text" name="nombre" >
