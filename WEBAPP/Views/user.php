@@ -13,8 +13,12 @@ if(!isset($_SESSION["usu_docu"])){
 
     <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
-     <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
     <link rel="stylesheet" href="css/jquery.dataTables.min.css" />
+
+    <script src="dist/sweetalert-dev.js"></script>
+    <link rel="stylesheet" href="dist/sweetalert.css">
+
     <link rel="stylesheet" type="text/css" href="css/styleMenu.css">
     <link rel="stylesheet" href="assets/css/main.css" />
     <script type="text/javascript">

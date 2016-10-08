@@ -101,8 +101,11 @@ function url(){
 	
 
 }
+
+
 function seleccionar(){
 	condicion=$("#seleccion").val();
+
 	if(condicion == 1)
 	{
 		$(".centro").fadeOut();
@@ -115,25 +118,21 @@ function seleccionar(){
 		$(".cargo").fadeIn();
 	}
 }
-//  	function menu(Vvar){
-// 		switch(Vvar){
-// 			
+ 	function menu(Vvar){
+		switch(Vvar){
+			
 
-// 			case "inicio":
-// 				$("#registrousu").fadeOut();
-// 				$("#TipodeProducto").fadeOut();
-// 				$("#registroProducto").fadeOut();
-// 				$("#accesorios").fadeOut();
-// 				$("#entradaysalida").fadeOut();
-
-// 				$("#fondopan").fadeIn();
+			case "inicio":
+				$(".content-form").fadeOut();
+				
+				$("#fondopan").fadeIn();
 
 				
-// 			break;
+			break;
 
-// 			
-// 	}
-// }
+			
+	}
+}
 
    
  
