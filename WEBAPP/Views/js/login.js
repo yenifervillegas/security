@@ -8,7 +8,7 @@ $(document).ready(function() {
 
   }); 
 // cargar();
- url();
+ url();    
 
 $("#lirol").click(function(){
 

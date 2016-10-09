@@ -1,4 +1,14 @@
 <!-- Andrea T. Villegas -->
+<html>
+<head>
+	<title></title>
+	 <script src="../views/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="../views/dist/sweetalert.css">
+</head>
+<body>
+
+</body>
+</html>
 <?php
 require_once("../Model/conexion.php");
 require_once("../Model/usuario.class.php");
@@ -49,13 +59,12 @@ switch ($action) {
 
 	try{
 		Gestion_usuario::Modificar($codigo,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$cifrar);
-		echo "<script>alert('Modifico  con exito');
-			location.href = '../views/user.php#user.php?seccion=usu';
-			</script>";
+		echo "<script>swal('Heres a message!');</script>";
+		
 	}catch(Exception $e){
 		echo $e;
 	}
-
+echo "<script>location.href = '../views/user.php#user.php?seccion=usu';</script>";
 		break;
 
 		case 'estado':

@@ -31,7 +31,7 @@ if(!isset($_SESSION["usu_docu"])){
         "url": "js/Spanish.json"
       }
   });
-      
+
   });
   function salida(sld){
 
