@@ -2,10 +2,8 @@
 <html>
 <head>
 	<title></title>
-	 <script src="bower_components/es6-promise/es6-promise.min.js"></script>
-
-	<script src="bower_components/sweetalert2/dist/sweetalert2.min.js"></script>
-	<link rel="stylesheet" href="bower_components/sweetalert2/dist/sweetalert2.min.css">
+		<script src="dist/sweetalert.min.js"></script>
+		 <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
 </head>
 <body>
 
@@ -61,15 +59,24 @@ switch ($action) {
 
 	try{
 		Gestion_usuario::Modificar($codigo,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$cifrar);
-		echo "<script>alert('Modifico con exito');
+	
+echo "<script>alert('Modifico con exito');
 			location.href = '../views/user.php#user.php?seccion=usu';
 			</script>";
-		// echo "swal('Heres a message!');";
+	// 	// echo "<script>alert('Modifico con exito');
+	// 		// location.href = '../views/user.php#user.php?seccion=usu';
+	// 		// </script>";
+	// 	 echo("<script>swal({
+ //  		title: 'Auto close alert!',
+ // 		text: 'I will close in 2 seconds.',
+ // 		<a href='../views/user.php#user.php?seccion=usu'></a>
+	// })
+
+	// </script>");
 		
 	}catch(Exception $e){
 		echo $e;
-	}
-echo "<script>location.href = '../views/user.php#user.php?seccion=usu';</script>";
+	} echo "<script>location.href = '../views/user.php#user.php?seccion=usu';</script>";
 		break;
 
 		case 'estado':
