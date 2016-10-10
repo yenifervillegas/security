@@ -8,6 +8,9 @@ $producto=Gestion_producto::consultarprodu();
 $cargarusu=Gestion_producto::consultarultimousu();
 
 $fecha=date("Y-m-d");
+echo"<script>alert('Debe de Registrar EL Usuario Antes de Registrar un Producto');
+	location.href = '../views/user.php#user.php?seccion=pro';
+	</script>";;
 ?>
 
 

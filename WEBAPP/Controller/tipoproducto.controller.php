@@ -11,7 +11,7 @@ case 'create':
 	
 	$tipopro_nombre=$_POST["txt_tipopronom"];
 	$tipopro_desc=$_POST["txt_desctipopro"];
-	echo"dfd";
+	
 	try {
 		Gestion_Tipoproducto::Guardar($tipopro_nombre, $tipopro_desc);
 		echo "<script>alert('Guardar con exito');

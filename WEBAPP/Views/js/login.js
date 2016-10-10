@@ -124,6 +124,7 @@ function seleccionar(){
 
 			case "inicio":
 				$(".content-form").fadeOut();
+				$(".content-table").fadeOut();
 				
 				$("#fondopan").fadeIn();
 
