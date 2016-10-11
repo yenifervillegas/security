@@ -52,7 +52,7 @@
 	<input type="text" name="cargo" value=" <?php echo $codigo["usu_cargo"]; ?>"required/>
 
 	<label>Contraseña</label>
-	<input type="password" name="contrasena" value=" <?php echo $codigo["usu_pass"]; ?>"required/>
+	<input type="password" name="contrasena1" value=" <?php echo $codigo["usu_pass"]; ?>"required/>
 </br>
 	<button name="action" value="Modificar" >Modificar</button>
 	<button name="action" value="Cancelar" >Cancelar</button>

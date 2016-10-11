@@ -54,15 +54,19 @@ switch ($action) {
 		$direccion=$_POST["direccion"];
 		$centro=$_POST["centro"];
 		$cargo=$_POST["cargo"];
-		$contrasena=$_POST["contrasena"];
-		$cifrar=password_hash($contrasena,PASSWORD_DEFAULT);
+		$contrasenah=$_POST["contrasena1"];
+		$cifrars=password_hash($contrasenah,PASSWORD_DEFAULT);
 
 	try{
-		Gestion_usuario::Modificar($codigo,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$cifrar);
+		Gestion_usuario::Modificar($codigo,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$contrasenah);
 	
 echo "<script>alert('Modifico con exito');
 			location.href = '../views/user.php#user.php?seccion=usu';
 			</script>";
+	
+
+
+
 	// 	// echo "<script>alert('Modifico con exito');
 	// 		// location.href = '../views/user.php#user.php?seccion=usu';
 	// 		// </script>";
@@ -76,7 +80,7 @@ echo "<script>alert('Modifico con exito');
 		
 	}catch(Exception $e){
 		echo $e;
-	} echo "<script>location.href = '../views/user.php#user.php?seccion=usu';</script>";
+	} 
 		break;
 
 		case 'estado':
