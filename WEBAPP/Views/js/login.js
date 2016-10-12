@@ -8,7 +8,9 @@ $(document).ready(function() {
 
   }); 
 // cargar();
+
  url();    
+
 
 $("#lirol").click(function(){
 
@@ -103,6 +105,8 @@ function url(){
 }
 
 
+
+
 function seleccionar(){
 	condicion=$("#seleccion").val();
 
@@ -110,10 +114,15 @@ function seleccionar(){
 	{
 		$(".centro").fadeOut();
 		$(".cargo").fadeOut();
+		$("#centros").val("calatrava");
+		$("#cargos").val("vigilante");
+		
 		$(".contrasena").fadeIn();
 		
 	}else{
 		$(".contrasena").fadeOut();
+		$("#contrasena").val("1");
+
 		$(".centro").fadeIn();
 		$(".cargo").fadeIn();
 	}
@@ -134,6 +143,8 @@ function seleccionar(){
 			
 	}
 }
+
+
 
    
  

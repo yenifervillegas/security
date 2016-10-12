@@ -1,4 +1,4 @@
-<!-- Andrea T. Villegas -->
+
 <?php
 //se guarda en la base de datos
 class Gestion_usuario{
@@ -99,6 +99,25 @@ function activo1($estado,$codigo){
 		Conexion::Cerrarbd();
 
 	}
+
+	function consultardoculike($docume){
+		$pdo = Conexion::Abrirbd();
+		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		
+		$sqlP= "SELECT * FROM usuario WHERE usu_docu  LIKE CONCAT('%',?,'%') ";
+
+		$query= $pdo->prepare($sqlP);
+		$query->execute(array($docume));
+
+		$result=$query->fetchALL(PDO::FETCH_BOTH);
+
+	
+		Conexion::Cerrarbd();
+			return $result;
+	}
+
+
+
 }
 
 ?>
