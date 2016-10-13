@@ -27,6 +27,7 @@ switch ($action) {
 		
 		try{
 			Gestion_rol::Modificar($codigo,$rol_nombre);
+
 			echo "<script>alert('Modifico con exito');
                   location.href = '../views/user.php#user.php?seccion=rol';
                 </script>";

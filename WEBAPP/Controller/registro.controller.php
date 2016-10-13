@@ -2,8 +2,8 @@
 <html>
 <head>
 	<title></title>
-		<script src="dist/sweetalert.min.js"></script>
-		 <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+	<script src="../Views/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="../Views/dist/sweetalert.css">
 </head>
 <body>
 
@@ -111,8 +111,16 @@ echo "<script>alert('Modifico con exito');
 			}
 		break;
 		case 'Cancelar':
-			echo "<script>location.href = '../views/user.php#user.php?seccion=usu';
+			echo "<script>
+swal({   title: 'Auto close alert!',   text: 'I will close in 2 seconds.',   
+	   showConfirmButton: true },
+
+	   function(){   
+	   location.href = '../views/user.php#user.php?seccion=usu';
+		});
 			</script>";
+			// echo "<script>location.href = '../views/user.php#user.php?seccion=usu';
+			// </script>";
 		break;
 }
 ?>
