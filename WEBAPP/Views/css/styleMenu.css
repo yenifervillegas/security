@@ -139,6 +139,7 @@ margin-bottom: 0;
 	overflow: hidden;
 	vertical-align: top;
 
+
 }
 #nombre{
 	display: inline-block;
@@ -149,6 +150,7 @@ margin-bottom: 0;
 	color: #fff;
 	font-weight: bolder;
 	margin-top: 8px;
+	margin-left: 10px;
 
 
 
@@ -159,6 +161,7 @@ width: 36px;
 height: 36px;
 background: url(../images/user.png);
 margin-top: 5px;
+margin-left: 5px;
 
 
 }

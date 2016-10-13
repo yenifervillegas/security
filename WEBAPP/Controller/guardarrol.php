@@ -1,4 +1,13 @@
+<html>
+<head>
+	<title></title>
+	<script src="../Views/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="../Views/dist/sweetalert.css">
+</head>
+<body>
 
+</body>
+</html>
 <?php
 require_once("../Model/conexion.php");
 require_once("../Model/rol.class.php");
@@ -11,9 +20,14 @@ switch ($action) {
 		
 		try{
 			Gestion_rol::Guardar($nombre_rol);
-			echo "<script>alert('Guardo con exito');
-                  location.href = '../views/user.php#user.php?seccion=rol';
-                </script>";
+			echo "<script>
+				swal({   title: 'Guardo con Èxito',    
+	   			showConfirmButton: true },
+
+	   			function(){   
+	   			location.href = '../views/user.php#user.php?seccion=rol';
+				});
+			</script>";
 
 		}catch(Exception $e){
 			echo $e;
@@ -28,9 +42,14 @@ switch ($action) {
 		try{
 			Gestion_rol::Modificar($codigo,$rol_nombre);
 
-			echo "<script>alert('Modifico con exito');
-                  location.href = '../views/user.php#user.php?seccion=rol';
-                </script>";
+			echo "<script>
+				swal({   title: 'Modifico con Èxito',    
+	   			showConfirmButton: true },
+
+	   			function(){   
+	   			location.href = '../views/user.php#user.php?seccion=rol';
+				});
+			</script>";
 		}catch(Exception $e){
 			echo $e;
 		}
@@ -43,9 +62,14 @@ switch ($action) {
     try {
        		 Gestion_rol::Eliminar($rol_cod);
        		 
-       		echo "<script>alert('Desea eliminal el rol');
-                  location.href = '../views/user.php#user.php?seccion=rol';
-                </script>";
+       		echo "<script>
+				swal({   title: 'Elimino con Èxito',    
+	   			showConfirmButton: true },
+
+	   			function(){   
+	   			location.href = '../views/user.php#user.php?seccion=rol';
+				});
+			</script>";
       	}catch (Exception $e){
        		 	echo $e;
        		 }

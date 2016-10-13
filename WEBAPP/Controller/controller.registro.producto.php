@@ -1,4 +1,14 @@
 <!-- Andrea taborda -->
+<html>
+<head>
+	<title></title>
+	<script src="../Views/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="../Views/dist/sweetalert.css">
+</head>
+<body>
+
+</body>
+</html>
 <?php
 date_default_timezone_set("America/Bogota");
 session_start();
@@ -23,8 +33,13 @@ switch ($accion) {
 
 
 		Gestion_producto::Guardar($codigo_usu,$codigo_produ,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad,$fecha,$hora);
-		echo "<script>alert('Guardar con exito');
-			location.href = '../views/user.php#user.php?seccion=pro';
+		echo "<script>
+				swal({   title: 'Guardo con Èxito',    
+	   			showConfirmButton: true },
+
+	   			function(){   
+	   			location.href = '../views/user.php#user.php?seccion=pro';
+				});
 			</script>";
 
 	}catch(Exception $e){
@@ -47,8 +62,13 @@ switch ($accion) {
 
 	try{
 		Gestion_producto::modificar($codigo_regi,$codigo_usu,$codigo_produ,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad);
-			echo "<script>alert('Modifico  con exito');
-			location.href = '../views/user.php#user.php?seccion=pro';
+			echo "<script>
+				swal({   title: 'Modifico con Èxito',    
+	   			showConfirmButton: true },
+
+	   			function(){   
+	   			location.href = '../views/user.php#user.php?seccion=pro';
+				});
 			</script>";
 		}catch(Exception $e){
 			echo $e;
@@ -63,8 +83,13 @@ switch ($accion) {
 
 		try{
 			Gestion_producto::eliminar($codigoA);
-			echo "<script>alert('Elimino con exito');
-			location.href ='../views/user.php#user.php?seccion=pro';
+			echo "<script>
+				swal({   title: 'Elimino con Èxito',    
+	   			showConfirmButton: true },
+
+	   			function(){   
+	   			location.href = '../views/user.php#user.php?seccion=pro';
+				});
 			</script>";
 		}catch(Exception $e){
 

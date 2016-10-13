@@ -1,3 +1,13 @@
+<html>
+<head>
+	<title></title>
+	<script src="../Views/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="../Views/dist/sweetalert.css">
+</head>
+<body>
+
+</body>
+</html>
 <?php
 require_once("../Model/conexion.php");
 require_once("../Model/accesorio.class.php");
@@ -14,9 +24,15 @@ switch ($accion) {
 
 		try{
 			Gestion_usuario::Guardar($codigo_regi,$nombre,$cantidad);
-			echo "<script>alert('Guardo  con exito');
-			location.href = '../views/user.php#user.php?seccion=ace';
+			echo "<script>
+				swal({   title: 'Guardo con Èxito',    
+	   			showConfirmButton: true },
+
+	   			function(){   
+	   			location.href = '../views/user.php#user.php?seccion=ace';
+				});
 			</script>";
+
 
 		}catch(Exception $e){
 		echo $e;
@@ -32,9 +48,16 @@ switch ($accion) {
 
 	try{
 		Gestion_usuario::Modificar($codigo_acce,$codigo_regi,$nombre,$cantidad);
-			echo "<script>alert('Modifico  con exito');
-			location.href ='../Views/user.php#user.php?seccion=ace';
+			echo "<script>
+				swal({   title: 'Modifico con Èxito',    
+	   			showConfirmButton: true },
+
+	   			function(){   
+	   			location.href = '../views/user.php#user.php?seccion=ace';
+				});
 			</script>";
+
+
 		}catch(Exception $e){
 			echo $e;
 		}
@@ -46,9 +69,15 @@ switch ($accion) {
 
 		try{
 			Gestion_usuario::eliminar($codigoA);
-			echo "<script>alert('Elimino con exito');
-			location.href = '../Views/user.php#user.php?seccion=ace';
+			echo "<script>
+				swal({   title: 'Elimino con Èxito',    
+	   			showConfirmButton: true },
+
+	   			function(){   
+	   			location.href = '../views/user.php#user.php?seccion=ace';
+				});
 			</script>";
+
 		}catch(Exception $e){
 
 			echo $e;

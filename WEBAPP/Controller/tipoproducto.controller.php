@@ -1,4 +1,13 @@
+<html>
+<head>
+	<title></title>
+	<script src="../Views/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="../Views/dist/sweetalert.css">
+</head>
+<body>
 
+</body>
+</html>
 <?php
 require_once("../Model/conexion.php");
 require_once("../Model/tipoproducto.class.php");
@@ -14,9 +23,14 @@ case 'create':
 	
 	try {
 		Gestion_Tipoproducto::Guardar($tipopro_nombre, $tipopro_desc);
-		echo "<script>alert('Guardar con exito');
-		location.href =  '../views/user.php#user.php?seccion=tipo';
-		</script>";
+		echo "<script>
+				swal({   title: 'Guardo con Èxito',    
+	   			showConfirmButton: true },
+
+	   			function(){   
+	   			location.href = '../views/user.php#user.php?seccion=tipo';
+				});
+			</script>";
 	}
 	catch (Exception $e) {
 	$mensaje =("Ha ocurrido un error, el error fue :".$e->getMessage()." en ".$e->getFile()." en la linea ".$e->getLine());
@@ -32,9 +46,14 @@ case 'create':
 
      		 try {
      		 	Gestion_Tipoproducto::Modificar($tipopro_cod, $tipopro_nombre, $tipopro_desc);
-     		 	echo "<script>alert('Modifico con exito');
-					location.href =  '../views/user.php#user.php?seccion=tipo';
-						</script>";
+     		 	echo "<script>
+				swal({   title: 'Modifico con Èxito',    
+	   			showConfirmButton: true },
+
+	   			function(){   
+	   			location.href = '../views/user.php#user.php?seccion=tipo';
+				});
+			</script>";
      		 } catch (Exception $e) {
      		 	echo $e;
      		 }
@@ -45,9 +64,14 @@ case 'create':
 
        		 try {
        		 	Gestion_Tipoproducto::Eliminar($tipopro_cod);
-       		 	echo "<script>alert('Elimino con exito');
-       		 	location.href =  '../views/user.php#user.php?seccion=tipo';
-						</script>";
+       		 	echo "<script>
+				swal({   title: 'Elimino con Èxito',    
+	   			showConfirmButton: true },
+
+	   			function(){   
+	   			location.href = '../views/user.php#user.php?seccion=tipo';
+				});
+			</script>";
 						
 			
        		 } catch (Exception $e) {

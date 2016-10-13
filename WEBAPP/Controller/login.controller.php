@@ -1,3 +1,13 @@
+<html>
+<head>
+  <title></title>
+  <script src="../Views/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="../Views/dist/sweetalert.css">
+</head>
+<body>
+
+</body>
+</html>
 <?php
   require_once("../Model/conexion.php");
   require_once("../Model/login.class.php");
@@ -21,12 +31,24 @@ switch($accion){
                 header("location: ../Views/user.php");
               }
               elseif ($nick == $inyeccion or $pass == $inyeccion) {
-                echo "No se pase de listo con nosotros.<br>";
+                echo "<script>
+                swal({   title: 'Usuario no Registrado',    
+                showConfirmButton: true },
+
+                function(){   
+                location.href = '../views/index.html';
+              });
+          </script>";
               }
               else {
-                echo "<script>alert('Usuario no registrado');
-                  location.href = '../views/index.html';
-                </script>";
+                echo "<script>
+                swal({   title: 'Usuario no Registrado',    
+                showConfirmButton: true },
+
+                function(){   
+                location.href = '../views/index.html';
+              });
+          </script>";
               }
             }
           catch (Exception $e) {
