@@ -21,7 +21,7 @@ switch ($action) {
 		try{
 			Gestion_rol::Guardar($nombre_rol);
 			echo "<script>
-				swal({   title: 'Guardo con Èxito',    
+				swal({   title: 'Guardo con 	Éxito',    
 	   			showConfirmButton: true },
 
 	   			function(){   
@@ -43,7 +43,7 @@ switch ($action) {
 			Gestion_rol::Modificar($codigo,$rol_nombre);
 
 			echo "<script>
-				swal({   title: 'Modifico con Èxito',    
+				swal({   title: 'Modifico con Éxito',    
 	   			showConfirmButton: true },
 
 	   			function(){   
@@ -63,7 +63,7 @@ switch ($action) {
        		 Gestion_rol::Eliminar($rol_cod);
        		 
        		echo "<script>
-				swal({   title: 'Elimino con Èxito',    
+				swal({   title: 'Elimino con Éxito',    
 	   			showConfirmButton: true },
 
 	   			function(){   

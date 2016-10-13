@@ -5,10 +5,10 @@
 	<form action="../Controller/tipoproducto.controller.php" method="POST">
 
 		<label>Nombre del tipo de producto</label>
-		<input type="text" name="txt_tipopronom"/></br>
+		<input type="text" name="txt_tipopronom" required/></br>
 
 		<label>Marca</label>
-		<input type="text" name="txt_desctipopro"></br>
+		<input type="text" name="txt_desctipopro" requiered></br>
 
 		<button name="action" value="create">Guardar</button>	
 	</form>

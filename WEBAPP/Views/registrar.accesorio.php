@@ -17,10 +17,10 @@ $cargarregi=Gestion_usuario::consultarultimoregi();
        <input type="hidden" name="codigo_regi"  value="<?php echo $cargarregi["regi_cod"]?>">
 
        <label for="">Nombre del Accesorio</label>
-       <input type="text" name="nombre" >
+       <input type="text" name="nombre" required >
 
        <label for="">Cantidad</label>
-       <input type="text" name="cantidad" />
+       <input type="number" name="cantidad" required/>
 </br>
 
        <button name="action"  value="Guardar">Guardar</button>

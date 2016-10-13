@@ -25,7 +25,7 @@ switch ($accion) {
 		try{
 			Gestion_usuario::Guardar($codigo_regi,$nombre,$cantidad);
 			echo "<script>
-				swal({   title: 'Guardo con Èxito',    
+				swal({   title: 'Guardo con Éxito',    
 	   			showConfirmButton: true },
 
 	   			function(){   
@@ -49,7 +49,7 @@ switch ($accion) {
 	try{
 		Gestion_usuario::Modificar($codigo_acce,$codigo_regi,$nombre,$cantidad);
 			echo "<script>
-				swal({   title: 'Modifico con Èxito',    
+				swal({   title: 'Modifico con Éxito',    
 	   			showConfirmButton: true },
 
 	   			function(){   
@@ -70,7 +70,7 @@ switch ($accion) {
 		try{
 			Gestion_usuario::eliminar($codigoA);
 			echo "<script>
-				swal({   title: 'Elimino con Èxito',    
+				swal({   title: 'Elimino con Éxito',    
 	   			showConfirmButton: true },
 
 	   			function(){   

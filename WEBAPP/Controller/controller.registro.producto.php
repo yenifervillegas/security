@@ -34,7 +34,7 @@ switch ($accion) {
 
 		Gestion_producto::Guardar($codigo_usu,$codigo_produ,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad,$fecha,$hora);
 		echo "<script>
-				swal({   title: 'Guardo con Èxito',    
+				swal({   title: 'Guardo con Éxito',    
 	   			showConfirmButton: true },
 
 	   			function(){   
@@ -63,7 +63,7 @@ switch ($accion) {
 	try{
 		Gestion_producto::modificar($codigo_regi,$codigo_usu,$codigo_produ,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad);
 			echo "<script>
-				swal({   title: 'Modifico con Èxito',    
+				swal({   title: 'Modifico con Éxito',    
 	   			showConfirmButton: true },
 
 	   			function(){   
@@ -84,7 +84,7 @@ switch ($accion) {
 		try{
 			Gestion_producto::eliminar($codigoA);
 			echo "<script>
-				swal({   title: 'Elimino con Èxito',    
+				swal({   title: 'Elimino con Éxito',    
 	   			showConfirmButton: true },
 
 	   			function(){   

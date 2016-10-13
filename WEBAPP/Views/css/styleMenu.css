@@ -161,7 +161,7 @@ width: 36px;
 height: 36px;
 background: url(../images/user.png);
 margin-top: 5px;
-margin-left: 5px;
+margin-left: 3px;
 
 
 }
@@ -258,6 +258,7 @@ h2{
 #consuEntra{
 	width: 90%;
 	margin-left: 5%;
+	cursor: pointer;
 
 }
 

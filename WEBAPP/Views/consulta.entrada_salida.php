@@ -50,7 +50,7 @@ $codigoEntrada=Gestion_producto::consultarEntrada();
 					<td>".$comp["entra_fechasal"]."</td>
 					<td>".$comp["entra_horaentra"]."</td>
 					<td>".$comp["entra_horasal"]."</td>
-					<td><div onclick='salida(".$comp["entra_cod"].");'>Salida</div></td>
+					<td><div id='consuEntra' onclick='salida(".$comp["entra_cod"].");'>Salida</div></td>
 					
 			</tr>";
 			}

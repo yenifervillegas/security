@@ -14,9 +14,26 @@ require_once("../Model/conexion.php");
 require_once("../Model/usuario.class.php");
 
 $action= $_REQUEST["action"];
-switch ($action) {
+switch ($action) { 
+
 	case 'Guardar'://funcion para guardar usuario 9 lineas de abajo son para capturar los datos
 		
+
+$documento=$_POST["documento"];
+
+
+	$validarw=Gestion_usuario::validadocu($documento);
+
+	if($validarw != ""){
+		echo "<script>
+			swal({   title: 'El usuario ya existe',    
+	  	showConfirmButton: true },
+
+	  	function(){   
+	   	location.href = '../views/user.php#user.php?seccion=usu';
+			});
+		</script>";
+	}else{
 		$seleccion=$_POST["seleccion"];
 		$nombre=$_POST["nombre"];
 		$apellido=$_POST["apellido"];
@@ -34,7 +51,7 @@ switch ($action) {
 		try{
 			Gestion_usuario::Guardar($seleccion,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$estado,$cargo,$cifrar);
 			echo "<script>
-				swal({   title: 'Guardo con Èxito',    
+				swal({   title: 'Guardo con Éxito',    
 	   			showConfirmButton: true },
 
 	   			function(){   
@@ -45,7 +62,7 @@ switch ($action) {
 		}catch(Exception $e){
 			echo $e;
 		}
-
+}
 		break;
 
 		case 'Modificar'://funcion para modificar usuario 9 lineas de abajo son para capturar los datos
@@ -66,7 +83,7 @@ switch ($action) {
 		Gestion_usuario::Modificar($codigo,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$contrasenah);
 	
 			echo "<script>
-				swal({   title: 'Modifico con Èxito',    
+				swal({   title: 'Modifico con Éxito',    
 	   			showConfirmButton: true },
 
 	   			function(){   

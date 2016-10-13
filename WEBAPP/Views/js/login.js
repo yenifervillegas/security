@@ -15,11 +15,15 @@ $(document).ready(function() {
 $("#lirol").click(function(){
 
 		$("#fondopan").fadeOut();
+		$(".contenendor").fadeIn();
+
 		$(".contenendor").load("registro.rol.php");
 	});
 
 $("#liUsuario").click(function(){
 		$("#fondopan").fadeOut();
+		$(".contenendor").fadeIn();
+
 		$(".contenendor").load("registro.usuario.php");
 	});
 
@@ -27,18 +31,24 @@ $("#liUsuario").click(function(){
 	$("#liproducto").click(function(){
 
 		$("#fondopan").fadeOut(); 
+		$(".contenendor").fadeIn();
+
 		$(".contenendor").load("registro.tipoproducto.php");
 	});
 
 	$("#liregiproducto").click(function(){
 
 		$("#fondopan").fadeOut();
+		$(".contenendor").fadeIn();
+
 		$(".contenendor").load("registro.registro_producto.php");
 	});
 
 	$("#liaccesorio").click(function(){
 
 		$("#fondopan").fadeOut();
+		$(".contenendor").fadeIn();
+
 		$(".contenendor").load("registrar.accesorio.php");
 	});
 
@@ -46,6 +56,8 @@ $("#liUsuario").click(function(){
 	$("#lientrasal").click(function(){
 
 		$("#fondopan").fadeOut();
+		$(".contenendor").fadeIn();
+		
 		$(".contenendor").load("consulta.entrada_salida.php");
 	});
 	
@@ -134,7 +146,8 @@ function seleccionar(){
 			case "inicio":
 				$(".content-form").fadeOut();
 				$(".content-table").fadeOut();
-				
+				$(".contenendor").fadeOut();
+
 				$("#fondopan").fadeIn();
 
 				

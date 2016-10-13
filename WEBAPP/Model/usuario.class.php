@@ -2,6 +2,20 @@
 <?php
 //se guarda en la base de datos
 class Gestion_usuario{
+	function validadocu($documento){
+		$pdo= Conexion::Abrirbd();
+		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+		$sql="SELECT * FROM usuario WHERE usu_docu=?";
+
+		$query=$pdo->prepare($sql);
+		$query->execute(array($documento));
+
+		$result=$query->fetch(PDO::FETCH_BOTH);
+
+		Conexion::Cerrarbd();
+		return $result;
+}
 	function Guardar($seleccion,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$estado,$cargo,$cifrar){
 		$pdo= Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);

@@ -18,7 +18,7 @@
       <input type="text" name="codigo_usu" readonly value="<?php echo $codigoP["usu_cod"]; ?>">
 
       <label>codigo de producto</label>
-      <input type="text" name="codigo_produ" value=" <?php echo $codigoP["produ_cod"]; ?>" />
+      <input type="text" name="codigo_produ" readonly value=" <?php echo $codigoP["produ_cod"]; ?>" />
 
       <label>registro serial</label>
       <input type="text" name="regi_serial" value=" <?php echo $codigoP["regi_serial"]; ?>"/>

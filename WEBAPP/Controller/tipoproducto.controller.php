@@ -24,7 +24,7 @@ case 'create':
 	try {
 		Gestion_Tipoproducto::Guardar($tipopro_nombre, $tipopro_desc);
 		echo "<script>
-				swal({   title: 'Guardo con Èxito',    
+				swal({   title: 'Guardo con Éxito',    
 	   			showConfirmButton: true },
 
 	   			function(){   
@@ -65,7 +65,7 @@ case 'create':
        		 try {
        		 	Gestion_Tipoproducto::Eliminar($tipopro_cod);
        		 	echo "<script>
-				swal({   title: 'Elimino con Èxito',    
+				swal({   title: 'Elimino con Éxito',    
 	   			showConfirmButton: true },
 
 	   			function(){   

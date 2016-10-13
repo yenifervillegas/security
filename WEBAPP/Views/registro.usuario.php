@@ -41,7 +41,7 @@ function fEventsUsu(){
 
  			<form  action="../Controller/registro.controller.php" method="post" <?php $rol=Gestion_usuario::cargar_rol(); ?>>
 		
-						
+				<label>Rol</label>	
 				<select  name="seleccion" id="seleccion" onchange="seleccionar()">
 				  <option value="" disabled selected>Elija Rol de Usuario</option>
 						<?php foreach ($rol as $roles): ?>
@@ -67,7 +67,7 @@ function fEventsUsu(){
 							
 					  		
 				<label>Numero de Documento</label>
-				<input type="number" name="documento" id="txtdocumento"  required /><input  disabled id="aaa"/>
+				<input type="number" name="documento" id="txtdocumento"  required />
 							
 				<label>Email</label>
 	  			<input type="email" name="email" required />
