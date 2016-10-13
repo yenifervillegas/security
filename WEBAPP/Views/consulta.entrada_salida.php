@@ -30,7 +30,7 @@ $codigoEntrada=Gestion_producto::consultarEntrada();
 	<thead>
 		<tr>
 			<td>Codigo entrada y salida</td>
-			<td>Codigo de registro de producto</td>
+			<td>nombre</td>
 			<td>Fecha de entrada </td>
 			<td>Fecha de salida</td>
 			<td>Hora de entrada</td>
@@ -45,7 +45,7 @@ $codigoEntrada=Gestion_producto::consultarEntrada();
 			foreach ($codigoEntrada as $comp) {
 			echo "<tr>
 					<td>".$comp["entra_cod"]."</td>
-					<td>".$comp["regi_cod"]."</td>
+					<td>".$comp["produ_nom"]."</td>
 					<td>".$comp["entra_fechaentra"]."</td>
 					<td>".$comp["entra_fechasal"]."</td>
 					<td>".$comp["entra_horaentra"]."</td>

@@ -48,43 +48,43 @@ function fEventsUsu(){
 						  <option value="<?php echo $roles["rol_cod"]?>" ><?php echo $roles["rol_nom"]; ?></option>
 						<?php endforeach ?>
 				</select>
-					   
+					 </br>  
 				<label>Nombre</label>
 				<input type="text" name="nombre"  required />
 					       
-					    
+					</br>    
 				<label>Apellido</label>
 				<input type="text" name="apellido" class="" required />
-				       
+				     </br>  
 				  <label >Tipo de Documento</label>
 						<select name="tipodocu">
-							<option value="0">seleccionar</option>
+							<option value="0"disabled selected>seleccionar</option>
 							<option value="Cedula">Cedula</option>
 							<option value="Tarjeta de Identidad">Tarjeta de Identidad</option>
 							<option value="Cedula de extrajero">Cedula de extrajero</option>
 							<option value="Pasaporte">Pasaporte</option>
 						</select>
 							
-					  		
+					  </br>		
 				<label>Numero de Documento</label>
 				<input type="number" name="documento" id="txtdocumento"  required />
-							
+						</br>	
 				<label>Email</label>
 	  			<input type="email" name="email" required />
-							
+						</br>	
 	  			<label>Telefono</label>
 				<input type="number" name="telefono"  required />
-							
+						</br>	
 		  		<label for="">Direccion</label>
 		  		<input id="" type="text" name="direccion" required />
 							
-							
+						</br>	
 				<label class="centro" >Centro</label>
 				<input class="centro" id="centros"  type="text" name="centro"  required />
-							
+						</br>	
 				<label class="cargo">Cargo</label>
 				<input class="cargo"  id="cargos" type="text" name="cargo"  required />
-							
+						</br>	
 				<label class="contrasena">Contraseña</label>
 				<input class="contrasena" id="contrasena"  type="password" name="contrasena"  required />
 							

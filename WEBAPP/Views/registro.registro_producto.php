@@ -8,11 +8,10 @@ $producto=Gestion_producto::consultarprodu();
 $cargarusu=Gestion_producto::consultarultimousu();
 
 $fecha=date("Y-m-d");
-echo"<script>alert('Debe de Registrar EL Usuario Antes de Registrar un Producto');
-	location.href = '../views/user.php#user.php?seccion=pro';
-	</script>";;
-?>
 
+
+?>
+<h2>Debes registra primero el usuario para registrar un producto</h2>
 
 
 <section class="content-form">
@@ -22,11 +21,11 @@ echo"<script>alert('Debe de Registrar EL Usuario Antes de Registrar un Producto'
 		<!--<input name="codigo_produ" type="text" required/>-->
 
 		<label>Codigo de usuario: <?php echo $cargarusu["usu_docu"]?></label>
-		<input name="codigo_usu" type="hidden"  value="<?php echo $cargarusu["usu_docu"]?>"/><!--este si va?,,,, se le cambio el name repetido con el cod prod-->
+		<input name="codigo_usu" id="codigo_usu" type="hidden"  value="<?php echo $cargarusu["usu_docu"]?>"/><!--este si va?,,,, se le cambio el name repetido con el cod prod-->
 
-		<label>Nombre de producto</label>
+		<label>Tipo de producto</label>
 		<select name="codigo_produ">
-			<option>Seleccionar</option>
+			<option disabled selected>Seleccionar</option>
 			<?php
 				foreach ($producto as $pd) {
 				 	echo "<option value=".$pd["produ_cod"].">".$pd["produ_nom"]." ".$pd["produ_marca"]."</option>";
@@ -67,3 +66,6 @@ echo"<script>alert('Debe de Registrar EL Usuario Antes de Registrar un Producto'
     <?php include 'consulta.registro_producto.php'; ?>
   </section>
 
+<script type="text/javascript">
+
+</script>
