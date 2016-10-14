@@ -33,8 +33,8 @@ $producto=Gestion_producto::consultar();
 	<thead>
 		<tr>
 			<td>Codigo registro </td>
-			<td>Codigo Usuario</td>
-			<td>Producto</td>
+			<td>Documento</td>
+			<td>Nombre Producto</td>
 			<td>Registro serial </td>
 			<td>Registro color</td>
 			<td>Registro fecha</td>
@@ -52,7 +52,7 @@ $producto=Gestion_producto::consultar();
 			echo "<tr>
 					<td>".$produc["regi_cod"]."</td>
 					<td>".$produc["usu_cod"]."</td>
-					<td>".$produc["produ_cod"]."</td>
+					<td>".$produc["produ_nom"]."</td>
 					<td>".$produc["regi_serial"]."</td>
 					<td><div style='height:30px; width:30px; background-color:".$produc["regi_color"]."'></div></td>
 					<td>".$produc["regi_fecha"]."</td>

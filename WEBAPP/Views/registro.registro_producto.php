@@ -15,12 +15,12 @@ $fecha=date("Y-m-d");
 
 
 <section class="content-form">
-<h2>Registro de Productos</h2>
+
 	<form action="../Controller/controller.registro.producto.php" method="post">
 		
 		<!--<input name="codigo_produ" type="text" required/>-->
 
-		<label>Codigo de usuario: <?php echo $cargarusu["usu_docu"]?></label>
+		<label>Documento del Usuario: <?php echo $cargarusu["usu_docu"]?></label>
 		<input name="codigo_usu" id="codigo_usu" type="hidden"  value="<?php echo $cargarusu["usu_docu"]?>"/><!--este si va?,,,, se le cambio el name repetido con el cod prod-->
 
 		<label>Tipo de producto</label>

@@ -54,7 +54,8 @@ class Gestion_producto{
 		$pdo = Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		
-		$sqlP= "select * from registro_producto";
+		$sqlP= "SELECT registro_producto.regi_cod,registro_producto.usu_cod,tipo_producto.produ_nom,registro_producto.regi_serial,registro_producto.regi_color,registro_producto.regi_fecha,registro_producto.regi_desc,registro_producto.regi_autoalerta,registro_producto.regi_cantidad
+from tipo_producto inner join registro_producto on(tipo_producto.produ_cod=registro_producto.produ_cod)";
 
 		$query= $pdo->prepare($sqlP);
 		$query->execute();
@@ -143,7 +144,10 @@ class Gestion_producto{
 		$pdo = Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		$sql = "SELECT * FROM entrada_salida";
+		$sql = "SELECT entrada_salida.entra_cod, tipo_producto.produ_nom,entrada_salida.entra_fechaentra,entrada_salida.entra_fechasal,entrada_salida.entra_horaentra,entrada_salida.entra_horasal
+				from tipo_producto inner join registro_producto on(tipo_producto.produ_cod=registro_producto.produ_cod)
+                inner join entrada_salida on(registro_producto.regi_cod = entrada_salida.regi_cod)
+";
 		$query= $pdo->prepare($sql);
 		$query->execute();
 

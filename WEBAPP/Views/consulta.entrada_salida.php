@@ -29,8 +29,8 @@ $codigoEntrada=Gestion_producto::consultarEntrada();
 <table id="myTable">
 	<thead>
 		<tr>
-			<td>Codigo entrada y salida</td>
-			<td>nombre</td>
+			<td>Codigo</td>
+			<td>Nombre del producto</td>
 			<td>Fecha de entrada </td>
 			<td>Fecha de salida</td>
 			<td>Hora de entrada</td>
