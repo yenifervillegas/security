@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-10-2016 a las 06:13:42
+-- Tiempo de generación: 14-10-2016 a las 16:40:34
 -- Versión del servidor: 10.1.10-MariaDB
 -- Versión de PHP: 5.6.19
 
@@ -125,7 +125,7 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`usu_cod`, `rol_cod`, `usu_nom`, `usu_ape`, `usu_tipodocu`, `usu_docu`, `usu_email`, `usu_tel`, `usu_direc`, `usu_centro`, `usu_estado`, `usu_cargo`, `usu_pass`) VALUES
-(1, 1, 'andrea', 'taborda', 'Tarjeta de Identidad', '98111364257', 'yenitabordav@hotmail.com', 456, 'dfd', 'dsds', 'Activo', 'ff', '$2y$10$VlB0rYkvP28twW8se4TfgeSb4UAmzpjWzpCZZMraMfnQh21t/q3.y');
+(1, 1, 'Andrea', 'Taborda', 'Cedula', '98111364257', 'andre@homail.com', 3232, 'direccion', 'centro', 'Activo', 'cargo', '$2y$10$RLdLyq4byBD/sXhmzhRoVuPqVc9kcTDUn0quO2qd.fF3r/PcFrPwu');
 
 --
 -- Índices para tablas volcadas
@@ -136,7 +136,8 @@ INSERT INTO `usuario` (`usu_cod`, `rol_cod`, `usu_nom`, `usu_ape`, `usu_tipodocu
 --
 ALTER TABLE `accesorios`
   ADD PRIMARY KEY (`acce_cod`),
-  ADD KEY `regi_cod` (`regi_cod`);
+  ADD KEY `regi_cod` (`regi_cod`),
+  ADD KEY `regi_cod_2` (`regi_cod`);
 
 --
 -- Indices de la tabla `entrada_salida`
@@ -180,17 +181,17 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `accesorios`
 --
 ALTER TABLE `accesorios`
-  MODIFY `acce_cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `acce_cod` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `entrada_salida`
 --
 ALTER TABLE `entrada_salida`
-  MODIFY `entra_cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `entra_cod` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `registro_producto`
 --
 ALTER TABLE `registro_producto`
-  MODIFY `regi_cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `regi_cod` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `rol`
 --
@@ -200,7 +201,7 @@ ALTER TABLE `rol`
 -- AUTO_INCREMENT de la tabla `tipo_producto`
 --
 ALTER TABLE `tipo_producto`
-  MODIFY `produ_cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `produ_cod` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
