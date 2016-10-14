@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-09-2016 a las 04:41:51
+-- Tiempo de generación: 14-10-2016 a las 06:13:42
 -- Versión del servidor: 10.1.10-MariaDB
 -- Versión de PHP: 5.6.19
 
@@ -35,13 +35,6 @@ CREATE TABLE `accesorios` (
   `acce_cantidad` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `accesorios`
---
-
-INSERT INTO `accesorios` (`acce_cod`, `regi_cod`, `acce_nom`, `acce_cantidad`) VALUES
-(1, 1, 'portatil', 1);
-
 -- --------------------------------------------------------
 
 --
@@ -56,15 +49,6 @@ CREATE TABLE `entrada_salida` (
   `entra_horaentra` varchar(40) NOT NULL,
   `entra_horasal` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `entrada_salida`
---
-
-INSERT INTO `entrada_salida` (`entra_cod`, `regi_cod`, `entra_fechaentra`, `entra_fechasal`, `entra_horaentra`, `entra_horasal`) VALUES
-(1, 1, '2016-09-20', '', '23:54', ''),
-(2, 1, '2016-09-20', '', '23:55', ''),
-(3, 1, '2016-09-20', '', '23:55', '');
 
 -- --------------------------------------------------------
 
@@ -83,13 +67,6 @@ CREATE TABLE `registro_producto` (
   `regi_autoalerta` varchar(80) NOT NULL,
   `regi_cantidad` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `registro_producto`
---
-
-INSERT INTO `registro_producto` (`regi_cod`, `usu_cod`, `produ_cod`, `regi_serial`, `regi_color`, `regi_fecha`, `regi_desc`, `regi_autoalerta`, `regi_cantidad`) VALUES
-(1, 1, 3, ' 1', ' 33233', '0000-00-00', ' 2016-09-01', ' dsadsd', 0);
 
 -- --------------------------------------------------------
 
@@ -121,13 +98,6 @@ CREATE TABLE `tipo_producto` (
   `produ_marca` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `tipo_producto`
---
-
-INSERT INTO `tipo_producto` (`produ_cod`, `produ_nom`, `produ_marca`) VALUES
-(1, 'portatil', 'wwww');
-
 -- --------------------------------------------------------
 
 --
@@ -149,6 +119,13 @@ CREATE TABLE `usuario` (
   `usu_cargo` varchar(80) NOT NULL,
   `usu_pass` varchar(80) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`usu_cod`, `rol_cod`, `usu_nom`, `usu_ape`, `usu_tipodocu`, `usu_docu`, `usu_email`, `usu_tel`, `usu_direc`, `usu_centro`, `usu_estado`, `usu_cargo`, `usu_pass`) VALUES
+(1, 1, 'andrea', 'taborda', 'Tarjeta de Identidad', '98111364257', 'yenitabordav@hotmail.com', 456, 'dfd', 'dsds', 'Activo', 'ff', '$2y$10$VlB0rYkvP28twW8se4TfgeSb4UAmzpjWzpCZZMraMfnQh21t/q3.y');
 
 --
 -- Índices para tablas volcadas
@@ -228,7 +205,7 @@ ALTER TABLE `tipo_producto`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `usu_cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `usu_cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- Restricciones para tablas volcadas
 --
