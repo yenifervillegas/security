@@ -3,6 +3,7 @@
 	<title></title>
 	<script src="../Views/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="../Views/dist/sweetalert.css">
+    <meta charset="UTF-8">
 </head>
 <body>
 
@@ -19,10 +20,10 @@ case 'create':
 
 	
 	$tipopro_nombre=$_POST["txt_tipopronom"];
-	$tipopro_desc=$_POST["txt_desctipopro"];
+	
 	
 	try {
-		Gestion_Tipoproducto::Guardar($tipopro_nombre, $tipopro_desc);
+		Gestion_Tipoproducto::Guardar($tipopro_nombre);
 		echo "<script>
 				swal({   title: 'Guardo con Éxito',    
 	   			showConfirmButton: true },
@@ -42,10 +43,10 @@ case 'create':
 
          	$tipopro_cod=$_POST["txt_tipoprocod"];
 			$tipopro_nombre=$_POST["txt_tipopronom"];
-			$tipopro_desc=$_POST["txt_desctipopro"];
+			
 
      		 try {
-     		 	Gestion_Tipoproducto::Modificar($tipopro_cod, $tipopro_nombre, $tipopro_desc);
+     		 	Gestion_Tipoproducto::Modificar($tipopro_cod, $tipopro_nombre);
      		 	echo "<script>
 				swal({   title: 'Modifico con Èxito',    
 	   			showConfirmButton: true },

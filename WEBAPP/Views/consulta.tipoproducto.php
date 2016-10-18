@@ -33,7 +33,6 @@ function valida3(code){
         <tr>
           <td>Codigo</td>
           <td>Nombre</td>
-          <td>Marca</td>
           <td>Acciones</td>
         </tr>
       </thead>
@@ -45,15 +44,13 @@ function valida3(code){
                     
                     <td>".$row["produ_cod"]."</td>
                     <td>".$row["produ_nom"]."</td>
-                    <td>".$row["produ_marca"]."</td>
-                    <td>
-                   
+                   <td>
                     
                    <span style='cursor:pointer' onclick='valida3(".$row["produ_cod"].");' class='btn-floating light-green'>
                      modificar
                    </span>
                     <a href='../Controller/tipoproducto.controller.php?produ_cod=".$row["produ_cod"]."&action=delete'>Eliminar</a></td>
-                    
+                    </td>
                   </tr>";
             $item++;
           }

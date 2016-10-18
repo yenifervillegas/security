@@ -3,6 +3,7 @@
 	<title></title>
 	<script src="../Views/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="../Views/dist/sweetalert.css">
+    <meta charset="UTF-8">
 </head>
 <body>
 

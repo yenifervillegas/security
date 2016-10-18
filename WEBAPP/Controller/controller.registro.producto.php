@@ -4,6 +4,7 @@
 	<title></title>
 	<script src="../Views/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="../Views/dist/sweetalert.css">
+    <meta charset="UTF-8">
 </head>
 <body>
 
@@ -21,18 +22,18 @@ switch ($accion) {
 	$codigo_usu=$_POST["codigo_usu"];
 	$codigo_produ=$_POST["codigo_produ"];
 	$registro_serial=$_POST["registro_serial"];
+	$registro_marca=$_POST["registro_marca"];
 	$registre_color=$_POST["registre_color"];
 	$registre_fecha=$_POST["registre_fecha"];
 	$registre_decrip=$_POST["registre_decrip"];
 	$registre_autoalerta=$_POST["registre_autoalerta"];
-	$registre_cantidad=$_POST["registre_cantidad"];
 	$fecha=date("y-m-d");
 	$hora=date("H:i,A");
 
 	try{
 
 
-		Gestion_producto::Guardar($codigo_usu,$codigo_produ,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad,$fecha,$hora);
+		Gestion_producto::Guardar($codigo_usu,$codigo_produ,$registro_serial,$registro_marca,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$fecha,$hora);
 		echo "<script>
 				swal({   title: 'Guardo con Éxito',    
 	   			showConfirmButton: true },
@@ -54,6 +55,7 @@ switch ($accion) {
 	$codigo_usu=$_POST["codigo_usu"];
 	$codigo_produ=$_POST["codigo_produ"];
 	$registro_serial=$_POST["regi_serial"];
+	$registro_marca=$_POST["registro_marca"];
 	$registre_color=$_POST["regi_color"];
 	$registre_fecha=$_POST["regi_fecha"];
 	$registre_decrip=$_POST["regi_desc"];
@@ -61,7 +63,7 @@ switch ($accion) {
 	$registre_cantidad=$_POST["regi_cantidad"];
 
 	try{
-		Gestion_producto::modificar($codigo_regi,$codigo_usu,$codigo_produ,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad);
+		Gestion_producto::modificar($codigo_regi,$codigo_usu,$codigo_produ,$registro_serial,$registro_marca,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta);
 			echo "<script>
 				swal({   title: 'Modifico con Éxito',    
 	   			showConfirmButton: true },

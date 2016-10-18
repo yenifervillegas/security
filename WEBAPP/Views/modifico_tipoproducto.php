@@ -15,8 +15,7 @@
       <label>Nombre del tipo de producto</label>
         <input type="text" name="txt_tipopronom" value="<?php echo $tipo["produ_nom"]; ?>"/>
   		
-      <label>Marca</label>
-  		  <input type="text" name="txt_desctipopro" value="<?php echo $tipo["produ_marca"]; ?>">
+     
         </br>
   		<button name="action" value="update">Modificar</button>
       <button name="action" value="cancelar">Cancelar</button>

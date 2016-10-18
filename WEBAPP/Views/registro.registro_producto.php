@@ -36,14 +36,16 @@ $fecha=date("Y-m-d");
 
 		<label >Registra serial</label>
 		<input name="registro_serial" type="text" required/>
-	
+		
+		<label>Marca</label>
+		<input type="text" name="registro_marca" required></br>
 
 		<label >Registre color </label>
 		<input name="registre_color" type="color" required/>
 
 	
 		<label>Fecha:</label>
-		<input autocomplete='off'  name='registre_fecha' type='date' min='<?php echo $fecha; ?>'class='' id='fecha'>
+		<input autocomplete='off'  name='registre_fecha' type='text'  value='<?php echo $fecha; ?>'>
 		
 		<label >Registre descripcion</label>
 		<textarea name="registre_decrip" type="text"></textarea>
@@ -52,8 +54,7 @@ $fecha=date("Y-m-d");
 		<label >Registre autoalterna</label>
 		<input  name="registre_autoalerta" type="text"/>
 
-		<label >Registre Cantidad del Producto</label>
-		<input  name="registre_cantidad" type="number" required/>
+		
 	
 </br>
 </br>

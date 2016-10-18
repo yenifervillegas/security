@@ -7,9 +7,6 @@
 		<label>Nombre del tipo de producto</label>
 		<input type="text" name="txt_tipopronom" required/></br>
 
-		<label>Marca</label>
-		<input type="text" name="txt_desctipopro" required></br>
-
 		<button name="action" value="create">Guardar</button>	
 	</form>
 </section>

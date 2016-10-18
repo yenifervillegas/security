@@ -36,11 +36,11 @@ $producto=Gestion_producto::consultar();
 			<td>Documento</td>
 			<td>Nombre Producto</td>
 			<td>Registro serial </td>
+			<td>Registro marca </td>
 			<td>Registro color</td>
 			<td>Registro fecha</td>
 			<td>Registro descripcion</td>
 			<td>Registro autoalterna </td>
-			<td>Registro cantidad </td>
 			<td>Accion</td>
 
 
@@ -54,12 +54,11 @@ $producto=Gestion_producto::consultar();
 					<td>".$produc["usu_cod"]."</td>
 					<td>".$produc["produ_nom"]."</td>
 					<td>".$produc["regi_serial"]."</td>
+					<td>".$produc["regi_marca"]."</td>
 					<td><div style='height:30px; width:30px; background-color:".$produc["regi_color"]."'></div></td>
 					<td>".$produc["regi_fecha"]."</td>
 					<td>".$produc["regi_desc"]."</td>
 					<td>".$produc["regi_autoalerta"]."</td>
-
-					<td>".$produc["regi_cantidad"]."</td>
 
 					<td>
 						

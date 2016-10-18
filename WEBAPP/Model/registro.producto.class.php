@@ -4,14 +4,14 @@
 class Gestion_producto{
 
 
-	function Guardar($codigo_usu,$codigo_produ,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad,$fecha,$hora){
+	function Guardar($codigo_usu,$codigo_produ,$registro_serial,$registro_marca,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$fecha,$hora){
 	$pdo=conexion::Abrirbd();
 	$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-	$sql="INSERT INTO registro_producto (usu_cod,produ_cod,regi_serial,regi_color,regi_fecha,regi_desc,regi_autoalerta,regi_cantidad) values(?,?,?,?,?,?,?,?)";
+	$sql="INSERT INTO registro_producto (usu_cod,produ_cod,regi_serial,regi_marca,regi_color,regi_fecha,regi_desc,regi_autoalerta) values(?,?,?,?,?,?,?,?)";
 
 	$query=$pdo->prepare($sql);
-	$query->execute(array($codigo_usu,$codigo_produ,$registro_serial,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$registre_cantidad));	
+	$query->execute(array($codigo_usu,$codigo_produ,$registro_serial,$registro_marca,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta));	
 
 //consultar entrada y salir
 
@@ -54,7 +54,7 @@ class Gestion_producto{
 		$pdo = Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		
-		$sqlP= "SELECT registro_producto.regi_cod,registro_producto.usu_cod,tipo_producto.produ_nom,registro_producto.regi_serial,registro_producto.regi_color,registro_producto.regi_fecha,registro_producto.regi_desc,registro_producto.regi_autoalerta,registro_producto.regi_cantidad
+		$sqlP= "SELECT registro_producto.regi_cod,registro_producto.usu_cod,tipo_producto.produ_nom,registro_producto.regi_serial,registro_producto.regi_marca,registro_producto.regi_color,registro_producto.regi_fecha,registro_producto.regi_desc,registro_producto.regi_autoalerta
 from tipo_producto inner join registro_producto on(tipo_producto.produ_cod=registro_producto.produ_cod)";
 
 		$query= $pdo->prepare($sqlP);

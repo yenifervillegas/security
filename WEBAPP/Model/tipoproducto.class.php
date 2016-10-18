@@ -2,14 +2,14 @@
 <?php
 //tipoproducto.class.php
 class Gestion_Tipoproducto{
-	function Guardar($tipopro_nombre,$tipopro_desc)
+	function Guardar($tipopro_nombre)
 	{
 		$pdo=Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		$sql="INSERT INTO tipo_producto (produ_nom, produ_marca) VALUES(?,?)";
+		$sql="INSERT INTO tipo_producto (produ_nom) VALUES(?)";
 		$query = $pdo->prepare($sql);
-		$query->execute(array($tipopro_nombre, $tipopro_desc));
+		$query->execute(array($tipopro_nombre));
 
 		Conexion::Cerrarbd();
 	}
@@ -40,14 +40,14 @@ class Gestion_Tipoproducto{
 		return $result;
 
 	}
-	function Modificar($tipopro_cod, $tipopro_nombre, $tipopro_desc)
+	function Modificar($tipopro_cod, $tipopro_nombre)
 	{
 		$pdo = Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		$sql = "UPDATE tipo_producto SET produ_nom = ?, produ_marca = ? WHERE produ_cod = ?";
+		$sql = "UPDATE tipo_producto SET produ_nom = ? WHERE produ_cod = ?";
 		$query= $pdo->prepare($sql);
-		$query->execute(array($tipopro_nombre, $tipopro_desc, $tipopro_cod));
+		$query->execute(array($tipopro_nombre,$tipopro_cod));
 		Conexion::Cerrarbd();
 	}
 
