@@ -144,9 +144,11 @@ from tipo_producto inner join registro_producto on(tipo_producto.produ_cod=regis
 		$pdo = Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		$sql = "SELECT entrada_salida.entra_cod, tipo_producto.produ_nom,entrada_salida.entra_fechaentra,entrada_salida.entra_fechasal,entrada_salida.entra_horaentra,entrada_salida.entra_horasal
-				from tipo_producto inner join registro_producto on(tipo_producto.produ_cod=registro_producto.produ_cod)
-                inner join entrada_salida on(registro_producto.regi_cod = entrada_salida.regi_cod)
+		$sql = "SELECT entrada_salida.*,usuario.usu_nom,usuario.usu_ape,usuario.usu_docu,tipo_producto.produ_nom,registro_producto.regi_serial,accesorios.acce_nom,accesorios.acce_cantidad,entrada_salida.entra_fechaentra,entrada_salida.entra_fechasal,entrada_salida.entra_horaentra,entrada_salida.entra_horasal
+from usuario inner join entrada_salida on(usuario.usu_cod=entrada_salida.entra_cod)
+			 inner join  tipo_producto on(tipo_producto.produ_cod=entrada_salida.entra_cod)
+             inner join  registro_producto on(registro_producto.regi_cod=tipo_producto.produ_cod)
+             inner join  accesorios on(registro_producto.regi_cod=accesorios.acce_cod)
 ";
 		$query= $pdo->prepare($sql);
 		$query->execute();
