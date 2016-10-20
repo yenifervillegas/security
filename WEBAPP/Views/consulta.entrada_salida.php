@@ -33,15 +33,15 @@ $codigoEntrada=Gestion_producto::consultarEntrada();
 			
 			<td>nombre</td>
 			<td>documento</td>
-			<td>Nombre de producto</td>
+			<td>producto</td>
 			<td>serial</td>
-			<td>accesorios</td>
-			<td>cantidad de accesorios</td>
-			<td>Fecha de entrada </td>
-			<td>Fecha de salida</td>
-			<td>Hora de entrada</td>
-			<td>Hora de salida</td>
-			<td>Acciòn</td>
+			<td>accesorio</td>
+			<td>Cantidad</td>
+			<td>Fecha entrada </td>
+			<td>Fecha salida</td>
+			<td>Hora entrada</td>
+			<td>Hora salida</td>
+			<td>Acción</td>
 
 
 		</tr>

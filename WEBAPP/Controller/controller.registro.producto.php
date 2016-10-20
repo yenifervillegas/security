@@ -105,7 +105,7 @@ switch ($accion) {
 	case 'salidae':
 
 		$codigo=$_GET["salidas"];
-		$fecha=date("y-m-d");
+		$fecha=date("d-m-y");
 	$hora=date("H:i,A");
 		try{
 			Gestion_producto::entrada_salida($codigo,$fecha,$hora);
