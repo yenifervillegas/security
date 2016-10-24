@@ -3,6 +3,20 @@
 
 class Gestion_producto{
 
+	function validadocu($documento){
+		$pdo= Conexion::Abrirbd();
+		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+		$sql="SELECT * FROM usuario WHERE usu_docu=?";
+
+		$query=$pdo->prepare($sql);
+		$query->execute(array($documento));
+
+		$result=$query->fetch(PDO::FETCH_BOTH);
+
+		Conexion::Cerrarbd();
+		return $result;
+}
 
 	function Guardar($codigo_usu,$codigo_produ,$registro_serial,$registro_marca,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$fecha,$hora){
 	$pdo=conexion::Abrirbd();

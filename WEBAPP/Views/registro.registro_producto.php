@@ -20,8 +20,8 @@ $fecha=date("Y-m-d");
 		
 		<!--<input name="codigo_produ" type="text" required/>-->
 
-		<label>Documento del Usuario: <?php echo $cargarusu["usu_docu"]?></label>
-		<input name="codigo_usu" id="codigo_usu" type="hidden"  value="<?php echo $cargarusu["usu_docu"]?>"/><!--este si va?,,,, se le cambio el name repetido con el cod prod-->
+		<label>Documento del Usuario</label>
+		<input name="codigo_usu" id="codigo_usu" type="number" />
 
 		<label>Tipo de producto</label>
 		<select name="codigo_produ">

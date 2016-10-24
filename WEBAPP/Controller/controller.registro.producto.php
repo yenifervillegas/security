@@ -19,7 +19,22 @@ require_once("../Model/registro.producto.class.php");
 $accion=$_REQUEST["action"];
 switch ($accion) {
 	case 'Guardarpro':
-	$codigo_usu=$_POST["codigo_usu"];
+	$documentorr=$_POST["codigo_usu"];
+
+
+	$validarw=Gestion_producto::validadocu($documentorr);
+
+	if($validarw == ""){
+		echo "<script>
+			swal({   title: 'El Usuario no Existe',    
+	  	showConfirmButton: true },
+
+	  	function(){   
+	   	location.href = '../views/user.php#user.php?seccion=pro';
+			});
+		</script>";
+	}else{
+	$documentorr=$_POST["codigo_usu"];
 	$codigo_produ=$_POST["codigo_produ"];
 	$registro_serial=$_POST["registro_serial"];
 	$registro_marca=$_POST["registro_marca"];
@@ -33,7 +48,7 @@ switch ($accion) {
 	try{
 
 
-		Gestion_producto::Guardar($codigo_usu,$codigo_produ,$registro_serial,$registro_marca,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$fecha,$hora);
+		Gestion_producto::Guardar($documentorr,$codigo_produ,$registro_serial,$registro_marca,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta,$fecha,$hora);
 		echo "<script>
 				swal({   title: 'Guardo con Éxito',    
 	   			showConfirmButton: true },
@@ -46,7 +61,8 @@ switch ($accion) {
 	}catch(Exception $e){
 		echo $e;
 	}
-	
+	 }
+
 		break;
 
 		case 'modificar'://funcion para modificar usuario 9 lineas de abajo son para capturar los datos
