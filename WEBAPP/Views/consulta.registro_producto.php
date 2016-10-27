@@ -51,7 +51,7 @@ $producto=Gestion_producto::consultar();
 			foreach ($producto as $produc) {
 			echo "<tr>
 					<td>".$produc["regi_cod"]."</td>
-					<td>".$produc["usu_cod"]."</td>
+					<td>".$produc["usu_docu"]."</td>
 					<td>".$produc["produ_nom"]."</td>
 					<td>".$produc["regi_serial"]."</td>
 					<td>".$produc["regi_marca"]."</td>

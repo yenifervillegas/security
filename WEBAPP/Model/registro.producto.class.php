@@ -22,7 +22,7 @@ class Gestion_producto{
 	$pdo=conexion::Abrirbd();
 	$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-	$sql="INSERT INTO registro_producto (usu_cod,produ_cod,regi_serial,regi_marca,regi_color,regi_fecha,regi_desc,regi_autoalerta) values(?,?,?,?,?,?,?,?)";
+	$sql="INSERT INTO registro_producto (usu_docu,produ_cod,regi_serial,regi_marca,regi_color,regi_fecha,regi_desc,regi_autoalerta) values(?,?,?,?,?,?,?,?)";
 
 	$query=$pdo->prepare($sql);
 	$query->execute(array($codigo_usu,$codigo_produ,$registro_serial,$registro_marca,$registre_color,$registre_fecha,$registre_decrip,$registre_autoalerta));	
@@ -33,8 +33,11 @@ class Gestion_producto{
 	$query=$pdo->prepare($sql1);
 	$query->execute();
 
-	$result1=$query->rowCount();
-    $codigo=$result1;
+	// $result1=$query["regi_cod"];
+
+	// $result1=$query->rowCount();
+	$result1=$query->fetch(PDO::FETCH_BOTH);
+    $codigo=$result1[0];
 
 	$sql2="INSERT INTO entrada_salida (regi_cod,entra_fechaentra,entra_fechasal,entra_horaentra,entra_horasal) values(?,?,?,?,?)";
 
@@ -68,7 +71,7 @@ class Gestion_producto{
 		$pdo = Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		
-		$sqlP= "SELECT registro_producto.regi_cod,registro_producto.usu_cod,tipo_producto.produ_nom,registro_producto.regi_serial,registro_producto.regi_marca,registro_producto.regi_color,registro_producto.regi_fecha,registro_producto.regi_desc,registro_producto.regi_autoalerta
+		$sqlP= "SELECT registro_producto.regi_cod,registro_producto.usu_docu,tipo_producto.produ_nom,registro_producto.regi_serial,registro_producto.regi_marca,registro_producto.regi_color,registro_producto.regi_fecha,registro_producto.regi_desc,registro_producto.regi_autoalerta
 from tipo_producto inner join registro_producto on(tipo_producto.produ_cod=registro_producto.produ_cod)";
 
 		$query= $pdo->prepare($sqlP);
@@ -158,11 +161,11 @@ from tipo_producto inner join registro_producto on(tipo_producto.produ_cod=regis
 		$pdo = Conexion::Abrirbd();
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		$sql = "SELECT entrada_salida.*,usuario.usu_nom,usuario.usu_ape,usuario.usu_docu,tipo_producto.produ_nom,registro_producto.regi_serial,accesorios.acce_nom,accesorios.acce_cantidad,entrada_salida.entra_fechaentra,entrada_salida.entra_fechasal,entrada_salida.entra_horaentra,entrada_salida.entra_horasal
-from usuario inner join entrada_salida on(usuario.usu_cod=entrada_salida.entra_cod)
-			 inner join  tipo_producto on(tipo_producto.produ_cod=entrada_salida.entra_cod)
-             inner join  registro_producto on(registro_producto.regi_cod=tipo_producto.produ_cod)
-             inner join  accesorios on(registro_producto.regi_cod=accesorios.acce_cod)
+		$sql = "SELECT usuario.usu_nom,usuario.usu_ape,usuario.usu_docu,tipo_producto.produ_nom,registro_producto.regi_serial,accesorios.acce_nom,accesorios.acce_cantidad,entrada_salida.entra_cod,entrada_salida.entra_fechaentra,entrada_salida.entra_fechasal,entrada_salida.entra_horaentra,entrada_salida.entra_horasal 
+from usuario inner join  registro_producto on(usuario.usu_docu=registro_producto.usu_docu)
+             inner join  tipo_producto on(tipo_producto.produ_cod=registro_producto.produ_cod)
+             inner join  entrada_salida on(registro_producto.regi_cod=entrada_salida.regi_cod)
+             left join  accesorios on(registro_producto.regi_cod=accesorios.regi_cod)
 ";
 		$query= $pdo->prepare($sql);
 		$query->execute();
