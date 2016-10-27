@@ -72,7 +72,7 @@ class Gestion_producto{
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		
 		$sqlP= "SELECT registro_producto.regi_cod,registro_producto.usu_docu,tipo_producto.produ_nom,registro_producto.regi_serial,registro_producto.regi_marca,registro_producto.regi_color,registro_producto.regi_fecha,registro_producto.regi_desc,registro_producto.regi_autoalerta
-from tipo_producto inner join registro_producto on(tipo_producto.produ_cod=registro_producto.produ_cod)";
+		from tipo_producto inner join registro_producto on(tipo_producto.produ_cod=registro_producto.produ_cod)";
 
 		$query= $pdo->prepare($sqlP);
 		$query->execute();
