@@ -11,6 +11,31 @@ $fecha=date("Y-m-d");
 
 
 ?>
+<script type="text/javascript">
+
+$("#codigo_usu").keyup(function(){
+	var paramet= $(this).val();
+	$.post("listadoajax.php",{vlparam2: paramet}, function(data){
+	$(".conteDocu").val(data)
+
+	codigo1=$("#codigo_usu").val();
+	codigo2=$(".conteDocu").val();
+
+	if (codigo1==codigo2) {
+		$("#infoLabel").html("");
+		$("#infoLabel").css("display", "none");
+	}else{
+		$("#infoLabel").html("Este usuario no se encuentra en la base de datos");
+		$("#infoLabel").css({"display" : "block","width" : "80%", "height" : "50px", "padding-top": "9px", "padding-left": "8px"});
+	}
+
+	});
+
+	});
+
+
+</script>
+
 <h2>Debes registra primero el usuario para registrar un producto</h2>
 
 
@@ -22,6 +47,8 @@ $fecha=date("Y-m-d");
 
 		<label>Documento del Usuario</label>
 		<input name="codigo_usu" id="codigo_usu" type="number" />
+		<div id="coc"><input class="conteDocu" type="text"/></div>
+		<label id="infoLabel"></label>
 
 		<label>Tipo de producto</label>
 		<select name="codigo_produ">
@@ -35,7 +62,7 @@ $fecha=date("Y-m-d");
 		</select>
 
 		<label >Registra serial</label>
-		<input name="registro_serial" type="text" required/>
+		<input name="registro_serial" id="registro_serial" type="text" required/>
 		
 		<label>Marca</label>
 		<input type="text" name="registro_marca" required></br>

@@ -20,6 +20,20 @@ font-family: helvetica;
 font-weight: 100;
 }
 
+
+#coc{
+	display: none;
+	
+}
+
+
+#infoLabel{
+margin-top: 15px;
+background-color: #ef5350;
+color: #fff;
+
+}
+
 .container {
 position: relative;
 height: 100%;
