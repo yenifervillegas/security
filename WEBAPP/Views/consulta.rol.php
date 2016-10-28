@@ -27,6 +27,36 @@ $rol =Gestion_rol::Consultar();
   $(".contenendor").load("modifico_rol.php?rol_cod="+code+"");
  }
 
+function valida4(code1){
+	// if(confirm("desea Eliminar este rol")){
+	// self.location.href="../Controller/guardarrol.php?rol_cod="+code1+"&action=Borrar";
+	// // <a href='../Controller/guardarrol.php?rol_cod=".$consulta["rol_cod"]."&action=Borrar' class='btn-floating red'>
+	// // 									Eliminar
+	// // 								</a>
+	// }
+
+swal({
+  title: "Are you sure?",
+  text: "You will not be able to recover this imaginary file!",
+  type: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#DD6B55",
+  confirmButtonText: "Yes, delete it!",
+  closeOnConfirm: false
+},
+function(){
+  swal("Deleted!", "Your imaginary file has been deleted.", "success");
+  self.location.href="../Controller/guardarrol.php?rol_cod="+code1+"&action=Borrar";
+});
+
+
+
+
+
+
+
+ }
+
   </script>
 
 <table id="myTable" class="striped responsive-table">
@@ -50,9 +80,8 @@ $rol =Gestion_rol::Consultar();
 								<span style='cursor:pointer' onclick='valida3(".$consulta["rol_cod"].");' class='btn-floating light-green'>
                      				modificar
                   				 </span>
-								<a href='../Controller/guardarrol.php?rol_cod=".$consulta["rol_cod"]."&action=Borrar' class='btn-floating red'>
-									Eliminar
-								</a>
+								
+								<span onclick='valida4(".$consulta["rol_cod"].")'>Eliminar</span>
 							</td>
 					</tr>";
 			}
