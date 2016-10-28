@@ -24,9 +24,13 @@ $("#codigo_usu").keyup(function(){
 	if (codigo1==codigo2) {
 		$("#infoLabel").html("");
 		$("#infoLabel").css("display", "none");
+		$("#registro_serial").removeAttr("disabled");
+		$("#registro_marca").removeAttr("disabled");
 	}else{
 		$("#infoLabel").html("Este usuario no se encuentra en la base de datos");
 		$("#infoLabel").css({"display" : "block","width" : "80%", "height" : "50px", "padding-top": "9px", "padding-left": "8px"});
+		$("#registro_serial").attr("disabled","disabled");
+		$("#registro_marca").attr("disabled","disabled");
 	}
 
 	});
@@ -65,7 +69,7 @@ $("#codigo_usu").keyup(function(){
 		<input name="registro_serial" id="registro_serial" type="text" required/>
 		
 		<label>Marca</label>
-		<input type="text" name="registro_marca" required></br>
+		<input type="text" name="registro_marca" id="registro_marca" required></br>
 
 		<label >Registre color </label>
 		<input name="registre_color" type="color" required/>
