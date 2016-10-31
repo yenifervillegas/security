@@ -96,26 +96,26 @@ switch ($accion) {
 
 
 
-		case 'eliminar':
-		$codigoA=$_GET["codigo_produc"];
+		// case 'eliminar':
+		// $codigoA=$_GET["codigo_produc"];
 
-		try{
-			Gestion_producto::eliminar($codigoA);
-			echo "<script>
-				swal({   title: 'Elimino con Éxito',    
-	   			showConfirmButton: true },
+		// try{
+		// 	Gestion_producto::eliminar($codigoA);
+		// 	echo "<script>
+		// 		swal({   title: 'Elimino con Éxito',    
+	 //   			showConfirmButton: true },
 
-	   			function(){   
-	   			location.href = '../views/user.php#user.php?seccion=pro';
-				});
-			</script>";
-		}catch(Exception $e){
+	 //   			function(){   
+	 //   			location.href = '../views/user.php#user.php?seccion=pro';
+		// 		});
+		// 	</script>";
+		// }catch(Exception $e){
 
-			echo $e;
-		}
+		// 	echo $e;
+		// }
 
 
-		break;
+		// break;
 
 
 	case 'salidae':

@@ -146,16 +146,16 @@ class Gestion_producto{
 			Conexion::Cerrarbd();
 		}
 
-		function eliminar($codigoA){
-			$pdo = Conexion::Abrirbd();
-			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		// function eliminar($codigoA){
+		// 	$pdo = Conexion::Abrirbd();
+		// 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-			$sql = "DELETE from  registro_producto where regi_cod=?";
-			$query= $pdo->prepare($sql);
-			$query->execute(array($codigoA));
+		// 	$sql = "DELETE from  registro_producto where regi_cod=?";
+		// 	$query= $pdo->prepare($sql);
+		// 	$query->execute(array($codigoA));
 
-			Conexion::Cerrarbd();
-		}
+		// 	Conexion::Cerrarbd();
+		// }
 
 		function consultarEntrada(){
 		$pdo = Conexion::Abrirbd();

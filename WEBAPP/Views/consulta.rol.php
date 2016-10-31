@@ -28,30 +28,11 @@ $rol =Gestion_rol::Consultar();
  }
 
 function valida4(code1){
-	// if(confirm("desea Eliminar este rol")){
-	// self.location.href="../Controller/guardarrol.php?rol_cod="+code1+"&action=Borrar";
-	// // <a href='../Controller/guardarrol.php?rol_cod=".$consulta["rol_cod"]."&action=Borrar' class='btn-floating red'>
-	// // 									Eliminar
-	// // 								</a>
-	// }
-
-swal({
-  title: "Are you sure?",
-  text: "You will not be able to recover this imaginary file!",
-  type: "warning",
-  showCancelButton: true,
-  confirmButtonColor: "#DD6B55",
-  confirmButtonText: "Yes, delete it!",
-  closeOnConfirm: false
-},
-function(){
-  swal("Deleted!", "Your imaginary file has been deleted.", "success");
-  self.location.href="../Controller/guardarrol.php?rol_cod="+code1+"&action=Borrar";
-});
-
-
-
-
+	
+	self.location.href="../Controller/guardarrol.php?rol_cod="+code1+"&action=Borrar";
+	// <a href='../Controller/guardarrol.php?rol_cod=".$consulta["rol_cod"]."&action=Borrar' class='btn-floating red'>
+	// 									Eliminar
+	// 								</a>
 
 
 

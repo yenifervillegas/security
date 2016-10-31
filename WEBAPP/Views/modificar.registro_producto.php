@@ -9,13 +9,13 @@
   <!-- Formulario de modificar usuarios: Vigilantes o Administradores -->
   <form action="../controller/controller.registro.producto.php" method="post">
       
-  <h1>Modificar</h1>
+  <h1>Modificar Registro Producto</h1>
       <label>Codigo de registro producto: <?php echo $codigoP["regi_cod"]; ?></label>
       <input type="hidden" name="codigo_regi" readonly value="<?php echo $codigoP["regi_cod"]; ?>">
 
         </br>
       <label>Codigo de usuario</label>
-      <input type="text" name="codigo_usu" readonly value="<?php echo $codigoP["usu_cod"]; ?>">
+      <input type="text" name="codigo_usu" readonly value="<?php echo $codigoP["usu_docu"]; ?>">
 
       <label>codigo de producto</label>
       <input type="text" name="codigo_produ" readonly value=" <?php echo $codigoP["produ_cod"]; ?>" />
@@ -35,8 +35,7 @@
       <label>registro autoalterna</label>
       <input type="text" name="regi_autoalerta" value=" <?php echo $codigoP["regi_autoalerta"]; ?>"/>
 
-      <label>registro cantidad</label>
-      <input type="text" name="regi_cantidad" value=" <?php echo $codigoP["regi_cantidad"]; ?>"/>
+     
 
 </br>
       <button name="action" value="modificar">Modificar</button>

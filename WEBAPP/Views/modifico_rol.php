@@ -9,7 +9,7 @@
   <!-- Formulario de modificar usuarios: Vigilantes o Administradores -->
 
   <form action="../Controller/guardarrol.php" method="post"><br>
-    <center><h4 class="thin">Modificar Rol</h4></center>
+    <center><h1 class="thin">Modificar Rol</h1></center>
 
       <label>Codigo: <?php echo $codigo["rol_cod"]; ?></label>
       <input type="hidden" name="codigo" value=" <?php echo $codigo["rol_cod"]; ?>"/>

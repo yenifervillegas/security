@@ -6,13 +6,13 @@
 ?>
 <section class="content-form">
 
-	<h1>Modificar usuario</h1>
+	<h1>Modificar Accesorios</h1>
 	<form action="../Controller/accesorio.controller.php" method="POST">
 
-	<label>Codigo: <?php echo $codigo["acce_cod"]; ?></label>
+	<label>Codigo <?php echo $codigo["acce_cod"]; ?></label>
 	<input type="hidden" name="codigo" value=" <?php echo $codigo["acce_cod"]; ?>"/>
 
-	<label>Codigo<?php echo $codigo["regi_cod"]; ?></label>
+	<label>Codigo Registro Producto<?php echo $codigo["regi_cod"]; ?></label>
 	<input type="hidden" name="codigo_regi" value=" <?php echo $codigo["regi_cod"]; ?>"/>
 
 
@@ -21,7 +21,7 @@
 
 	<label>Cantidad</label>
 	<input type="text" name="cantidad" value=" <?php echo $codigo["acce_cantidad"]; ?>"required/>
-
+<br>
 	<button name="action" value="Modificar" >Modificar</button>
 	<button name="action" value="Cancelar" >Cancelar</button>
 </section>
