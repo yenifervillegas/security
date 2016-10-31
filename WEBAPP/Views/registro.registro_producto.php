@@ -26,11 +26,21 @@ $("#codigo_usu").keyup(function(){
 		$("#infoLabel").css("display", "none");
 		$("#registro_serial").removeAttr("disabled");
 		$("#registro_marca").removeAttr("disabled");
+		$("#registre_color").removeAttr("disabled");
+		$("#registre_fecha").removeAttr("disabled");
+		$("#registre_decrip").removeAttr("disabled");
+		$("#registre_autoalerta").removeAttr("disabled");
+		$("#action").removeAttr("disabled");
 	}else{
 		$("#infoLabel").html("Este usuario no se encuentra en la base de datos");
 		$("#infoLabel").css({"display" : "block","width" : "80%", "height" : "50px", "padding-top": "9px", "padding-left": "8px"});
 		$("#registro_serial").attr("disabled","disabled");
 		$("#registro_marca").attr("disabled","disabled");
+		$("#registre_color").attr("disabled","disabled");
+		$("#registre_fecha").attr("disabled","disabled");
+		$("#registre_decrip").attr("disabled","disabled");
+		$("#registre_autoalerta").attr("disabled","disabled");
+		$("#action").attr("disabled","disabled");
 	}
 
 	});
@@ -72,25 +82,25 @@ $("#codigo_usu").keyup(function(){
 		<input type="text" name="registro_marca" id="registro_marca" required></br>
 
 		<label >Registre color </label>
-		<input name="registre_color" type="color" required/>
+		<input name="registre_color" id="registre_color" type="color" required/>
 
 	
 		<label>Fecha:</label>
-		<input autocomplete='off'  name='registre_fecha' type='text'  value='<?php echo $fecha; ?>'>
+		<input autocomplete='off' id="registre_fecha" name='registre_fecha' type='text'  value='<?php echo $fecha; ?>'>
 		
 		<label >Registre descripcion</label>
-		<textarea name="registre_decrip" type="text"></textarea>
+		<textarea name="registre_decrip" id="registre_decrip" type="text"></textarea>
 
 	
 		<label >Registre autoalterna</label>
-		<input  name="registre_autoalerta" type="text"/>
+		<input  name="registre_autoalerta" id="registre_autoalerta" type="text"/>
 
 		
 	
 </br>
 </br>
 
-		<button name="action"  value="Guardarpro">Guardar</button>
+		<button name="action" id="action" value="Guardarpro">Guardar</button>
 </form>
 </section>
 
