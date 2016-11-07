@@ -59,10 +59,10 @@ function valida4(code1){
 							
 							<td>
 								<span style='cursor:pointer' onclick='valida3(".$consulta["rol_cod"].");' class='btn-floating light-green'>
-                     				modificar
+                     				Modificar
                   				 </span>
 								
-								<span onclick='valida4(".$consulta["rol_cod"].")'>Eliminar</span>
+								<span style='cursor:pointer' onclick='valida4(".$consulta["rol_cod"].")'>Eliminar</span>
 							</td>
 					</tr>";
 			}

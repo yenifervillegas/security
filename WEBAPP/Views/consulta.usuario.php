@@ -57,11 +57,11 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 			<td>Documento</td>
 			
 			<td>Telefono</td>
-			<td>Direccion</td>
+			<td>Dirección</td>
 			<td>Centro</td>
 			<td>Estado</td>
 			<td>Cargo</td>
-			<td>Accion</td>
+			<td>Acción</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -88,7 +88,7 @@ $usuario =Gestion_usuario::consultar_usuario();//se trae los usuarios registrado
 									Activar
 								</span>
 								<span style='cursor:pointer' onclick='valida2(&#34".$consulta["usu_estado"]."&#34,".$consulta["usu_cod"].");'class='btn-floating light-green'>
-									modificar
+									Modificar
 								</span>
 							</td>
 					</tr>";

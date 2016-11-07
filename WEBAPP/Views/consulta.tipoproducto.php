@@ -47,7 +47,7 @@ function valida3(code){
                    <td>
                     
                    <span style='cursor:pointer' onclick='valida3(".$row["produ_cod"].");' class='btn-floating light-green'>
-                     modificar
+                      Modificar
                    </span>
                     <a href='../Controller/tipoproducto.controller.php?produ_cod=".$row["produ_cod"]."&action=delete'>Eliminar</a></td>
                     </td>
