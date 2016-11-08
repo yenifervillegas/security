@@ -14,15 +14,15 @@
 	<form action="../Controller/registro.controller.php" method="POST">
 
 	<label>Codigo: <?php echo $codigo["usu_cod"]; ?></label>
-	<input type="hidden" name="codigo" value=" <?php echo $codigo["usu_cod"]; ?>"/>
+	<input type="hidden" name="codigo" value="<?php echo $codigo["usu_cod"]; ?>"/>
 
 
 
 	<label>Nombre</label>
-	<input type="text" name="nombre" value=" <?php echo $codigo["usu_nom"]; ?>"required/>
+	<input type="text" name="nombre" value="<?php echo $codigo["usu_nom"]; ?>"required/>
 
 	<label>Apellido</label>
-	<input type="text" name="apellido" value=" <?php echo $codigo["usu_ape"]; ?>"required/>
+	<input type="text" name="apellido" value="<?php echo $codigo["usu_ape"]; ?>"required/>
 
 	<label >Tipo de Documento</label>
 		<select name="tipodocu">
@@ -34,25 +34,25 @@
 		</select>
 
 	<label>Documento</label>
-	<input type="text" name="documento" value=" <?php echo $codigo["usu_docu"]; ?>" required/>
+	<input type="text" name="documento" value="<?php echo $codigo["usu_docu"]; ?>" required/>
 
 	<label>Email</label>
-	<input type="email" name="email" value=" <?php echo $codigo["usu_email"]; ?>"required/>
+	<input type="email" name="email" value="<?php echo $codigo["usu_email"]; ?>"required/>
 
 	<label>Telefono</label>
-	<input type="text" name="telefono" value=" <?php echo $codigo["usu_tel"]; ?>"/>
+	<input type="text" name="telefono" value="<?php echo $codigo["usu_tel"]; ?>"/>
 
 	<label>Direccion</label>
-	<input type="text" name="direccion" value=" <?php echo $codigo["usu_direc"]; ?>" required/>
+	<input type="text" name="direccion" value="<?php echo $codigo["usu_direc"]; ?>" required/>
 
 	<label>centro</label>
-	<input type="text" name="centro" value=" <?php echo $codigo["usu_centro"]; ?>" required/>
+	<input type="text" name="centro" value="<?php echo $codigo["usu_centro"]; ?>" required/>
 
 	<label>cargo</label>
-	<input type="text" name="cargo" value=" <?php echo $codigo["usu_cargo"]; ?>"required/>
+	<input type="text" name="cargo" value="<?php echo $codigo["usu_cargo"]; ?>"required/>
 
 	<label>Contraseña</label>
-	<input type="password" name="contrasena1" value=" <?php echo $codigo["usu_pass"]; ?>"required/>
+	<input type="password" name="contrasena" value="<?php if (password_verify($pass,$datos["usu_pass"])){  echo $codigo["usu_pass"]; }?>"required/>
 </br>
 	<button name="action" value="Modificar" >Modificar</button>
 	<button name="action" value="Cancelar" >Cancelar</button>

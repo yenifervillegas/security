@@ -77,11 +77,11 @@ $documento=$_POST["documento"];
 		$direccion=$_POST["direccion"];
 		$centro=$_POST["centro"];
 		$cargo=$_POST["cargo"];
-		$contrasenah=$_POST["contrasena1"];
-		$cifrars=password_hash($contrasenah,PASSWORD_DEFAULT);
+		$contrasena=$_POST["contrasena"];
+		$cifrar=password_hash($contrasena,PASSWORD_DEFAULT);
 
 	try{
-		Gestion_usuario::Modificar($codigo,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$contrasenah);
+		Gestion_usuario::Modificar($codigo,$nombre,$apellido,$tipodocu,$documento,$email,$telefono,$direccion,$centro,$cargo,$cifrar);
 	
 			echo "<script>
 				swal({   title: 'Modifico con Éxito',    
